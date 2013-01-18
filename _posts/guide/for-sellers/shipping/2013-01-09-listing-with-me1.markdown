@@ -24,13 +24,11 @@ Selected sellers are marked for shipping mode me1 internally after an agreement 
 The guide covers in detail the API resources involved:
 
 <ul class="ch-list">
-<li> **shipping modes**</li>
-<li> **items**</li>
-<li> **shipping methods**</li>
+<li> shipping modes</li>
+<li> items</li>
+<li> shipping methods</li>
 </ul>
 <br/>
-
-It introduces the concepts of **shipping modes** and **shipping methods**, to later explain how to **list items with shipping methods** and **dimensions** or list with the **free shipping** option.
 
 <div class="contents">
   <h5>Table of Contents</h5>
