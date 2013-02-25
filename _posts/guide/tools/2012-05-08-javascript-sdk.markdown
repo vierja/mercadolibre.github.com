@@ -33,10 +33,12 @@ MELI.init({client_id: 6586});
 That's it. Afterwards, this line of code will show the First Name of your registration in MELI:
 
 {% highlight javascript %}
-MELI.get(
-  "/users/me",{},
-    function(data) { alert("Hello "+data[2].first_name) }
-);
+MELI.login(function() {
+	MELI.get(
+ 		"/users/me",{},
+	    function(data) { alert("Hello "+data[2].first_name) }
+	);
+});
 {% endhighlight %}
 
 Under the hood, the JSSDK checks that:

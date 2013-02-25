@@ -54,7 +54,7 @@ Keep in mind that having a promotional pack <u>is not mandatory</u> for listing 
 If you have indeed acquired a promotional pack for your agency, you can access its information by sending a GET request to the following URL:
 
 <pre class="terminal">
- https://api.mercadolibre.com/users/me/promotion_packs?access_token=YOUR_ACCESS_TOKEN
+ https://api.mercadolibre.com/users/{user_id}/promotion_packs?access_token=YOUR_ACCESS_TOKEN
 </pre>
 
 *YOUR_ACCESS_TOKEN* is the key that will allow you to authenticate when using MELI's API. You will learn how to obtain the access token on the [Authentication section](/authentication-and-authorization).
@@ -62,7 +62,7 @@ If you have indeed acquired a promotional pack for your agency, you can access i
 If you wish to see detailed information regarding your promotional pack, you can do so by sending a GET request to the following URL:
 
 <pre class="terminal">
- https://api.mercadolibre.com/users/me/promotion_pack_combos/YOUR_PACKAGE_ID?access_token=YOUR_ACCESS_TOKEN
+ https://api.mercadolibre.com/users/{user_id}/promotion_pack_combos/YOUR_PACKAGE_ID?access_token=YOUR_ACCESS_TOKEN
 </pre>
 
 *YOUR_PACKAGE_ID* is the ID of the package obtained in the previous step (when receiving the response of the GET request to the Promotion Packs API).
