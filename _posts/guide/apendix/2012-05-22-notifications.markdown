@@ -1,11 +1,11 @@
 ---
 layout: firststep
 title: Receiving notifications
-categories: 
+categories:
 - Notifications
 menu:
 - Notifications
-tags: 
+tags:
 - Notifications
 ---
 
@@ -32,7 +32,7 @@ Notifications are a very convenient way to stay up-to-date with everything that 
 
 In the Applications Page where you created your App, you can edit the details and specify which 'topics' you will listen to
 (see [Applications Page](http://applications.mercadolibre.com)).
-_If you haven't created your App yet, go to the [Creating your app section](http://developers.mercadolibre.com/creating-your-own-application/)_.
+_If you haven't created your App yet, go to the [Creating your app section](http://developers.mercadolibre.com/application-manager/)_.
 
   - **Notifications callback URL:** Configure the public URL of your domain where you want to receive notifications for the different topics. E.g.: “http://myshoes-app.com/callbacks”.
 
@@ -41,7 +41,7 @@ _If you haven't created your App yet, go to the [Creating your app section](http
 ###Available Topics: {#topics}
 - **orders**  — To get notified of any change on one of your orders. E.g.: you received an order from a purchase, the buyer added shipping instructions or the buyer added a payment to an order.
 
-- **items**   — To get notified of any changes on an item you have published. 
+- **items**   — To get notified of any changes on an item you have published.
 	E.g.: Due to MercadoLibre’s rules, your item is set to ‘under_review’; the seller changes an item’s attribute (price, title, description) and all the applications subscribed to that seller’s feed get notified of the change; or the 60 days' period of a listing has finished.
 
 - **questions**   — To get notified of every question made to you or answered.
@@ -76,7 +76,7 @@ _If you haven't created your App yet, go to the [Creating your app section](http
 
 — 60 days passed and the listing expired: The status changes to "closed"
 
-###questions 
+###questions
 — You receive a new question.
 
 — You answer a question.
@@ -134,6 +134,3 @@ GET the item
 
 GET the question
 <pre class="terminal">https://api.mercadolibre.com/questions/QUESTION_ID?access_token=ACCESS_TOKEN</pre>
-
-
-
