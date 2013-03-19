@@ -54,7 +54,7 @@ curl -X POST -H "Content-Type: application/json" -d
      	"available_quantity":1,
      	"price":10,
      	"picture_ids":[
-        	"http://origin-static.tricae.com.br/p/Brandili-Polo-Listrada-Vermelha-e-Bege-Brandili-9265-32322-2-product.jpg"
+        	"http://www.mundodofutebol.com.br/imagens/produto/6484_0181.jpg"
      	]
   	},
   	{
