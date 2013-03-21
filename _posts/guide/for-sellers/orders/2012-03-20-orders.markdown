@@ -1,6 +1,6 @@
 ---
 layout: guides
-title: Manging Orders
+title: Managing Orders
 categories: 
 - Listing
 - Manage Listings
