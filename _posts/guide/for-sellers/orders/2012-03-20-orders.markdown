@@ -132,10 +132,10 @@ This is how an Order looks like:
 
 ##Status {#status}
 
-The are a few possible status for an order:
+There are a few possible status for an order:
 
 + confirmed: Initial state of an order, the buyer confirmed the purchase, but is not paid yet
-+ payment_required: The order needs a payment to become confirmed and show users information.
++ payment_required: The order needs a payment to become confirmed and to show users information.
 + payment_in_process: There is a payment related with the order, but it has not accredited yet.
 + paid: The order has a related payment and it has been accredited.
 + cancelled: The order has not completed by some reason.
