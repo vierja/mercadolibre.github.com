@@ -169,7 +169,7 @@ https://api.mercadolibre.com/orders/search?buyer=buyer_id&#038;access_token={...
 
 ###Archived Orders
 
-If you are looking for an old order, more than 21 days or qualified by both parties, you can use archived resource: 
+If you are looking for an older order, more than 21 days or qualified by both parties, you can use archived resource: 
 
 <pre class="terminal">
 https://api.mercadolibre.com/orders/search/archived?seller=seller_id&#038;access_token={...}
