@@ -45,7 +45,7 @@ There are three groups of information in this form: Basic application Info, Auth
 
 **- Callback URL: Redirect URI. ** URL to return users to your app after they grant access. 
 
-**- Domains: ** Authorized Javascript Origins. Comma-separated list of fully-qualified domain name of all pages that will use the client-side authentication. Only needed if using Javascript API. Don't include protocol or port.
+**- Domains: ** Authorized Javascript Origins. Comma-separated list of fully-qualified domain name of all pages that will use the client-side authentication. Only needed if using Javascript API. Don't include protocol, port or "localhost".
 
 Both these attributes are further explained in the [Authentication and authorization guide](/authentication-and-authorization).
 

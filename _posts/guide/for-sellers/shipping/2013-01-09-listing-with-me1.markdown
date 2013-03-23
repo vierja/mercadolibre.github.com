@@ -420,4 +420,7 @@ https://api.mercadolibre.com/shipments/:shipment_id?access_token=
 }
 {% endhighlight %}
 
+**Note:** If the product was sent by some another service send the parameter service_id with value 11.
+
+
 
