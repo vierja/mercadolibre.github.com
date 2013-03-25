@@ -357,48 +357,34 @@ https://api.mercadolibre.com/sites/MLB/shipping_services
 
 {% highlight javascript %}
 [
-  {
-    "id": 1,
-    "name": "PAC",
-    "status": "active",
-    "shipping_company":  {
-      "id": 100008,
-      "name": "Correios",
-      "site_id": "MLB"
+    {
+        "id": 1,
+        "name": "PAC",
+        "status": "active",
+        "shipping_company": {
+            "id": 100008,
+            "name": "Correios",
+            "site_id": "MLB"
+        },
+        "site_id": "MLB",
+        "currency_id": "BRL",
+        "tracks_shipments": true,
+        "tracking_url": "http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI=#{trackingNumber}"
     },
-    "site_id": "MLB",
-    "currency_id": "BRL",
-    "tracks_shipments": true,
-    "max_size": 5000,
-    "min_size": 1,
-    "max_weight": 30000,
-    "min_weight": 1,
-    "free_options":  [
-      "country",
-      "no"
-    ]
-  },
-   {
-    "id": 2,
-    "name": "Sedex",
-    "status": "active",
-    "shipping_company":  {
-      "id": 100008,
-      "name": "Correios",
-      "site_id": "MLB"
-    },
-    "site_id": "MLB",
-    "currency_id": "BRL",
-    "tracks_shipments": true,
-    "max_size": 5000,
-    "min_size": 1,
-    "max_weight": 30000,
-    "min_weight": 1,
-    "free_options":  [
-      "country",
-      "no"
-    ]
-   }
+    {
+        "id": 2,
+        "name": "Sedex",
+        "status": "active",
+        "shipping_company": {
+            "id": 100008,
+            "name": "Correios",
+            "site_id": "MLB"
+        },
+        "site_id": "MLB",
+        "currency_id": "BRL",
+        "tracks_shipments": true,
+        "tracking_url": "http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI=#{trackingNumber}"
+    }
 ]
 {% endhighlight %}
 
@@ -419,5 +405,8 @@ https://api.mercadolibre.com/shipments/:shipment_id?access_token=
   "service_id": 1
 }
 {% endhighlight %}
+
+**Note:** If the product was sent by some another service, you should send the parameter service_id with value 11.
+
 
 
