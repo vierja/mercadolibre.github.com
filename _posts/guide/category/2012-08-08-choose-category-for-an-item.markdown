@@ -1,4 +1,15 @@
-
+---
+layout: guides
+title: Choose category for an item
+categories: 
+- Listing
+- Manage Listings
+- Orders
+- Manage Questions
+- Shipping
+menu: 
+- Listing &amp; Selling
+---
 
 
 ## How to choose a category to list an item
