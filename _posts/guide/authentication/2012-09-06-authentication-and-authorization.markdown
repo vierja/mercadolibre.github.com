@@ -141,8 +141,8 @@ After you get the access token, you can make calls to the APIs with it to gain a
 
 If you want to use the access token from your server for off-line processing, you should implement the server-side flow (do not use a client-side-generated token for server-side application, **see notes below**)
 
-In this case, the first steps of the flow are the same. However, when the user grants the permissions to your application he will be redirected to the url as specified when you registered your application with an access_code parameter. 
-<pre>http://your_url?access_code=...</pre> 
+In this case when the user grants the permissions to your application he will be redirected to the url as specified when you registered your application with an access_code parameter. 
+<pre>http://your_url?code=...</pre> 
 Here you must exchange this code for an access token by issuing a POST request to...
 <pre>https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=SECRET_CODE&redirect_uri=$APP_CALLBACK_URL</pre>
 ...…in which response you will receive the access token, the expiration time and a refresh token (if you requested offline-access permissions) that you will use to get a new token once the current token has expired (all this takes place on the server side).
