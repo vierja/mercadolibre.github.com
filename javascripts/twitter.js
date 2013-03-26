@@ -318,6 +318,6 @@ JQTWEET = {
       clean: function(tweet) {
         return this.hash(this.at(this.list(this.link(tweet))));
       }
-    }, // ify
+    } // ify
 };
 

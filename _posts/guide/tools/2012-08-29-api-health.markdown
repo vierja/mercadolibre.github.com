@@ -84,11 +84,7 @@ title: Platform Health
     padding-top: 2%;
     padding-bottom: 2%;
     margin-top: 0.5%;
-    background: -moz-linear-gradient(top, #3A3A3A 0%, #444 100%);
-    background: -webkit-linear-gradient(top, #3A3A3A 0%, #444 100%);
-    background: -o-linear-gradient(top, #3A3A3A 0%, #444 100%);
-    background: -ms-linear-gradient(top, #3A3A3A 0%, #444 100%);
-    background: linear-gradient(top, #3A3A3A 0%, #444 100%);
+    background: #444444;
 }
 
 .left {
