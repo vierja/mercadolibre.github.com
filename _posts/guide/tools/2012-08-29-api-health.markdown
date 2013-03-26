@@ -2,13 +2,15 @@
 layout: 1columns
 title: Platform Health
 ---
-
+<script src="/javascripts/lagfeeds.js">
+</script>
 <script src="/javascripts/twitter.js">
 </script>
-
+<script src="/javascripts/initHealth.js">
+</script>
 
 <div class="status_bar">
-    
+
     <div id="status_color_api">
         <div id="general_status" class="status">
         </div>
@@ -28,17 +30,46 @@ title: Platform Health
         </div>
     </div>
 </div>
+<br />
+<!--<h3><u>Lag Feeds</u></h3>-->
+
+<table class="ch-datagrid">
+    <thead>
+        <tr>
+            <th scope="col">Feed</th>
+            <th scope="col">Lag</th>
+            <th scope="col">Last Notification</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><div id="itemsLagStatus">&nbsp; items </div></td>
+            <td><div id="itemsLag">&nbsp;</div></td>
+            <td><div id="itemsNovedadLag">&nbsp;</div></td>
+        </tr>
+        <tr>
+            <td><div id="questionsLagStatus">&nbsp; questions </div></td>
+            <td><div id="questionsLag">&nbsp;</div></td>
+            <td><div id="questionsNovedadLag">&nbsp;</div></td>
+        </tr>
+        <tr>
+            <td><div id="ordersLagStatus">&nbsp; orders </div></td>
+            <td><div id="ordersLag">&nbsp;</div></td>
+            <td><div id="ordersNovedadLag">&nbsp;</div></td>
+        </tr>
+    </tbody>
+</table>
 
 <div class="ch-g1">
     <div class="SubTitles">Recent News</div>
     <div id="lastTweets"></div>
 </div>
-     
+
 
 <style>
 
 .status {
-    padding: 5%; 
+    padding: 5%;
     font-size: 24px;
     font-weight: bold;
     color: #FFF;
@@ -48,8 +79,8 @@ title: Platform Health
 }
 
 .sub_status_bar {
-    width:49.8%; 
-    color: #FFF; 
+    width:49.8%;
+    color: #FFF;
     padding-top: 2%;
     padding-bottom: 2%;
     margin-top: 0.5%;
@@ -75,6 +106,13 @@ title: Platform Health
     font-size: 20px;
 }
 
+.inner_status_box {
+    width: 50%;
+    margin: auto;
+    display: block;
+    font-size: 20px;
+}
+
 .inner_status_bar img{
     margin-right: 5%;
 }
@@ -86,9 +124,9 @@ title: Platform Health
 }
 
 .SubTitles {
-    color: #DC7B1C; 
-    font-size: 18px; 
-    font-weight: bold; 
+    color: #DC7B1C;
+    font-size: 18px;
+    font-weight: bold;
     padding-bottom: 15px;
     margin-top: 20px;
 }
@@ -112,22 +150,22 @@ title: Platform Health
     color: #333333;
     padding: 10px;
 }
- 
+
 #lastTweets .tweet {
     margin: 0 auto 15px auto;
     padding: 0 0 15px 0;
     border-bottom: 1px dotted #ccc;
 }
- 
+
 #lastTweets .tweet a {
     text-decoration: none;
     color: #13c9d0;
 }
- 
+
 #lastTweets .tweet a:hover {
     text-decoration: underline;
 }
- 
+
 #lastTweets .tweet .time {
     font-size: 10px;
     font-style: italic;
@@ -135,4 +173,3 @@ title: Platform Health
 }
 
 </style>
-
