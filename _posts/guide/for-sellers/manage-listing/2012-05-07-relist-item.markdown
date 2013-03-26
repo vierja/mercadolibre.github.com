@@ -20,7 +20,7 @@ In case you need to list an item again (this may happen if you have sold the spe
 
 It’s different from creating a new listing from scratch. By relisting an item, all the questions, sales and visits the item had will be kept. It’s like extending the listing period with a new listing.
 
-Only items with a “closed” status admit relisting. For more details about listing status see [changing listing status](/change-listing-status).
+Only items with a “closed” status admit relisting. For more details about listing status see [changing listing status](/modify-listing/#changing-status).
 
 <div class="contents">
   <h5>Table of Contents</h5>

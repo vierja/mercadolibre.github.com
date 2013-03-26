@@ -241,7 +241,7 @@ If you were to receive an error status code on a response when communicating wit
 
 ## Modify, change status and relist a property {#res-modify-pause-finalize}
 
-You can [Modify a listing](/modify-listing) field as with any other item or [Change its status](/change-listing-status).
+You can [Modify a listing](/modify-listing) field as with any other item or [Change its status](/modify-listing/#changing-status).
 
 
 Real estate listings have an expiration date. This expiration date is usually up to two months following the activation date (depending on whether a promotional pack is active or not) 

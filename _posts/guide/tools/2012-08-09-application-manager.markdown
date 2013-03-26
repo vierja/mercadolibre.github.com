@@ -71,4 +71,4 @@ There are several types of applications. However we will divide them in three gr
 
 **- Notifications callback URL: ** Configure the public URL of your domain where you want to receive the notifications on the different topics. 
 
-**- Topics: ** Comma-separated list of ‘topics’ you want to subscribe to. There are three possible topics: orders, items, questions.
+**- Topics: ** Comma-separated list of ‘topics’ you want to subscribe to. There are three possible topics: orders, items, questions, payments.
