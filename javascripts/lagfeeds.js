@@ -11,7 +11,6 @@ LAGFEEDS = {
                     $('#'+status[i]['name']+'LagStatus').html('&nbsp<img src="http://feeds.mercadolibre.com/itemFeedCheckerRecursos/'+status[i]['status']+'.png"> &nbsp&nbsp'+status[i]['name']);
                     $('#'+status[i]['name']+'Lag').html(status[i]['lag']+' sec. &nbsp&nbsp');
                     $('#'+status[i]['name']+'NovedadLag').html('&nbsp&nbsp '+status[i]['lastNoticeFeed']+' &nbsp&nbsp');
-                   $('#'+status[i]['name']+'PostLag').html('&nbsp&nbsp '+status[i]['lastPost']+' &nbsp&nbsp');
                 }
             }
         });
