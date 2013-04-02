@@ -1,13 +1,13 @@
 ---
 layout: events-photos
-title: Winners 1st Hackathon Libre Argentina
+title: Winners MercadoLibre Hackathon BsAs 2013
 ---
 
 <section class="main main-content">
     <h1>{{ page.title }}</h1>
     <div class="ch-g1">
         <p align="center">
-            <img src="../images/hackathon_branco_24.jpg" alt="1st Hackathon Libre Argentina" title="1st Hackathon Libre Argentina">
+            <img src="../images/hackathon_branco_24.jpg" alt="MercadoLibre Hackathon BsAs 2013" title="MercadoLibre Hackathon BsAs 2013">
         </p>
         <p>
         No dia 23 de março de 2013 aconteceu o primeiro Hackathon livre, o mercado livre abriu a porta para os desenvolvedores mostrarem toda sua criatividade utilizando as apis do mercado livre, o desafio era quem iria ter a idéia mais criativa e coloca-la em prática em uma maratona de 12 horas de codificação, a idéia tinha que visar os vendedores do mercado livre
