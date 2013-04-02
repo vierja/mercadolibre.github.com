@@ -26,8 +26,8 @@ require '../src/meli.php';
 
 // Create our Application instance (replace this with your appId and secret).
 $meli = new Meli(array(
-    'appId'         => 12345,
-    'secret'        => dsadsaDWFfs24DF34dgg43T3,
+    'appId'         => '12345',
+    'secret'        => 'dsadsaDWFfs24DF34dgg43T3',
 ));
 {% endhighlight %}
 	
