@@ -49,7 +49,13 @@ section.main {
 	width:650px;
 	padding-right:50px;
 }
-
+.clear {
+	margin: 0;
+	float: left;
+	clear: both;
+	width: 100%;
+	height: 50px;
+}
 section.main img {
 	max-width:100%;
 }
@@ -60,10 +66,31 @@ section.main h1 {
 	line-height:1em;
 }
 
+section.main h1.winners {
+	margin: 35px 0 0 0;
+}
+
 section.main h2 {
 	font-size:24px;
 	margin:40px 0 20px 0;
 	line-height: 1.3em;
+}
+
+section.main h2.winner {
+	height: 80px;
+	font-size: 16px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+
+section.main h2.winner span {
+	font-size: 22px;
+}
+
+section.main span.equipe {
+	text-align: center;
+	display: block;
+	width: 100%;
 }
 
 section.main h3 {
@@ -593,6 +620,87 @@ footer .maintained-by{
 	margin:0 0 10px;
 }
 
+.box-event {
+	width: 700px;
+	margin: 20px 0 20px 0;
+	border: 1px solid #efefef;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	float: left;
+	clear: both;
+}
+.box-event h3 {
+	border-bottom: 1px solid #F4F4F4;
+	background: #f9f9f9 url("../images/noise.gif") repeat scroll 0 0;
+	font-size: 20px !important;
+	margin: 0px 0 10px 0 !important;
+	padding: 10px 20px;
+}
+.box-event .middle {
+	overflow: hidden;
+	padding: 0px 16px 10px;
+}
+.box-event .middle .info-left {
+	float: left;
+	padding: 0 10px 0 0;
+	width: 180px;
+}
+.box-event .middle h4 {
+	color: #898989;
+	font-size: 18px;
+	line-height: 25px;
+	margin: 0 0 10px;
+	font-family: Arial,Helvetica,"Nimbus Sans L",sans-serif;
+}
+p.footer-event {
+	display: block;
+	width: 100%;
+	margin: 20px 0 20px 0;
+}
+
+.big-image img {
+	width: 670px;
+}
+
+.myCarousel .ch-carousel-item {
+	width: 90px;
+	height: 90px;
+	padding: 0 6px 0 6px;
+}
+
+.myCarousel img {
+	max-width: 100%;
+	max-height: 100%;
+	cursor: pointer;
+}
+.showroomIcons {
+	overflow: hidden;
+}
+
+.showroomIcons li{
+	float:left;
+	width: 33%;
+	line-height: 2em;
+}
+
+.autoComplete {
+	width: 250px;
+}
+
+.autoComplete2 {
+	width: 350px;
+}
+
+.autoComplete3 {
+	width: 450px;
+}
+
+.ch-loading-small {
+	display: block;
+	margin:0 auto;
+}
+
 .menubar {
 	background:#f9f9f9 url("../images/noise.gif") repeat scroll 0 0;
 	-o-border-radius:5px;
@@ -617,6 +725,16 @@ footer .maintained-by{
 .menubar h2 {
 	color:#C0C0C0;
 }
+.menubar ul li.option small {
+	width: 100%;
+	float: left;
+	margin: -3px 0 5px 5px;
+	color: rgb(199, 199, 199);
+}
+.menubar.events h2 {
+	color: #000;
+}
+
 /*
 .contents p {
 	font-size:10px;
