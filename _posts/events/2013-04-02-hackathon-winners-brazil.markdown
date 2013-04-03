@@ -1,25 +1,30 @@
 ---
 layout: events-photos
-title: Winners 1st Hackathon Livre Brazil
+title: Winners 1st Hackathon Livre!
 ---
 
 <section class="main main-content">
     <h1>{{ page.title }}</h1>
     <div class="ch-g1">
         <p align="center">
-            <img src="../images/hackathon_branco.jpg" alt="1st Hackathon Libre Brazil" title="1st Hackathon Libre Brazil">
+            <img src="../images/hackathon_branco.jpg" alt="1st Hackathon Livre!" title="1st Hackathon Livre!">
         </p>
-        <p>
-        No dia 23 de março de 2013 aconteceu o primeiro Hackathon livre, o mercado livre abriu a porta para os desenvolvedores mostrarem toda sua criatividade utilizando as apis do mercado livre, o desafio era quem iria ter a idéia mais criativa e coloca-la em prática em uma maratona de 12 horas de codificação, a idéia tinha que visar os vendedores do mercado livre
+        <p style="text-align: justify">
+        No sábado, dia 23/03, o MercadoLivre realizou o 1º Hackathon Livre, maratona de programação para desenvolver novas funcionalidades a partir das APIs do MeLi. Estiveram presentes no evento 46 programadores que durante as doze horas de evento, pensaram em soluções que facilitem a vida dos vendedores na plataforma do MercadoLivre.
         </p>
     </div>
-    <p>&nbsp;</p>
     <div class="ch-g1">
-       <p>
-            Houve muitos participantes todos tiveram os seus méritos muitos projetos criativos Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac libero lorem. Curabitur hendrerit metus erat. Ut tempus leo non neque auctor semper. Praesent faucibus, dui et vehicula faucibus, nulla turpis feugiat erat, id ultricies urna ligula non felis. Suspendisse odio purus, fringilla a auctor sed, mattis lobortis lectus. Nullam ac fermentum sem.
+       <p style="text-align: justify">
+        Entre os 15 projetos apresentados, surgiram ideias de aplicativos mobile e para Facebook, criação de relatórios, comparativos de preços, cadastramento em lote de anúncios, entre outros.
+        </p>
+        <p style="text-align: justify">
+        Os ganhadores desta primeira maratona foram avaliados pela criatividade, inovação, originalidade e o bom uso das APIs do MercadoLivre.
+        </p>
+        <p style="text-align: justify">
+        Tendo em vista esses critérios, o projeto que se destacou foi o eShelf, criado pelos desenvolvedores Raphael Ferras, Glauber Gonçalves e Maurício Giordano. O aplicativo tem como objetivo criar uma prateleira virtual onde o vendedor pode cadastrar os seus produtos e gerar QR Codes que podem ser exibidos em monitores de mídia OOH (Out of home). Qualquer pessoa que seja abordada por essa mídia, poderá comprar os produtos imediatamente através dos seus celulares.
         </p>
         <p>
-            <h1 class='winners'>Winners</h1>
+            <h1 class='winners'>Ranking</h1>
         </p>
     <div class="ch-g1">
        <div class="ch-g1-3">
@@ -55,12 +60,12 @@ title: Winners 1st Hackathon Livre Brazil
            </div>
        </div>
     </div>
-    <p class='footer-event'>
-    Esse foi só o primeiro Hackathon nao deixe de conferir nossa pagina de eventos, o mercado livre bla bla bla Vestibulum vitae posuere risus. Ut a risus non felis eleifend laoreet et non sem. Ut lectus sem, vehicula eget fringilla id, interdum vitae libero.
+    <p class='footer-event' style="text-align: justify">
+    Parabenizamos os vencedores e todos os participantes que se empenharam nesta primeira edição do Hackathon Livre e já aguardamos ansiosamente a próxima edição!
     </p>
   </div>
   <div class="box-event">
-      <h3>Fotos hackathon!</h3>
+      <h3>Hackathon Livre!</h3>
       <div class="middle">
         <div class="big-image">
           <img src="/images/hackathon-br/DSC_0082.JPG" />
