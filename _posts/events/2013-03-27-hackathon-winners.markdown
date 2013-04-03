@@ -1,6 +1,6 @@
 ---
 layout: events-photos
-title: Winners 1st Hackathon Libre
+title: Winners 1st Hackathon MercadoLibre
 ---
 
 <section class="main main-content">
