@@ -14,9 +14,9 @@ title: Next events
   <div class="middle">
     <div class="info-left">
       <h4>2013 - April, 11<br /><br />Parque Norte <br />Buenos Aires<br />Argentina </h4>
-      <a href="https://eventioz.com.br/events/mercadolibre-developers-conference">Apply for event.</a>
+      <a href="http://devconf.mercadolibre.com">Apply for event.</a>
     </div>
-      <a href="https://eventioz.com.br/events/mercadolibre-developers-conference" class='banner-right'><img alt="1st MercadoLibre Developers Conference - Argentina" src="../images/buenos_aires3.jpg" ></a>
+      <a href="http://devconf.mercadolibre.com" class='banner-right'><img alt="1st MercadoLibre Developers Conference - Argentina" src="../images/buenos_aires3.jpg" ></a>
 <!--      width="477px" height="140px"-->
   </div>
 </div>
