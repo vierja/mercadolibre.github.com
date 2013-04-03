@@ -1,146 +1,103 @@
 ---
-layout: events
+layout: events-photos
 title: Winners 1st Hackathon Libre
 ---
 
 <section class="main main-content">
     <h1>{{ page.title }}</h1>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac libero lorem. Curabitur hendrerit metus erat. Ut tempus leo non neque auctor semper. Praesent faucibus, dui et vehicula faucibus, nulla turpis feugiat erat, id ultricies urna ligula non felis. Suspendisse odio purus, fringilla a auctor sed, mattis lobortis lectus. Nullam ac fermentum sem.
+    <div class="ch-g1">
+        <p align="center">
+            <img src="../images/hackathon_white_big.jpg" alt="1st Hackathon MercadoLibre" title="1st Hackathon MercadoLibre">
         </p>
+        <p style="text-align: justify">
+        On Saturday 03/23, Mercadolibre held the 1st Hackathon Libre, a programming marathon to develop new features from MeLi APIs. Attended the event 46 developers during the twelve hour of event, the mission was to think of solutions that facilitate the life of the sellers in the MercadoLibre platform.
+        </p>
+    </div>
+    <div class="ch-g1">
+       <p style="text-align: justify">
+        Among the 15 projects presented, emerged ideas for Facebook and mobile applications, reporting, comparative pricing, registration batch of ads, and others.
+        </p>
+        <p style="text-align: justify">
+        The winners of this first marathon were evaluated by creativity, innovation, originality and good use of MercadoLibre APIs
+        </p>
+        <p style="text-align: justify">
+        Given these criteria, the project highlighted in Brazil was the eShelf, created by developers Raphael Ferras, Glauber Gonçalves and Maurice Giordano. The application aims to create a virtual shelf where the seller can register their products and generate QR Codes that can be displayed on monitors media OOH (Out of home). Anyone can purchase the products instantly through their mobile phones.
+        </p>
+        <p>
+            <h1 class='winners'>Ranking Brazil</h1>
+        </p>
+        <div class="ch-g1">
+           <div class="ch-g1-5">
+               <div class="ch-leftcolumn">
+                    <h2 class='winner'>1st<br /><span>eShelf</span></h2>
+                    <ul class="ch-list">
+                        <li>Raphael F.</li>
+                        <li>Glauber G.</li>
+                        <li>Maurício G.</li>
+                    </ul>
+                </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-centercolumn">
+                    <h2 class='winner'>2nd<br /><span>Zé Barganha</span></h2>
+                    <ul class="ch-list">
+                        <li>Rafael H.</li>
+                        <li>Rafael C.</li>
+                        <li>Guilherme P.</li>
+                        <li>Fabio G.</li>
+                    </ul>
+               </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-centercolumn">
+                   <h2 class='winner'>3rd<br /><span>Meli Pro-Tools</span></h2>
+                    <ul class="ch-list">
+                        <li>Luciano C.</li>
+                    </ul>
+               </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-centercolumn">
+                    <h2 class='winner'>4th<br /><span>Meli Wordpress</span></h2>
+                    <ul class="ch-list">
+                        <li>Alexandre B.</li>
+                    </ul>
+               </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-rightcolumn">
+                   <h2 class='winner'>5th<br /><span>Mercado Commerce</span></h2>
+                    <ul class="ch-list">
+                        <li>Lucas M.</li>
+                    </ul>
+               </div>
+           </div>
+        </div>
+
+    <p class='footer-event' style="text-align: justify">
+    Congrats to all winners and all participants that have engaged at the first edition od Hackathon MercadoLibre. We're so excited for next edition!
+    </p>
+  </div>
+  <div class="box-event">
+      <h3>Pictures 1st Hackathon MercadoLibre</h3>
+      <div class="middle">
+        <div class="big-image">
+          <img src="/images/hackathon-br/DSC_0082.JPG" />
+        </div>
+      <div class="myCarousel ch-carousel">
+        <ul>
+          <li><img src="/images/hackathon-br/DSC_0082.JPG" /></li>
+          <li><img src="/images/hackathon-br/DSC_0088.JPG" /></li>
+          <li><img src="/images/hackathon-br/DSC_0103.JPG" /></li>
+          <li><img src="/images/hackathon-br/DSC_0329.JPG" /></li>
+          <li><img src="/images/hackathon-br/DSC_0330.JPG" /></li>
+          <li><img src="/images/hackathon-br/DSC_0340.JPG" /></li>
+          <li><img src="/images/hackathon-br/IMG_1376.JPG" /></li>
+          <li><img src="/images/hackathon-br/IMG_1388.JPG" /></li>
+        </ul>
+      </div>
+      </div>
+    </div>
 </section>
 
-<div class="ch-g1-2">
-    <div class="ch-leftcolumn" style="text-align: justify">
-        <h3>Hackathon Argentina</h3>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac libero lorem. Curabitur hendrerit metus erat. Ut tempus leo non neque auctor semper. Praesent faucibus, dui et vehicula faucibus, nulla turpis feugiat erat, id ultricies urna ligula non felis. Suspendisse odio purus, fringilla a auctor sed, mattis lobortis lectus. Nullam ac fermentum sem.
-        </p>
-        <h3>Winners</h3>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <h4>Nome da Equipe</h4>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <p>
-        Donec molestie urna ut quam suscipit non dignissim massa mattis. Fusce quis neque sit amet ligula varius auctor. Sed a turpis at ipsum lacinia sodales.
-        </p>
-        <h2>Nome do Projeto - <a href="http://github.com">http://github.com</a></h2>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <p>
-        Vestibulum vitae posuere risus. Ut a risus non felis eleifend laoreet et non sem. Ut lectus sem, vehicula eget fringilla id, interdum vitae libero.
-        </p>
-    </div>
-</div>
-<div class="ch-g1-2">
-    <div class="ch-rightcolumn" style="text-align: justify">
-        <h3>Hackathon Brasil</h3>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac libero lorem. Curabitur hendrerit metus erat. Ut tempus leo non neque auctor semper. Praesent faucibus, dui et vehicula faucibus, nulla turpis feugiat erat, id ultricies urna ligula non felis. Suspendisse odio purus, fringilla a auctor sed, mattis lobortis lectus. Nullam ac fermentum sem.
-        </p>
-        <h3>Winners</h3>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <h4>Nome da Equipe</h4>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <p>
-        Donec molestie urna ut quam suscipit non dignissim massa mattis. Fusce quis neque sit amet ligula varius auctor. Sed a turpis at ipsum lacinia sodales.
-        </p>
-        <h2>Nome do Projeto - <a href="http://github.com">http://github.com</a></h2>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <h4>Nome do Projeto - <a href="http://github.com">http://github.com</a></h4>
-        <p>Nome da Equipe</p>
-        <ul class="ch-list">
-            <li>Fulano</li>
-            <li>Ciclano</li>
-            <li>Beltrano</li>
-        </ul>
-        <p>
-        Vestibulum vitae posuere risus. Ut a risus non felis eleifend laoreet et non sem. Ut lectus sem, vehicula eget fringilla id, interdum vitae libero.
-        </p>
-    </div>
-</div>
-<p>&nbsp;</p>
-<div class="ch-g1">
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac libero lorem. Curabitur hendrerit metus erat. Ut tempus leo non neque auctor semper. Praesent faucibus, dui et vehicula faucibus, nulla turpis feugiat erat, id ultricies urna ligula non felis. Suspendisse odio purus, fringilla a auctor sed, mattis lobortis lectus. Nullam ac fermentum sem.
-    </p>
-</div>
+{% include menu-events.html %}
