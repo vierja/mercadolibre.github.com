@@ -75,7 +75,7 @@ title: Winners 1st Hackathon Libre
         </div>
 
     <p class='footer-event' style="text-align: justify">
-    Congrats to all winners and all participants that have engaged at the first edition od Hackathon MercadoLibre. We're so excited for next edition!
+    Congrats to all winners and all participants that have engaged at the first edition of Hackathon MercadoLibre. We're so excited for next edition!
     </p>
   </div>
   <div class="box-event">
