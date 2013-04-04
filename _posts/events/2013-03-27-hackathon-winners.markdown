@@ -83,31 +83,53 @@ title: Winners 1st Hackathon MercadoLibre
            <div class="ch-g1-5">
                <div class="ch-leftcolumn">
                     <h2 class='winner'><span>MaiLister</span></h2>
+                    <ul class="ch-list">
+                        <li>David L.</li>
+                    </ul>
                 </div>
            </div>
            <div class="ch-g1-5">
                <div class="ch-centercolumn">
                     <h2 class='winner'><span>Mercado Insights</span></h2>
+                    <ul class="ch-list">
+                        <li>Federico B.</li>
+                        <li>Kevin H.</li>
+                    </ul>
                </div>
            </div>
            <div class="ch-g1-5">
                <div class="ch-centercolumn">
                    <h2 class='winner'><span>Mercado Stock</span></h2>
+                   <ul class="ch-list">
+                        <li>Matias A.</li>
+                        <li>Pablo C.</li>
+                    </ul>
                </div>
            </div>
            <div class="ch-g1-5">
                <div class="ch-centercolumn">
-                    <h2 class='winner'><span>SmarTools</span></h2>
+                    <h2 class='winner'><span>Smart Tools</span></h2>
+                    <ul class="ch-list">
+                        <li>Mariano Y.</li>
+                        <li>Ignacio C.</li>
+                        <li>Ariel M.</li>
+                    </ul>
                </div>
            </div>
            <div class="ch-g1-5">
                <div class="ch-rightcolumn">
                    <h2 class='winner'><span>The Price is Right</span></h2>
+                   <ul class="ch-list">
+                        <li>Lucadas M.</li>
+                        <li>Nacho C.</li>
+                        <li>Brian B.</li>
+
+                    </ul>
                </div>
            </div>
         </div>
 
-    <p class='footer-event' style="text-align: justify">
+    <p class='footer-event' style="text-align: justify; margin-top: 35px; float: left;">
     Winners will be announced on the 1st Developers Conference Argentina in April, 11.
     </p>
 
