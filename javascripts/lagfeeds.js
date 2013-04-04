@@ -1,7 +1,7 @@
 LAGFEEDS = {
     lagFeedsStatus: function() {
         $.ajax({
-            url: 'http://localhost/~mercadolivre/mockFeeds.php?',
+            url: 'http://feeds.mercadolibre.com/itemFeedChecker/api?',
             type: 'GET',
             dataType: 'jsonp',
             contentType: 'text/html',
