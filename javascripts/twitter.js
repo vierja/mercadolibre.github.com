@@ -109,15 +109,15 @@ JQTWEET = {
 
                 var tweetText = status[0].text.replace('#feedStatus', '');
                 
-                $(JQTWEET.feedStatusDiv).html(
-                    JQTWEET.ify.lightColor(tweetText).
-                          replace('TWEET_TEXT', JQTWEET.ify.clean(tweetText) )
-                          + " " + JQTWEET.ify.statusText('Feed', tweetText)
-                          .replace('AGO', JQTWEET.timeAgo(status[0].created_at) )
-                  );
+                // $(JQTWEET.feedStatusDiv).html(
+                //     JQTWEET.ify.lightColor(tweetText).
+                //           replace('TWEET_TEXT', JQTWEET.ify.clean(tweetText) )
+                //           + " " + JQTWEET.ify.statusText('Feed', tweetText)
+                //           .replace('AGO', JQTWEET.timeAgo(status[0].created_at) )
+                //   );
 
               }else{
-                 $(JQTWEET.feedStatusDiv).html('<div class="tweet"><IMG src="/images/icn-green.png"/> Feeds are up</div>');
+                 // $(JQTWEET.feedStatusDiv).html('<div class="tweet"><IMG src="/images/icn-green.png"/> Feeds are up</div>');
                 if(!$('#status_color_api').is(".yellow,.red,.green"))
                 {
                   $('#status_color_api').addClass('green');
