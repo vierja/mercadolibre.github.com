@@ -10,22 +10,23 @@ title: Winners 1st Hackathon MercadoLibre
             <img src="../images/hackathon_white_big.jpg" alt="1st Hackathon MercadoLibre" title="1st Hackathon MercadoLibre">
         </p>
         <p style="text-align: justify">
-        On Saturday 03/23, Mercadolibre held the 1st Hackathon Libre, a programming marathon to develop new features from MeLi APIs. Attended the event 46 developers during the twelve hour of event, the mission was to think of solutions that facilitate the life of the sellers in the MercadoLibre platform.
+        On Saturday 03/23, Mercadolibre held the 1st Hackathon Libre, a programming marathon to develop new features from MeLi APIs. Attended the event 86 developers (Brazil and Argentina), the mission was to think of solutions that facilitate the life of the sellers in the MercadoLibre platform.
         </p>
     </div>
     <div class="ch-g1">
        <p style="text-align: justify">
-        Among the 15 projects presented, emerged ideas for Facebook and mobile applications, reporting, comparative pricing, registration batch of ads, and others.
+        Among the projects presented, emerged ideas for Facebook and mobile applications, reporting, comparative pricing, registration batch of ads, and others.
         </p>
         <p style="text-align: justify">
         The winners of this first marathon were evaluated by creativity, innovation, originality and good use of MercadoLibre APIs
         </p>
-        <p style="text-align: justify">
-        Given these criteria, the project highlighted in Brazil was the eShelf, created by developers Raphael Ferras, Glauber Gonçalves and Maurice Giordano. The application aims to create a virtual shelf where the seller can register their products and generate QR Codes that can be displayed on monitors media OOH (Out of home). Anyone can purchase the products instantly through their mobile phones.
-        </p>
         <p>
             <h1 class='winners'>Ranking Brazil</h1>
         </p>
+        <p style="text-align: justify">
+            Given these criteria, the project highlighted in Brazil was the eShelf, created by developers Raphael Ferras, Glauber Gonçalves and Maurice Giordano. The application aims to create a virtual shelf where the seller can register their products and generate QR Codes that can be displayed on monitors media OOH (Out of home). Anyone can purchase the products instantly through their mobile phones.
+        </p>
+
         <div class="ch-g1">
            <div class="ch-g1-5">
                <div class="ch-leftcolumn">
@@ -73,6 +74,42 @@ title: Winners 1st Hackathon MercadoLibre
                </div>
            </div>
         </div>
+
+        <p>
+            <h1 class="finalists">Finalists Argentina</h1>
+            <h3 class="finalists">Alphabetically</h3>
+        </p>
+        <div class="ch-g1">
+           <div class="ch-g1-5">
+               <div class="ch-leftcolumn">
+                    <h2 class='winner'><span>MaiLister</span></h2>
+                </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-centercolumn">
+                    <h2 class='winner'><span>Mercado Insights</span></h2>
+               </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-centercolumn">
+                   <h2 class='winner'><span>Mercado Stock</span></h2>
+               </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-centercolumn">
+                    <h2 class='winner'><span>SmarTools</span></h2>
+               </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-rightcolumn">
+                   <h2 class='winner'><span>The Price is Right</span></h2>
+               </div>
+           </div>
+        </div>
+
+    <p class='footer-event' style="text-align: justify">
+    Winners will be announced on the 1st Developers Conference Argentina in April, 11.
+    </p>
 
     <p class='footer-event' style="text-align: justify">
     Congrats to all winners and all participants that have engaged at the first edition of Hackathon MercadoLibre. We're so excited for next edition!
