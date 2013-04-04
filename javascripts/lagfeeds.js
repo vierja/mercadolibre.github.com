@@ -27,7 +27,6 @@ LAGFEEDS = {
                 } else {
                     $('#feedStatus').html('<div class="tweet"><IMG src="/images/icn-green.png"/> Feeds are up</div>');
                 }
-                // feed has some minutes of delay
             }
         });
 
