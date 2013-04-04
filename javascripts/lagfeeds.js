@@ -14,5 +14,9 @@ LAGFEEDS = {
                 }
             }
         });
+
+        window.setTimeout(function() {
+            LAGFEEDS.lagFeedsStatus();
+        }, 5000);
     }
 };
