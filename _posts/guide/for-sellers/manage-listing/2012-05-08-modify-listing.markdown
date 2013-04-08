@@ -101,25 +101,20 @@ Note: the value passed in the "status" key is case sensitive and thus must be se
 
 ## Changing listing type {#changing-type}
 
-To change de listing type you will use a specific URL, you have to send a POST request to our Items API with a type change, to the following URL:
+To change the listing type you will use a specific URL, you have to send a POST request to our Items API with a type change, to the following URL:
 
+Example:
 <pre class="terminal">
-curl https://api.mercadolibre.com/items/ITEM_ID/listing_type
-</pre>
-
-
-Possible values are:
-
-**- diamond** <br/>
-**- gold** <br/>
-**- silver** <br/>
-**- bronze** <br/>
-
-JSON example:
-{% highlight javascript %}
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -d
 {
-	"id":"silver"
+  "id": "silver"
 }
-{% endhighlight %}
-
+https://api.mercadolibre.com/items/ITEM_ID/listing_type
+</pre>
 Note: the value passed in the "id" key is case sensitive and thus must be sent in lowercase.
+
+
+To check the possible values for the listing_type_id:
+<pre class="terminal">
+curl https://api.mercadolibre.com/sites/COUNTRY_ID/listing_types/
+</pre>
