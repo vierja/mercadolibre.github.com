@@ -113,6 +113,7 @@ https://api.mercadolibre.com/items/ITEM_ID/listing_type
 </pre>
 Note: the value passed in the "id" key is case sensitive and this must be sent in lowercase.
 
+**Important!** You only can change the listing type of **active items.**
 
 To check the possible values for the listing_type_id make a GET request in this URL:
 <pre class="terminal">
