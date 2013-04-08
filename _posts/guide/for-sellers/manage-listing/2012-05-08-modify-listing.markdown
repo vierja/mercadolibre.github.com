@@ -111,10 +111,10 @@ curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -
 }
 https://api.mercadolibre.com/items/ITEM_ID/listing_type
 </pre>
-Note: the value passed in the "id" key is case sensitive and thus must be sent in lowercase.
+Note: the value passed in the "id" key is case sensitive and this must be sent in lowercase.
 
 
-To check the possible values for the listing_type_id:
+To check the possible values for the listing_type_id make a GET request in this URL:
 <pre class="terminal">
-curl https://api.mercadolibre.com/sites/COUNTRY_ID/listing_types/
+curl https://api.mercadolibre.com/sites/MLB/listing_types/
 </pre>
