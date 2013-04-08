@@ -1,15 +1,15 @@
 ---
 layout: guides
 title: Modify items
-categories: 
+categories:
 - Listing
 - Manage Listings
 - Orders
 - Manage Questions
 - Shipping
-menu: 
+menu:
 - Listing &amp; Selling
-tags: 
+tags:
 - Manage Listings
 ---
 
@@ -19,6 +19,7 @@ tags:
   <dl>
     <dt><a href="javascript:void(0)" onClick="goToByScroll('#update-item')">Update an Item</a></dt>
     <dt><a href="javascript:void(0)" onClick="goToByScroll('changing-status')">Changing listing status</a></dt>
+    <dt><a href="javascript:void(0)" onClick="goToByScroll('changing-type')">Changing listing type</a></dt>
 </dl>
 </div>
 
@@ -31,7 +32,7 @@ You can modify an item field after it has been listed using our API.
 </pre>
 
 
-You can modify the values for pictures, title, available quantity, price, attributes, etc. 
+You can modify the values for pictures, title, available quantity, price, attributes, etc.
 
 <strong>NOTE on descriptions:</strong>
 
@@ -43,7 +44,7 @@ You must send a JSON formatted body with the elements you wish to modify.
 Example:
 <pre class="terminal">
 curl -X PUT -H "Content-Type: application/json" -H "Accept: application/json" -d
-{ 
+{
   "title": "Your new title",
   "price": 1000
 }
@@ -98,3 +99,22 @@ JSON example:
 
 Note: the value passed in the "status" key is case sensitive and thus must be sent in lowercase.
 
+## Changing listing type {#changing-type}
+
+To change the listing type you will use a specific URL, you have to send a POST request to our Items API with a type change, to the following URL:
+
+Example:
+<pre class="terminal">
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -d
+{
+  "id": "silver"
+}
+https://api.mercadolibre.com/items/ITEM_ID/listing_type
+</pre>
+Note: the value passed in the "id" key is case sensitive and this must be sent in lowercase.
+
+
+To check the possible values for the listing_type_id make a GET request in this URL:
+<pre class="terminal">
+curl https://api.mercadolibre.com/sites/MLB/listing_types/
+</pre>
