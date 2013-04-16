@@ -1,11 +1,11 @@
 ---
 layout: 1columns
 title: API Directory
-categories: 
+categories:
 - API Directory
 menu:
 - API Directory
-tags: 
+tags:
 - API Directory
 ---
 
@@ -48,7 +48,7 @@ th p{
 
 <br />
 
-###Users and Apps 
+###Users and Apps
 <p> Under users and apps we will find all the resources relatives to mercadolibre users, applications and scopes.  </p>
 
 <table>
@@ -147,8 +147,8 @@ th p{
       <td>Displays attributes and rules over them in order to describe the items that are stored in each category. Rules are executed while posting the item. So the current attribute settings may be inconsistent with items which have been posted with another configuration.</td>
     </tr>
 </tbody>
-</table>  
-  
+</table>
+
 <br />
 <br />
 
@@ -239,7 +239,7 @@ th p{
     <tr>
       <td class="left_column"><a href="https://api.mercadolibre.com/sites/MLA/hot_items/search?limit=5&amp;category=MLA1743" target="_blank">/sites/{site_id}/hot_items/search?limit=5&amp;category={category_id} </a>
 </td>
-      <td>Retrieve an array of the hot items from the category specified by parameter.</td>
+      <td>Retrieve an array of the hot items from the category specified by parameter. Works only with the first level of categories.</td>
     </tr>
     <tr>
       <td class="left_column"><a href="https://api.mercadolibre.com/sites/MLA/featured_items/HP" target="_blank">/sites/{site_id}/featured_items/{pool_id} </a>
