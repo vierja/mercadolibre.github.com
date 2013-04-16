@@ -76,21 +76,16 @@ title: Winners 1st Hackathon MercadoLibre
         </div>
 
         <p>
-            <h1 class="finalists">Finalists Argentina</h1>
-            <h3 class="finalists">Alphabetically</h3>
+            <h1 class="finalists">Ranking Argentina</h1>
         </p>
+        <p style="text-align: justify">
+            The project highlighted in Argentina was the Mercado Insights, created by Frederico Bond and Kevin Hanna. The project calculates statistics for sellers, suggesting optimal sales price, the right title, best shipping policy etc.
+        </p>
+
         <div class="ch-g1">
            <div class="ch-g1-5">
                <div class="ch-leftcolumn">
-                    <h2 class='winner'><span>MaiLister</span></h2>
-                    <ul class="ch-list">
-                        <li>David L.</li>
-                    </ul>
-                </div>
-           </div>
-           <div class="ch-g1-5">
-               <div class="ch-centercolumn">
-                    <h2 class='winner'><span>Mercado Insights</span></h2>
+                    <h2 class='winner'><span>1st<br />Mercado Insights</span></h2>
                     <ul class="ch-list">
                         <li>Federico B.</li>
                         <li>Kevin H.</li>
@@ -99,7 +94,15 @@ title: Winners 1st Hackathon MercadoLibre
            </div>
            <div class="ch-g1-5">
                <div class="ch-centercolumn">
-                   <h2 class='winner'><span>Mercado Stock</span></h2>
+                    <h2 class='winner'><span>Finalist<br />MaiLister</span></h2>
+                    <ul class="ch-list">
+                        <li>David L.</li>
+                    </ul>
+                </div>
+           </div>
+           <div class="ch-g1-5">
+               <div class="ch-centercolumn">
+                   <h2 class='winner'><span>Finalist<br />Mercado Stock</span></h2>
                    <ul class="ch-list">
                         <li>Matias A.</li>
                         <li>Pablo C.</li>
@@ -108,7 +111,7 @@ title: Winners 1st Hackathon MercadoLibre
            </div>
            <div class="ch-g1-5">
                <div class="ch-centercolumn">
-                    <h2 class='winner'><span>Smart Tools</span></h2>
+                    <h2 class='winner'><span>Finalist<br />Smart Tools</span></h2>
                     <ul class="ch-list">
                         <li>Mariano Y.</li>
                         <li>Ignacio C.</li>
@@ -118,7 +121,7 @@ title: Winners 1st Hackathon MercadoLibre
            </div>
            <div class="ch-g1-5">
                <div class="ch-rightcolumn">
-                   <h2 class='winner'><span>The Price is Right</span></h2>
+                   <h2 class='winner'><span>Finalist<br />The Price is Right</span></h2>
                    <ul class="ch-list">
                         <li>Lucadas M.</li>
                         <li>Nacho C.</li>
@@ -129,14 +132,15 @@ title: Winners 1st Hackathon MercadoLibre
            </div>
         </div>
 
-    <p class='footer-event' style="text-align: justify; margin-top: 35px; float: left;">
-    Winners will be announced on the 1st Developers Conference Argentina in April, 11.
-    </p>
-
     <p class='footer-event' style="text-align: justify">
     Congrats to all winners and all participants that have engaged at the first edition of Hackathon MercadoLibre. We're so excited for next edition!
     </p>
+
+    <p class='footer-event' style="text-align: justify">
+        <object width="700" height="446"><param name="movie" value="http://www.youtube.com/v/01hl9DNjGGM?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/01hl9DNjGGM?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="700" height="446" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+    </p>
   </div>
+
   <div class="box-event">
       <h3>Pictures 1st Hackathon MercadoLibre</h3>
       <div class="middle">
