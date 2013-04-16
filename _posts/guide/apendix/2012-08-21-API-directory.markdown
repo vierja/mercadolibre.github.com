@@ -244,7 +244,7 @@ th p{
     <tr>
       <td class="left_column"><a href="https://api.mercadolibre.com/sites/MLA/featured_items/HP" target="_blank">/sites/{site_id}/featured_items/{pool_id} </a>
 </td>
-      <td>Retrieve an array of the feature items.</td>
+      <td>Retrieve an array of the feature items. The featured items are items that have a special exposure at home page or categories page. You can use only HP for products of home or HP-{categId} for featured by category. Only works with first level of categories.</td>
     </tr>
     <tr>
       <td class="left_column"><a href="https://api.mercadolibre.com/sites/MLA/trends/search?category=MLA1042" target="_blank">/sites/{site_id}/trends/search?category={category_id} </a>
