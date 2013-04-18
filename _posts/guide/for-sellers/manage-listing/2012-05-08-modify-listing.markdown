@@ -71,6 +71,15 @@ In the request body you must send:
 }
 {% endhighlight %}
 
+Example:
+<pre class="terminal">
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -d
+{
+  "text": "You additional description text."
+}
+https://api.mercadolibre.com/items/ITEM_ID/descriptions?access_token=YOUR_ACCESS_TOKEN
+</pre>
+
 If the description has been successfully posted, you will receive a "201 Created" status code. Keep in mind that it might take some minutes for your new description to be shown.
 
 ## Changing listing status {#changing-status}
