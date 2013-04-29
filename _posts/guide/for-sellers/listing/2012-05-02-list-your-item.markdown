@@ -200,3 +200,79 @@ curl https://api.mercadolibre.com/sites/MLA/listing_types/silver
 {% endhighlight %}
 
 For more details about listing type costs, you can visit [MercadoLibre help site](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ).
+
+##Error Codes Reference {#error-codes}
+
+<table class="ch-datagrid errors-code">
+    <thead>
+      <tr>
+         <th cope="col">Error_code</th>
+         <th cope="col">Error message</th>
+         <th cope="col">Description</th>
+         <th cope="col">Possible solution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+         <td>invalid_client</td>
+         <td>Error getting client information for client_id: ${0}</td>
+         <td>Unknown user.</td>
+         <td>Verify if the user is valid.</td>
+      </tr>
+      <tr>
+         <td>invalid_client</td>
+         <td>invalid client_id : {0}</td>
+         <td>The client identifier provided is invalid.</td>
+         <td>The parameter client_id is invalid, consult your application.</td>
+      </tr>
+      <tr>
+         <td>invalid_client</td>
+         <td>invalid client_id[{0}] or client_secret[{1}]</td>
+         <td>Invalid client_id or client_secret provided.</td>
+         <td>The parameters client_id or client_secret is invalid, consult your application.</td>
+      </tr>
+      <tr>
+         <td>invalid_grant</td>
+         <td>To create an access token the user {0} must have an active session, or your application should request authorization for offline_access scope.</td>
+         <td>The provided authorization grant is invalid, expired, revoked, or does not match the redirection URI used in the authorization request.</td>
+         <td>Verify the parameter redirect_uri is the same configured in your application (<a href='http://applications.mercadolibre.com/' target='_blank'>App Manager</a>), if this not solve, do a new request to obtain a new code.</td>
+      </tr>
+      <tr>
+         <td>invalid_grant</td>
+         <td>Error validating grant. Your authorization code or refresh token may have expired or it has already been used.</td>
+         <td>It has expired or it has already been used.</td>
+         <td>Make a new request to obtain one new code or refresh_token.</td>
+      </tr>
+      <tr>
+         <td>invalid_grant</td>
+         <td>The client_id does not match the original.</td>
+         <td>Client id does not match.</td>
+         <td>The parameter client_id wasn't found, to get your client_id, consult your application (<a href='http://applications.mercadolibre.com/' target='_blank'>App Manager</a>).</td>
+      </tr>
+      <tr>
+         <td>invalid_grant</td>
+         <td>The redirect_uri does not match the original.</td>
+         <td>Redirect URI does not match the original.</td>
+         <td>The parameter redirect_uri is not the same configured in you application, to get your a redirect_uri, consult your application (<a href='http://applications.mercadolibre.com/' target='_blank'>App Manager</a>)</td>
+      </tr>
+      <tr>
+         <td>invalid_scope</td>
+         <td>Invalid scope.</td>
+         <td>The requested scope is invalid, unknown, or malformed.</td>
+         <td>The values allowed for parameter scope are: "offline_access","write","read"</td>
+      </tr>
+      <tr>
+         <td>invalid_request</td>
+         <td>Wrong number of parameters with duplicate values.</td>
+         <td>The request is missing a required parameter, includes an unsupported parameter or parameter value, or is otherwise malformed.</td>
+         <td>Verify that the parameters sent are valid and are not duplicated.</td>
+      </tr>
+      <tr>
+         <td>unsupported_grant_type</td>
+         <td>Unsupported grant type: ${0}.</td>
+         <td>The authorization grant type is not supported by the authorization server.</td>
+         <td>The values allowed for parameter grant_type are "authorization_code" or "refresh_token".</td>
+      </tr>
+   </tbody>
+</table>
+

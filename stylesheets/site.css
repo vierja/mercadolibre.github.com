@@ -582,7 +582,9 @@ footer .maintained-by{
 .sidebar h2:first-child{
 	margin-bottom: 13px;
 }
-
+.errors-code {
+	width: 991px;
+}
 
 
 

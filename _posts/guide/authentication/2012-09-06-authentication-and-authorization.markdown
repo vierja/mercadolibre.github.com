@@ -336,9 +336,10 @@ If the user has provided you with offline access, then by using the server-side 
 <pre>https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=&client_secret=&refresh_token=</pre>
 you will get a new access_token and also a new refresh token. Note that a refresh token can be used only once. 
 
+
 ##Error Codes Reference {#error-codes}
 
-<table class="ch-datagrid">
+<table class="ch-datagrid errors-code">
     <thead>
       <tr>
          <th cope="col">Error_code</th>
