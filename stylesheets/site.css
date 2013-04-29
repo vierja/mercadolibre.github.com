@@ -454,7 +454,14 @@ section.main .do-it h3 {
 
 
 
-
+.socialPages {
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.socialPages .fb-like {
+	margin-right: 30px;
+}
 .social {
 	border-top:1px dashed #ccc;
 }
@@ -519,10 +526,30 @@ footer {
 }
 
 .extra-report-issue,
-.extra-twitter
+.extra-social
 {
 	float: right;
 	text-align: right;
+}
+.extra-report-issue {
+	width: 86px;
+}
+
+.extra-social a {
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	overflow: hidden;
+	color: transparent;
+	font-size: 0;
+	float: left;
+	margin-right: 5px;
+}
+.extra-social a.twitter {
+	background: url('../images/footer-twitter-logo.png') no-repeat;
+}
+.extra-social a.facebook {
+	background: url('../images/footer-face-logo.png') no-repeat;
 }
 
 footer .social {
@@ -937,6 +964,39 @@ section.main .home-list p.updated {
 .error404 {
 	color: #ccc;
 }
+
+
+
+/** API FAQ **/
+.frequent-questions {
+	margin-top: 30px;
+}
+.questions {
+	float: left;
+	clear: both;
+	width: 100%;
+}
+.questions .ask {
+	margin-left: 20px;
+	cursor: pointer;
+	margin-top: 15px;
+	list-style: decimal;
+	line-height: 22px;
+	font-size: 17px;
+	border-bottom: 1px solid #EFEFEF;
+	padding-bottom: 15px;
+}
+.questions .ask:last-child {
+	border: none;
+}
+.questions .ask .answer {
+	margin-left: 40px;
+	display: none;
+	font-size: 13px;
+	line-height: normal;
+	margin-top: 15px;
+}
+
 
 
 
