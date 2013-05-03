@@ -37,3 +37,7 @@ https://api.mercadolibre.com/items/MLA430387888/descriptions?access_token=$ACCES
 </pre>
 
 That’s all!. Go to your item’s VIP (using the permalink field) and check the description.
+
+##Error Codes Reference {#error-codes}
+
+See <a href="/list-your-item/#error-codes">this link</a> to check for most common errors. For further assistance, please check our <a href='/forum' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.

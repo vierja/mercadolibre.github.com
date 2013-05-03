@@ -188,3 +188,7 @@ For example, when you list an item, you have to specify the following attributes
 {% endhighlight %}
 
 As you can see in the JSON above, you need to specify the **category_id**, the **currency_id** and the **listing_type_id**. These particular three fields are mandatory and only accept pre-defined IDs. You can see the different IDs that these fields accept by looking at the Category, Currencies and Listing Type API.
+
+##Error Codes Reference {#error-codes}
+
+See <a href="/list-your-item/#error-codes">this link</a> to check for most common errors. For further assistance, please check our <a href='/forum' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.

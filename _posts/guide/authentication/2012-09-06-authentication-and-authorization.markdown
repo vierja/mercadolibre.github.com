@@ -395,7 +395,7 @@ you will get a new access_token and also a new refresh token. Note that a refres
          <td>invalid_scope</td>
          <td>Invalid scope.</td>
          <td>The requested scope is invalid, unknown, or malformed.</td>
-         <td>The values allowed for parameter scope are: "offline_access","write","read"</td>
+         <td>The values allowed for parameter scope are: <b>"offline_access","write","read"</b>.</td>
       </tr>
       <tr>
          <td>invalid_request</td>
@@ -407,7 +407,7 @@ you will get a new access_token and also a new refresh token. Note that a refres
          <td>unsupported_grant_type</td>
          <td>Unsupported grant type: ${0}.</td>
          <td>The authorization grant type is not supported by the authorization server.</td>
-         <td>The values allowed for parameter grant_type are "authorization_code" or "refresh_token".</td>
+         <td>The values allowed for parameter grant_type are <b>"authorization_code"</b> or <b>"refresh_token"</b>.</td>
       </tr>
    </tbody>
 </table>

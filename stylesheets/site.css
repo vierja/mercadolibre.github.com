@@ -585,7 +585,10 @@ footer .maintained-by{
 .errors-code {
 	width: 991px;
 }
-
+.errors-code tr td {
+	font-size: 10px;
+	padding: 0 5px;
+}
 
 
 

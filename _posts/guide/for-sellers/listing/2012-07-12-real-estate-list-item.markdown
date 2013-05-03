@@ -154,23 +154,79 @@ You can list a real estate property by sending a POST request to our Items API w
 {% endhighlight %}
 
 A real estate property JSON is composed by the following information (an example is provided below the table):
-
-Field         | Description
-----------------------|----------------------------------------------------------------------------------------------------------
-site_id\*       | ID of the site your user belongs to. Obtained in the [Category selection section](/category-introduction).
-title\*         | Title of your listing.
-category_id\*     | ID of the chosen category for your listing. Obtained in the [Category selection section](#operation).
-price\*         | Price of the property. Always send a real price, otherwise your listing will be removed.
-currency_id\*     | Currency of the price. Allowed currencies vary according to your user's country. You can obtain all available currency options at <a href="https://api.mercadolibre.com/sites" target="_blank"> https://api.mercadolibre.com/sites</a>. Click on your Site ID and you will be now able to get the currencies element with all the available currencies and their IDs.
-available_quantity\*  | Available quantity of the property (generally 1)
-buying_mode\*     | For real estate properties, always send a "classified" value.
-listing_type_id\*   | Indicates the listing type for the listing. Possible values are "silver", "gold" or "gold_premium". If you have a promotional pack, keep in mind that you must have available items for the desired listing type.
-condition\*       | Possible values: "new", "used" or "not_specified".
-pictures\*        | You can provide either the Picture IDs of your uploaded pictures (if you have uploaded any) as well as the URLs of the pictures you wish to upload (if you have them on an accesible web URL). - Check out the example. Both options are shown. -
-location\*        | Location of the property including the information detailed in the [Location selection section](#res-loc-selection). If you have geolocation information (lat & long) you can add it here as well. This will enable a map with a pin on your location, which will enhance the quality of your listings.
-seller_contact\*    | Seller's contact information. The email provided in this field will be the one where users will send the contact forms. If no email is provided in the “seller_contact” field, the publishing user’s registered email address will be used.
-attributes\*      | Attributes of the property obtained in the [Attributes selection section](/res-attrs-selection).
-description       | (optional) You can include a description with additional information of your property. HTML format supported. Just make sure the description does not violate our terms & conditions. Max width for an HTML description is 918px.
+<table class="ch-datagrid">
+    <thead>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>site_id*</td>
+        <td>ID of the site your user belongs to. Obtained in the <a href='/category-introduction'>Category selection section</a>.</td>
+      </tr>
+      <tr>
+        <td>title*</td>
+        <td>Title of your listing.</td>
+      </tr>
+      <tr>
+        <td>category_id*</td>
+        <td>ID of the chosen category for your listing. Obtained in the <a href='#operation'>Category selection section</a>.</td>
+      </tr>
+      <tr>
+        <td>price*</td>
+        <td>Price of the property. Always send a real price, otherwise your listing will be
+        removed.</td>
+      </tr>
+      <tr>
+        <td>currency_id*</td>
+        <td>Currency of the price. Allowed currencies vary according to your user's
+        country. You can obtain all available currency options at <a href=
+        "https://api.mercadolibre.com/sites" target=
+        "_blank">https://api.mercadolibre.com/sites</a>. Click on your Site ID and you will
+        be now able to get the currencies element with all the available currencies and
+        their IDs.</td>
+      </tr>
+      <tr>
+        <td>available_quantity*</td>
+        <td>Available quantity of the property (generally 1)</td>
+      </tr>
+      <tr>
+        <td>buying_mode*</td>
+        <td>For real estate properties, always send a "classified" value.</td>
+      </tr>
+      <tr>
+        <td>listing_type_id*</td>
+        <td>Indicates the listing type for the listing. Possible values are "silver", "gold" or "gold_premium". If you have a promotional pack, keep in mind that you must have available items for the desired listing type.</td>
+      </tr>
+      <tr>
+        <td>condition*</td>
+        <td>Possible values: "new", "used" or "not_specified".</td>
+      </tr>
+      <tr>
+        <td>pictures*</td>
+        <td>You can provide either the Picture IDs of your uploaded pictures (if you have uploaded any) as well as the URLs of the pictures you wish to upload (if you have them on an accesible web URL). - Check out the example. Both options are shown.
+        -</td>
+      </tr>
+      <tr>
+        <td>location*</td>
+        <td>Location of the property including the information detailed in the <a href='#res-loc-selection'>Location selection section</a>. If you have geolocation information (lat &amp; long) you can add it here as well. This will enable a map with a pin on your location, which will enhance the quality of your listings.</td>
+      </tr>
+      <tr>
+        <td>seller_contact*</td>
+        <td>Seller's contact information. The email provided in this field will be the one where users will send the contact forms. If no email is provided in the &ldquo;seller_contact&rdquo; field, the publishing user&rsquo;s registered email address will be used.</td>
+      </tr>
+      <tr>
+        <td>attributes*</td>
+        <td>Attributes of the property obtained in the <a href='/res-attrs-selection'>Attributes selection section</a>.</td>
+      </tr>
+      <tr>
+        <td>description</td>
+        <td>(optional) You can include a description with additional information of your property. HTML format supported. Just make sure the description does not violate our terms &amp; conditions. Max width for an HTML description is 918px.</td>
+      </tr>
+    </tbody>
+</table>
 
 \*mandatory fields
 
@@ -251,3 +307,8 @@ When this ocurrs, you may choose to relist your property to active it again. Rel
 For your APP, you might want to add a process that periodically checks your listings' expiration dates so as to finalize and relist your listings before they reach their expiration date. *Only items with a "closed" status admit relisting.* You can send a PUT request with a "closed" status at any time when your item is "active" or "paused".
 
 [Relist a property](/relist-item)
+
+
+##Error Codes Reference {#error-codes}
+
+See <a href="/list-your-item/#error-codes">this link</a> to check for most common errors. For further assistance, please check our <a href='/forum' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.
