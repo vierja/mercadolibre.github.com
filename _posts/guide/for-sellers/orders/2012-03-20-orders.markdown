@@ -176,3 +176,73 @@ https://api.mercadolibre.com/orders/search/archived?seller=seller_id&#038;access
 </pre>
 
 The same request works with buyers. 
+
+
+##Error Codes Reference {#error-codes}
+
+<table class="ch-datagrid errors-code">
+    <thead>
+      <tr>
+         <th cope="col">Error_code</th>
+         <th cope="col">Error message</th>
+         <th cope="col">Description</th>
+         <th cope="col">Possible solution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+         <td>order_not_found</td>
+         <td>Order not found.</td>
+         <td>$order_id incorrect.</td>
+         <td>The order cannot be found, check if the order_id is correct. (<a href='#getorder'>More information</a>)</td>
+      </tr>
+      <tr>
+         <td>empty_order_id</td>
+         <td>Order ID can not be empty.</td>
+         <td>$order_id is null.</td>
+         <td>The parameter order_id cannot be null, check the URL used. (<a href='#getorder'>More information</a>)</td>
+      </tr>
+      <tr>
+         <td>invalid_order_id</td>
+         <td>Invalid order id.</td>
+         <td>$order_id incorrect.</td>
+         <td>The parameter order_id must be a integer number. (For search your orders see <a href='#searchorder'>this topic</a>)</td>
+      </tr>
+      <tr>
+         <td>not_identified_user</td>
+         <td>Can not identify the user.</td>
+         <td>$seller or $buyer incorrect.</td>
+         <td>The parameter $seller or $buyer must be a integer number. Probably your token does not match the seller used.</td>
+      </tr>
+      <tr>
+         <td>not_owned_order</td>
+         <td>The user has not access to the order.</td>
+         <td>$seller or $buyer incorrect.</td>
+         <td>To see one order, your access_token must be generated from seller or buyer.</td>
+      </tr>
+      <tr>
+         <td>caller.id.invalid</td>
+         <td>caller.id does not match buyer nor seller.</td>
+         <td>$seller or $buyer incorrect.</td>
+         <td>To see one order, you must be use one id from seller or buyer.</td>
+      </tr>
+      <tr>
+         <td>forbidden_feedback</td>
+         <td>The user has not access to the feedback yet.</td>
+         <td>Access denied.</td>
+         <td>Check if your access_token was generated from seller or buyer.</td>
+      </tr>
+      <tr>
+         <td>feedback_not_found</td>
+         <td>The feedback does not exist.</td>
+         <td>Reply error.</td>
+         <td>Check if feedback exist for give a reply.</td>
+      </tr>
+      <tr>
+         <td>invalid_fulfilled</td>
+         <td>'fulfilled' parameter must be true or false.</td>
+         <td>Error on give feedback.</td>
+         <td>Check the parameter $fulfilled this must be boolean (remove quotation marks) and check if the parameter $reason is not null in case of $fulfilled: false. </td>
+      </tr>
+   </tbody>
+</table>
