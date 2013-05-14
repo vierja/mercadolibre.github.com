@@ -10,7 +10,7 @@ categories:
 menu: 
 - Listing &amp; Selling
 tags: 
-- listing
+- Listing
 ---
 
 In our Marketplace, people can buy and sell items as well as post classified ads for real estate and motors. In this section, you will learn how to do it with our API.
