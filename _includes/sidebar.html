@@ -1,6 +1,6 @@
 <div class="menubar">
 <h1>{{ page.menu }}</h1>
-{% for category in page.categories case_sensitive:false %}
+{% for category in page.categories case_sensitive:true %}
   <h2>{{ category }}</h2>
 
   <ul>
