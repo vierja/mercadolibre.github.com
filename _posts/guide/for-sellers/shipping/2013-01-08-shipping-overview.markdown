@@ -14,7 +14,7 @@ tags:
 ---
 
 
-Listings in MercadoLibre can have 4 different shipping modes:
+Listings in MercadoLibre can have 4 different shipping modes
 
 <ol class="ch-list">
 <li><strong>not specified</strong>
