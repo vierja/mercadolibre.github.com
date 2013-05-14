@@ -4,7 +4,7 @@
 <h2>{{ category }}</h2>
 
   <ul>
-    {% for post in site.tags.[category] reversed %}
+    {% for post in site.tags.[category] reversed case_sensitive:false %}
       {% assign current = nil %}
       {% if post.id == page.id %}
         {% assign current = 'current' %}
@@ -12,5 +12,5 @@
       <li class="option"><a class="{{ current }}" href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-    {% endfor %}
+{% endfor %}
 </div>
