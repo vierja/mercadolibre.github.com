@@ -99,7 +99,7 @@ require '../src/meli.php';
 // Create our Application instance (replace this with your appId and secret).
 $meli = new Meli(array(
     'appId'         => 6092,
-    'secret'        => 54dfgdgwgw8gfAdgDJDIULkdjhgp87,
+    'secret'        => "54dfgdgwgw8gfAdgDJDIULkdjhgp87",
 ));
 			{% endhighlight %}
 		</div>

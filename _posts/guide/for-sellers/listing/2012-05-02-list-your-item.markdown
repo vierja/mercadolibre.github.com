@@ -1,15 +1,15 @@
 ---
 layout: guides
 title: List items
-categories: 
+categories:
 - Listing
 - Manage Listings
 - Orders
 - Manage Questions
 - Shipping
-menu: 
+menu:
 - Listing &amp; Selling
-tags: 
+tags:
 - Listing
 ---
 
@@ -20,9 +20,9 @@ The first step in selling is to list an item on MercadoLibre. Sellers can list a
 
 There are a number of considerations regarding an item such as the title, category, price, currency or description. You already know what items and attributes are. If you don’t, we recommend that you read the [Listings Introduction tutorial](/listing-introduction).
 
-Some item properties affect the appeareance of several pages where the items are viewed (the view item page, the search pages, the category browser page).  
+Some item properties affect the appeareance of several pages where the items are viewed (the view item page, the search pages, the category browser page).
 
-Additionally, there are mandatory attributes to list an item. 
+Additionally, there are mandatory attributes to list an item.
 
 
 <div class="contents">
@@ -55,8 +55,11 @@ curl -X POST -H "Content-Type: application/json" -d
     {"source":"http://en.wikipedia.org/wiki/File:Teashades.gif"}
   ]
 }'
-https://api.mercadolibre.com/items?access_token=$ACCESS_TOKEN  
+https://api.mercadolibre.com/items?access_token=$ACCESS_TOKEN
 </pre>
+
+Our using our SDK's
+
 
 The Items API will automatically download the provided images to MELI Storage and create a listing for your item. You will receive the following Json response:
 
@@ -71,11 +74,11 @@ The Items API will automatically download the provided images to MELI Storage an
 }
 {% endhighlight %}
 
-**Congratulations!** You have just listed your first item! You can access the Item’s VIP through the permalink attribute.  
+**Congratulations!** You have just listed your first item! You can access the Item’s VIP through the permalink attribute.
 
-If you have questions regarding how to get your access token to list items, please refer to the [getting started](/first-step) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial.    
-    
-**Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ) page. 
+If you have questions regarding how to get your access token to list items, please refer to the [getting started](/first-step) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial.
+
+**Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ) page.
 
 ## Best practices {#best-practices}
 
@@ -83,18 +86,18 @@ Please, don't use list operation to test the item's definition. Instead, use [va
 
 ## Defining attributes {#list-defining-attributes}
 
-To create your first item you need a number of attributes that can be set; some are mandatory and some are optional. They all define how the item is displayed, how buyers can purchase it and how it will be used in searching results.    
+To create your first item you need a number of attributes that can be set; some are mandatory and some are optional. They all define how the item is displayed, how buyers can purchase it and how it will be used in searching results.
 
 ### Title {#listing-title-attribute}
 
-The title is the main descriptor of an item. This label will be used for searching purposes and it is an important component of your item's detail. It is a mandatory attribute. For more details about this attribute in MercadoLibre, you can check the [visual introduction](/listing-introduction) and the [item title section](/listing-introduction/#item-title).   
+The title is the main descriptor of an item. This label will be used for searching purposes and it is an important component of your item's detail. It is a mandatory attribute. For more details about this attribute in MercadoLibre, you can check the [visual introduction](/listing-introduction) and the [item title section](/listing-introduction/#item-title).
 
-You can add a subtitle attribute, which is optional and it is used in the view item page or in the search result list. Together, these parameters are very important to describe your item. If you have doubts about how to describe your item, visit [MercadoLibre site help](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=9564&categId=MEJVT&type=FAQ).   
+You can add a subtitle attribute, which is optional and it is used in the view item page or in the search result list. Together, these parameters are very important to describe your item. If you have doubts about how to describe your item, visit [MercadoLibre site help](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=9564&categId=MEJVT&type=FAQ).
 
 
 ### Description {#listing-description-attribute}
 
-On the VIP (View Item Page), you can see the title and description. The description is displayed in an iframe. There are some considerations when working with descriptions. If you are interested in increasing your knowledge about this topic, see the [add description item](/add-description-item) section. 
+On the VIP (View Item Page), you can see the title and description. The description is displayed in an iframe. There are some considerations when working with descriptions. If you are interested in increasing your knowledge about this topic, see the [add description item](/add-description-item) section.
 You can also find details about this attribute in MercadoLibre in the [visual introduction](/listing-introduction).
 
 ### Condition {#listing-condition-attribute}
@@ -108,11 +111,11 @@ This attribute defines the number of items available for selling. The highest va
 
 ### Pictures {#listing-picture-attribute}
 
-Good pictures can make an item more appealing and give buyers a better idea of the item's appearance. Basically, you should add an array of up to six URL pictures. 
+Good pictures can make an item more appealing and give buyers a better idea of the item's appearance. Basically, you should add an array of up to six URL pictures.
 
-{% highlight javascript %} 
+{% highlight javascript %}
 {
- .... 	
+ ....
  "pictures":[
 	{"source":"http://yourServer/path/to/your/picture.jpg"},
 	{"source":"http://yourServer/path/to/your/otherPicture.gif"},
@@ -127,11 +130,11 @@ You can also add or change [pictures to your item](/add-pictures-item) later on.
 
 ### Category {#listing-category-attribute}
 
-Sellers must define a category in MercadoLibre site. This attribute is mandatory and only accepts pre-defined IDs. For more information about category details see [categories documentation](/category-introduction). 
+Sellers must define a category in MercadoLibre site. This attribute is mandatory and only accepts pre-defined IDs. For more information about category details see [categories documentation](/category-introduction).
 
-{% highlight javascript %} 
+{% highlight javascript %}
 {
- .... 	
+ ....
 	"category_id":"MLA12683",
  ...
 }
@@ -148,7 +151,7 @@ This attribute is mandatory too. You need to define it using a pre-defined id. I
 
 ### Listing type {#listing-type-attribute}
 
-This is another case of a mandatory attribute that only accepts pre-defined values. There are different listing types availables for each site (For more details about sites, see [Site API](https://api.mercadolibre.com/sites)). 
+This is another case of a mandatory attribute that only accepts pre-defined values. There are different listing types availables for each site (For more details about sites, see [Site API](https://api.mercadolibre.com/sites)).
 
 <pre class="terminal">
 curl https://api.mercadolibre.com/sites/MLA/listing_types
@@ -171,7 +174,7 @@ curl https://api.mercadolibre.com/sites/MLA/listing_types
 ]
 {% endhighlight %}
 
-You can list an item under the free, bronze, silver, gold and gold premium listing types. The fees for selling the item as well as how it is ranked in a search result will depend on the listing type you select. In order to analyze this API, we will go over a number of attributes for the “silver” ID listing type. 
+You can list an item under the free, bronze, silver, gold and gold premium listing types. The fees for selling the item as well as how it is ranked in a search result will depend on the listing type you select. In order to analyze this API, we will go over a number of attributes for the “silver” ID listing type.
 
 <pre class="terminal">
 curl https://api.mercadolibre.com/sites/MLA/listing_types/silver
