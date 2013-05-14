@@ -2,7 +2,7 @@
 layout: 2columns
 title: Javascript SDK
 categories: 
-- SDKs 
+- SDKs
 - More Tools
 - Samples
 menu: 
