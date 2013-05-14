@@ -43,7 +43,7 @@ It means the seller did not specify any shipping price for his items and the buy
 
 <i class="ch-icon-comment-alt">
 IMPORTANT:
-MercadoEnvios mode 2 is available for sellers of Brasil who want to opt-in to participate in the program and it will soon be available in Argentina.
+MercadoEnvios mode 2 is available for sellers of Brasil and Argentina who want to opt-in to participate in the program and it will soon be available in Argentina.
 <br>
 MercadoEnvios 1 is only available for selected sellers in Brasil who need to reach an agreement with MercadoLibre.
 </i>
