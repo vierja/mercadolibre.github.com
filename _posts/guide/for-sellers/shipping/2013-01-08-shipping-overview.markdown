@@ -210,3 +210,31 @@ https://api.mercadolibre.com/sites/MLA/shipping_methods
 	<li>How to list with <a href="/listing-with-me1">shipping mode me1</a> or <a href="/listing-with-me2">shipping mode me2</a></li>
 	<li><a href="/capture-and-manage-shipments">Capture shipping information and manage shipments</a></li>
 </ul>
+
+
+##Error Codes Reference {#error-codes}
+
+<table class="ch-datagrid errors-code">
+    <thead>
+      <tr>
+         <th cope="col">Error_code</th>
+         <th cope="col">Error message</th>
+         <th cope="col">Description</th>
+         <th cope="col">Possible solution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+         <td>not_found_shipping_service</td>
+         <td>Not found shipping service.</td>
+         <td>Invalid service id.</td>
+         <td>To send the tracking number, check <b><a href='https://api.mercadolibre.com/sites/MLA/shipping_services' target='_blank'>this resource</a></b> to obtain the correct service_id. In case you've sent it though another carrier send "11" to others services.</td>
+      </tr>
+      <tr>
+         <td>validation_error</td>
+         <td>No shipping mode can be used for this item. Check /users/?/shipping_modes?category_id=?&dimensions=?x?x?,?.</td>
+         <td>Validation error</td>
+         <td>Minimum dimensions are 2x11x16, sum not exceeding 200 (L + W + H &lt;= 200) and weight must be less than 30000.</td>
+      </tr>
+   </tbody>
+</table>

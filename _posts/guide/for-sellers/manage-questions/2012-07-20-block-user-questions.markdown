@@ -42,3 +42,4 @@ curl -X GET 'https://api.mercadolibre.com/users/$SELLER_ID/questions_blacklist?a
 curl -X DELETE 'https://api.mercadolibre.com/users/$SELLER_ID/questions_blacklist/$USER_ID?access_token=$ACCESS_TOKEN '
 </pre>
 
+
