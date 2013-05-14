@@ -1,10 +1,10 @@
 <div class="menubar">
 <h1>{{ page.menu }}</h1>
-{% for category in page.categories %}
-<h2>{{ category }}</h2>
+{% for category in page.categories case_sensitive:false %}
+  <h2>{{ category }}</h2>
 
   <ul>
-    {% for post in site.tags.[category] reversed case_sensitive:false %}
+    {% for post in site.tags.[category] reversed %}
       {% assign current = nil %}
       {% if post.id == page.id %}
         {% assign current = 'current' %}
