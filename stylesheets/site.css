@@ -765,6 +765,7 @@ p.footer-event {
 }
 .menubar h2 {
 	color:#C0C0C0;
+	text-transform: capitalize;
 }
 .menubar ul li.option small {
 	width: 100%;

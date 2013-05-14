@@ -2,12 +2,12 @@
 layout: guides
 title: Bookmark your items
 categories: 
-- Bookmarks
-- Questions
+- bookmarks
+- questions
 menu: 
 - Shopping
 tags: 
-- Bookmarks
+- bookmarks
 ---
 
 

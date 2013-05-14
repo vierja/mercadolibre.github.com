@@ -2,15 +2,15 @@
 layout: guides
 title: Listing with shipping me2
 categories:
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Shipping
+- shipping
 ---
 
 

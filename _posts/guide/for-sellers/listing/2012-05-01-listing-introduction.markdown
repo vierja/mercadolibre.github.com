@@ -2,15 +2,15 @@
 layout: guides
 title: Introduction
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Listing
+- listing
 ---
 
 In our Marketplace, people can buy and sell items as well as post classified ads for real estate and motors. In this section, you will learn how to do it with our API.

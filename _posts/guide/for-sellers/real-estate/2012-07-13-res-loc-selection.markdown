@@ -2,12 +2,12 @@
 layout: guides
 title: Location selection
 categories: 
-- Listing
-- Real Estate
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- real estate
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 

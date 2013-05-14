@@ -2,15 +2,15 @@
 layout: guides
 title: Answer a question
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Manage Questions
+- manage questions
 ---
 
 We also provide a way to answer a question.

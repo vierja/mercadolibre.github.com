@@ -2,15 +2,15 @@
 layout: guides
 title: Orders Scenarios
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Orders
+- orders
 ---
 
 Using Orders API you can build your own Sales Management System.

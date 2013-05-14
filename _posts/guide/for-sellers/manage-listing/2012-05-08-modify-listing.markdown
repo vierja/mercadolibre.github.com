@@ -2,15 +2,15 @@
 layout: guides
 title: Modify items
 categories:
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu:
 - Listing &amp; Selling
 tags:
-- Manage Listings
+- manage listings
 ---
 
 

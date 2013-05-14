@@ -2,15 +2,15 @@
 layout: guides
 title: Attributes selection
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Listing
+- listing
 ---
 
 ##Category attributes	{#attributes} 

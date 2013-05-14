@@ -2,15 +2,15 @@
 layout: guides
 title: Validate item
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Manage Listings
+- manage listings
 ---
 
 You can check if your listing will look ok before sending a real POST to the Items API. The Items API provides a validation service to check you listing details before publishing. It’s very useful to practice and check attribute variations!

@@ -2,15 +2,15 @@
 layout: guides
 title: Giving feedback to an order
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Orders
+- orders
 ---
 
 ##Overview {#overview}

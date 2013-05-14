@@ -2,15 +2,15 @@
 layout: guides
 title: Managing Orders
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu:
 - Orders
 tags: 
-- Orders
+- orders
 ---
 
 <div class="contents">

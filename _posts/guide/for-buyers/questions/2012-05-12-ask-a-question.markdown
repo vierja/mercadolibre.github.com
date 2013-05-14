@@ -2,12 +2,12 @@
 layout: guides
 title: Ask a question
 categories: 
-- Bookmarks
-- Questions
+- bookmarks
+- questions
 menu:
 - Buying Items
 tags: 
-- Questions
+- questions
 ---
 
 
