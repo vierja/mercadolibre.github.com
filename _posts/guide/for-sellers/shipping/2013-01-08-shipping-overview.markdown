@@ -2,15 +2,15 @@
 layout: guides
 title: Shipping Overview
 categories:
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
-menu: 
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
+menu:
 - Listing &amp; Selling
-tags: 
-- Shipping
+tags:
+- shipping
 ---
 
 
@@ -24,7 +24,7 @@ It means the seller did not specify any shipping price for his items and the buy
 <li>
   <strong>custom</strong>
 	<br>
-  	Sellers can include a table of up to 10 shipping costs on an item.<br> 
+  	Sellers can include a table of up to 10 shipping costs on an item.<br>
   	Each shipping cost has a label that describes the shipping option. e.g.: "2 days by Air" - 40 BRL, "To Buenos Aires" - 50 ARS.<br>
   	There is no tracking and there is no enforcement for the buyer to pay for the cost associated to his address<br>
 </li>
@@ -43,7 +43,7 @@ It means the seller did not specify any shipping price for his items and the buy
 
 <i class="ch-icon-comment-alt">
 IMPORTANT:
-MercadoEnvios mode 2 is available for sellers of Brasil who want to opt-in to participate in the program and it will soon be available in Argentina.
+MercadoEnvios mode 2 is available for sellers of Brasil and Argentina who want to opt-in to participate in the program.
 <br>
 MercadoEnvios 1 is only available for selected sellers in Brasil who need to reach an agreement with MercadoLibre.
 </i>
@@ -210,3 +210,32 @@ https://api.mercadolibre.com/sites/MLA/shipping_methods
 	<li>How to list with <a href="/listing-with-me1">shipping mode me1</a> or <a href="/listing-with-me2">shipping mode me2</a></li>
 	<li><a href="/capture-and-manage-shipments">Capture shipping information and manage shipments</a></li>
 </ul>
+
+
+##Error Codes Reference {#error-codes}
+
+<table class="ch-datagrid errors-code">
+    <thead>
+      <tr>
+         <th cope="col">Error_code</th>
+         <th cope="col">Error message</th>
+         <th cope="col">Description</th>
+         <th cope="col">Possible solution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+         <td>not_found_shipping_service</td>
+         <td>Not found shipping service.</td>
+         <td>Invalid service id.</td>
+         <td>To send the tracking number, check <b><a href='https://api.mercadolibre.com/sites/MLA/shipping_services' target='_blank'>this resource</a></b> to obtain the correct service_id. In case you've sent it though another carrier send "11" to others services.</td>
+      </tr>
+      <tr>
+         <td>validation_error</td>
+         <td>No shipping mode can be used for this item. Check /users/?/shipping_modes?category_id=?&dimensions=?x?x?,?.</td>
+         <td>Validation error</td>
+         <td>Minimum dimensions are 2x11x16, sum not exceeding 200 (L + W + H &lt;= 200) and weight must be less than 30000.</td>
+      </tr>
+   </tbody>
+</table>
+

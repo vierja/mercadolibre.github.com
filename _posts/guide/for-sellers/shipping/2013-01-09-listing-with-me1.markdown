@@ -2,15 +2,15 @@
 layout: guides
 title: Listing with shipping me1
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Shipping
+- shipping
 ---
 
 ## Overview
@@ -129,7 +129,7 @@ Length, Width and Height are separated by 'x' and ',' separates the weight.
 
 Restrictions:
 - **Weight** < 30000  (30 kg)
-- L + W  + H < 200
+- L + W  + H <= 200
 
 Dimensions should represent the size of the package that will be shipped. All values are mandatory.
 
@@ -407,6 +407,11 @@ https://api.mercadolibre.com/shipments/:shipment_id?access_token=
 {% endhighlight %}
 
 **Note:** If the product was sent by some another service, you should send the parameter service_id with value 11.
+
+
+##Error Codes Reference {#error-codes}
+
+Check <a href="/shipping-overview/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.
 
 
 

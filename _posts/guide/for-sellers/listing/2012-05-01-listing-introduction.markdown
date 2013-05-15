@@ -2,15 +2,15 @@
 layout: guides
 title: Introduction
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Listing
+- listing
 ---
 
 In our Marketplace, people can buy and sell items as well as post classified ads for real estate and motors. In this section, you will learn how to do it with our API.
@@ -91,6 +91,57 @@ curl https://api.mercadolibre.com/items/MLB233759102
 }
 {% endhighlight %}
 
+
+Getting this response using our SDK's
+
+<div id="code">
+	<ul>
+		<li><a href="#js">JavaScript</a></li>
+		<li><a href="#php">PHP</a></li>
+		<li><a href="#java">Java</a></li>
+		<li><a href="#net">.NET</a></li>
+	</ul>
+	<div>
+		<div id="js">
+{% highlight javascript %}
+MELI.get("/items/MLB474720094", null, function(data) {
+  alert("Title: " + data[2]["title"]);
+}
+{% endhighlight %}
+		</div>
+		<div id="php">
+{% highlight php5 %}
+$meli = new Meli(array(
+  "appId" => 123456,
+  "secret" => "application_secret"
+));
+$item = $meli->get("/items/MLB474720094");
+{% endhighlight %}
+		</div>
+		<div id="java">
+{% highlight java %}
+Meli m = new Meli(123456, "application_secret");
+Response response = m.get("/items/MLB474720094");
+{% endhighlight %}
+		</div>
+		<div id="net">
+{% highlight csharp %}
+Meli m = new Meli(123456, "application_secret");
+IRestResponse response = m.Get("/items/MLB474720094");
+{% endhighlight %}
+		</div>
+	</div>
+</div>
+
 Take a look at the response retrieved. It has a lot of parameters. Use <code>OPTIONS</code> http method to get a <code>JSON</code> encoded response that will describe the API, with all the allowed methods and connections to another part of the API. It is a standard format to get [API documentation](/design-considerations/#options).
 In this guide, we will cover only the above-mentioned.
 
+<script>
+
+  window.onload = function() { startDrawing(); }
+  
+  function startDrawing(){
+      $("#code").tabNavigator();
+
+  }
+</script>

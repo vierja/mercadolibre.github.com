@@ -2,13 +2,13 @@
 layout: 2columns
 title: Application Manager
 categories: 
-- SDKs 
-- More Tools
-- Samples
+- sdks
+- more tools
+- samples
 menu: 
 - Tools
 tags: 
-- More Tools
+- more tools
 ---
 
 To create an _App_, you must use the [Application Manager](http://applications.mercadolibre.com). **You need to choose your country to create a new one**. 

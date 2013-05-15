@@ -2,15 +2,15 @@
 layout: guides
 title: Listing with shipping me2
 categories:
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Shipping
+- shipping
 ---
 
 
@@ -138,3 +138,9 @@ The response will be a PDF file containing one or more pre-paid shipping labels 
 
 
 ![Sample label](/images/shipping-label.png)
+
+
+##Error Codes Reference {#error-codes}
+
+Check <a href="/shipping-overview/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.
+

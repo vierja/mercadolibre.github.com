@@ -2,15 +2,15 @@
 layout: guides
 title: Relist an item
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Manage Listings
+- manage listings
 ---
 
 ## Overview {#overview}
@@ -71,3 +71,7 @@ In this example, you are relisting the item “MLA123456789”, increasing the q
 Remember to check the Listing Type API for valid listing type codes.
 
 **Important:** as stated before, relisting an item generates a NEW item, which means that the Item ID MercadoLibre assigns to that item will be a new one. You will be able to obtain this new ID from the JSON in the response body you receive when relisting your items successfully.
+
+##Error Codes Reference {#error-codes}
+
+Check <a href="/list-your-item/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.

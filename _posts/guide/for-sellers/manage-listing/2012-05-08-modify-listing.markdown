@@ -2,15 +2,15 @@
 layout: guides
 title: Modify items
 categories:
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu:
 - Listing &amp; Selling
 tags:
-- Manage Listings
+- manage listings
 ---
 
 
@@ -122,3 +122,7 @@ To check the possible values for the listing_type_id make a GET request in this 
 <pre class="terminal">
 curl https://api.mercadolibre.com/sites/MLB/listing_types/
 </pre>
+
+##Error Codes Reference {#error-codes}
+
+Check <a href="/list-your-item/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.

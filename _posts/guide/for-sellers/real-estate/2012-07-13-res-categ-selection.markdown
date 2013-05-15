@@ -2,11 +2,11 @@
 layout: guides
 title: Operation and property type selection
 categories: 
-- Listing
-- Real Estate
-- Manage Listings
-- Orders
-- Manage Questions
+- listing
+- real estate
+- manage listings
+- orders
+- manage questions
 menu: 
 - Listing &amp; Selling
 tags: 

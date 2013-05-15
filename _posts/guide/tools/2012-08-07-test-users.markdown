@@ -2,13 +2,13 @@
 layout: 2columns
 title: Create Test Users
 categories: 
-- SDKs 
-- More Tools
-- Samples
+- sdks
+- more tools
+- samples
 menu: 
 - Tools
 tags: 
-- More Tools
+- more tools
 ---
 
 <div class="contents">

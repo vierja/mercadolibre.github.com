@@ -2,15 +2,15 @@
 layout: guides
 title: Giving feedback to an order
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Orders
+- orders
 ---
 
 ##Overview {#overview}
@@ -170,3 +170,7 @@ curl -X PUT -H "Content-Type: application/json" -d
 
 https://api.mercadolibre.com/orders/$ORDER_ID/feedback/sale?access_token={aSellersAccessToken}
 </pre>
+
+##Error Codes Reference {#error-codes}
+
+Check <a href="/orders/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.

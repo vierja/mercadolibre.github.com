@@ -2,13 +2,13 @@
 layout: 2columns
 title: .NET project using .NET SDK
 categories: 
-- SDKs 
-- More Tools
-- Samples
+- sdks
+- more tools
+- samples
 menu: 
 - Tools
 tags: 
-- Samples 
+- samples 
 ---
 
 ##.NET example on GitHub

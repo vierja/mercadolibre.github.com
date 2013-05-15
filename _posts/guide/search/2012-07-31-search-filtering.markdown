@@ -2,11 +2,11 @@
 layout: guides
 title: Using filters
 categories: 
-- Searching
+- searching
 menu: 
 - Searching
 tags: 
-- Searching
+- searching
 ---
 
 ## Overview {#search-overview}

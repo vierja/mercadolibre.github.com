@@ -2,11 +2,11 @@
 layout: guides
 title: Paging results
 categories: 
-- Searching
+- searching
 menu: 
 - Searching
 tags: 
-- Searching
+- searching
 ---
 
 ##  Overview {#paging-overview}

@@ -2,11 +2,11 @@
 layout: guides
 title: By seller
 categories: 
-- Searching
+- searching
 menu: 
 - Searching
 tags: 
-- Searching
+- searching
 ---
 	
 <div class="contents">

@@ -2,12 +2,12 @@
 layout: guides
 title: Real Estate JSON full specification 
 categories: 
-- Listing
-- Real Estate
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- real estate
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 

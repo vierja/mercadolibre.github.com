@@ -2,15 +2,15 @@
 layout: guides
 title: Attributes selection
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Listing
+- listing
 ---
 
 ##Category attributes	{#attributes} 
@@ -70,3 +70,7 @@ Each attribute has id, name, type, tags and values.
 
 </ul>
 For each attribute you choose to publish, save its attribute id and its value id as well. You will be needing them later on, when putting together the JSON for listing the property. Keep in mind that required attributes are mandatory and vary among categories. Not sending the correct attributes when listing is a very common mistake.
+
+##Error Codes Reference {#error-codes}
+
+Check <a href="/list-your-item/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.

@@ -1,7 +1,7 @@
 <div class="menubar">
 <h1>{{ page.menu }}</h1>
 {% for category in page.categories %}
-<h2>{{ category }}</h2>
+  <h2>{{ category }}</h2>
 
   <ul>
     {% for post in site.tags.[category] reversed %}
@@ -12,5 +12,5 @@
       <li class="option"><a class="{{ current }}" href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-    {% endfor %}
+{% endfor %}
 </div>

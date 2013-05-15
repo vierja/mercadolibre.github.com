@@ -2,15 +2,15 @@
 layout: guides
 title: Managing questions blacklist
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags:
-- Manage Questions
+- manage questions
 ---
 
 
@@ -41,4 +41,5 @@ curl -X GET 'https://api.mercadolibre.com/users/$SELLER_ID/questions_blacklist?a
 <pre class="terminal">
 curl -X DELETE 'https://api.mercadolibre.com/users/$SELLER_ID/questions_blacklist/$USER_ID?access_token=$ACCESS_TOKEN '
 </pre>
+
 

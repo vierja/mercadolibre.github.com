@@ -2,13 +2,13 @@
 layout: 2columns
 title: Category Dump
 categories: 
-- SDKs 
-- More Tools
-- Samples
+- sdks
+- more tools
+- samples
 menu: 
 - Tools
 tags: 
-- More Tools
+- more tools
 ---
 
 

@@ -2,15 +2,15 @@
 layout: guides
 title: Validate item
 categories: 
-- Listing
-- Manage Listings
-- Orders
-- Manage Questions
-- Shipping
+- listing
+- manage listings
+- orders
+- manage questions
+- shipping
 menu: 
 - Listing &amp; Selling
 tags: 
-- Manage Listings
+- manage listings
 ---
 
 You can check if your listing will look ok before sending a real POST to the Items API. The Items API provides a validation service to check you listing details before publishing. It’s very useful to practice and check attribute variations!
@@ -35,3 +35,7 @@ https://api.mercadolibre.com/items/validate?access_token=$ACCESS_TOKEN
 You will receive a “HTTP/1.1 204 No Content” message from the Items API if the listing POST example would pass the Items API validation process. To see the “HTTP/1.1 204 No Content” message on screen, add the -i parameter to the curl command.
 
 **Important:** This validation process is not mandatory, but will most likely become handy when testing your APP. Keep in mind that there is no sandbox nor pre-production environment, so every item listed during your testing phase will be visible in our platform by all of our users. It is highly recommended that you finalize listed items posted while testing.
+
+##Error Codes Reference {#error-codes}
+
+Check <a href="/list-your-item/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.

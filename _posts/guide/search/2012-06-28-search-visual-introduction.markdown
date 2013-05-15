@@ -2,11 +2,11 @@
 layout: guides
 title: Introduction
 categories: 
-- Searching
+- searching
 menu: 
 - Searching
 tags: 
-- Searching
+- searching
 ---
 
 Searching items is the most common thing to do in MercadoLibre. Here you can see different search criteria.
