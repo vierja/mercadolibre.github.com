@@ -1,9 +1,7 @@
 <div class="menubar">
 <h1>{{ page.menu }}</h1>
-<h2></h2>
 
 {% for category in page.categories %}
-
   <ul>
     {% for post in site.tags.[category] reversed %}
       {% assign current = nil %}
