@@ -49,14 +49,17 @@
 					<p>MercadoLibre’s Developers Program recommends the use of API V1, our brand new and most stable API version.</p>
 					<p><a href="/version/" class="seeAll">Learn More</a></p>
 				</article>
+	
+				{% for post in site.tags.homeRight | sort:date limit:1 %}
+					<article class="ch-g1-4">
 
-		<article class="ch-g1-4">
+						<h3><a href="http://devconf.mercadolibre.com/">{{ post.homeTitle }}</a></h3>
+						<div class="collaborate"></div>
+						<p>{{ post.homeText }}</p>
+						<p><a href="{{ post.url }}" class="seeAll">Learn More</a></p>
+					</article>					
+				{% endfor %}
 
-					<h3><a href="http://devconf.mercadolibre.com/">MercadoLibre Developers Conference</a></h3>
-					<div class="collaborate"></div>
-					<p>First Developers Conference, Buenos Aires, Argentina.</p>
-					<p><a href="http://devconf.mercadolibre.com/" class="seeAll">Learn More</a></p>
-				</article>
 
 			</section>
 		</section>

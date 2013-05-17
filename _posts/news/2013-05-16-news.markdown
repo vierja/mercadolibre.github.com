@@ -1,0 +1,29 @@
+---
+layout: news
+title: News
+categories: 
+- news
+menu: 
+- News
+---
+
+{% for category in page.categories %}
+
+  <ul>
+    {% for post in site.tags.[category] reversed %}
+
+	    <div class="box-event news">
+		  <h3>{{ post.title }}</h3>
+		  <div class="middle">
+		    <div class="info-left">
+		      <small class='date-new'>{{ post.date | date: "%B %d, %Y" }}</small>
+		      <h4 class='excerpt-new'>{{ post.excerpt }}</h4>
+		      <a href="/dev-conf-bs-as/">Learn more.</a>
+		    </div>
+		      <a href="{{ post.url }}" class='banner-right'><img alt="{{ post.title }}" src="../images/news/{{ post.imageRight }}" ></a>
+		  </div>
+		</div>
+
+    {% endfor %}
+  </ul>
+{% endfor %}

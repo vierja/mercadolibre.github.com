@@ -694,6 +694,19 @@ footer .maintained-by{
 	margin: 0 0 10px;
 	font-family: Arial,Helvetica,"Nimbus Sans L",sans-serif;
 }
+.box-event.news .middle h4 {
+	color: black;
+	font-size: 14px;
+	width: 290px;
+}
+.box-event.news .middle .banner-right {
+	float: right;
+}
+.box-event.news .middle small.date-new {
+	font-size: 14px;
+	color: #898989;
+}
+
 p.footer-event {
 	display: block;
 	width: 100%;
