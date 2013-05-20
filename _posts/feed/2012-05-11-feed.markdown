@@ -10,7 +10,7 @@
     <author>
         <name>MELI devs feed</name>
     </author>
-    <rights>Copyright (c) 2012 MercadoLibre</rights>
+    <rights>Copyright (c) 2013 MercadoLibre</rights>
     {% for post in site.posts limit:20 %} 
     <entry>
         <title>{{ post.title }}</title>
