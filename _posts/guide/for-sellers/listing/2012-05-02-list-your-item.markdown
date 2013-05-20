@@ -61,7 +61,7 @@ curl -X POST -H "Content-Type: application/json" -d
 https://api.mercadolibre.com/items?access_token=$ACCESS_TOKEN
 </pre>
 
-Or using our SDK's
+Try to post a item using our SDK's
 
 <div id="code">
   <ul>
