@@ -140,7 +140,7 @@ p.Value = m.AccessToken;
 
 var ps = new List<Parameter> ();
 ps.Add (p);
-IRestResponse r = m.Post ("/items", ps, new {title="Anteojos Ray Ban Wayfare",subtitle="Some subtitle here",category_id="MLA5529",price=10,currency_id="ARS",available_quantity=1,buying_mode="buy_it_now",listing_type_id="bronze",condition="new",description= "Item=, <strong> Ray-Ban WAYFARER Gloss Black RB2140 901 </strong> Model= RB2140. Size= 50mm. Name= WAYFARER. Color= Gloss Black. Includes Ray-Ban Carrying Case and Cleaning Cloth. New in Box",video_id="YOUTUBE_ID_HERE",warranty="12 months by Ray Ban",pictures=[{source="http=//upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"},{source="http=//en.wikipedia.org/wiki/File=Teashades.gif"}]});
+IRestResponse r = m.Post ("/items", ps, new {title="Anteojos Ray Ban Wayfare",subtitle="Some subtitle here",category_id="MLA5529",price:10,currency_id="ARS",available_quantity:1,buying_mode="buy_it_now",listing_type_id="bronze",condition="new",description: "Item:, <strong> Ray-Ban WAYFARER Gloss Black RB2140 901 </strong> Model: RB2140. Size: 50mm. Name: WAYFARER. Color: Gloss Black. Includes Ray-Ban Carrying Case and Cleaning Cloth. New in Box",video_id="YOUTUBE_ID_HERE",warranty="12 months by Ray Ban",pictures:[{source="http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"},{source="http://en.wikipedia.org/wiki/File:Teashades.gif"}]});
 {% endhighlight %}
     </div>
   </div>
