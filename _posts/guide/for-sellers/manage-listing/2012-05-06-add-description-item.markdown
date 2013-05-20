@@ -62,6 +62,7 @@ MELI.post(uri, param, function(data) {
     </div>
     <div id="php">
 {% highlight php5 %}
+<?php
 $description = array(
   "text" => "Need more information, Please ask. We will be happy to answer."
 );
