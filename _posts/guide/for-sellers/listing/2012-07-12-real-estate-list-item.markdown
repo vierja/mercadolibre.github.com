@@ -1,15 +1,15 @@
 ---
 layout: guides
 title: Real estate listing
-categories: 
+categories:
 - listing
 - manage listings
 - orders
 - manage questions
 - shipping
-menu: 
+menu:
 - Listing &amp; Selling
-tags: 
+tags:
 - listing
 ---
 
@@ -74,8 +74,7 @@ You can list a real estate property by sending a POST request to our Items API w
 
 {% highlight javascript %}
 
-{ 
-  "site_id": "MLA",
+{
   "title": "Property title",
   "category_id": "MLA1474", <-- Operation and property type
   "price": 100000,
@@ -110,7 +109,7 @@ You can list a real estate property by sending a POST request to our Items API w
     },
     "latitude": -34.48755,  <-- Optional
     "longitude": -58.56987, <-- Optional
-  },  
+  },
   "attributes": [
     {
       "id": "MLA1472-ANTIG",
@@ -123,10 +122,6 @@ You can list a real estate property by sending a POST request to our Items API w
     {
       "id": "MLA1472-AMBQTY",
       "value_id": "MLA1472-AMBQTY-2"
-    },
-    {
-      "id": "MLA1472-BATHQTY",
-      "value_id": "MLA1472-BATHQTY-1"
     },
     {
       "id": "MLA1472-BATHQTY",
@@ -152,6 +147,191 @@ You can list a real estate property by sending a POST request to our Items API w
   "description" : "<b>This is the real estate property descritpion.</b>"
 }
 {% endhighlight %}
+
+How to publish a real state property using the SDKs
+
+<div id="code">
+  <ul>
+    <li><a href="#js">JavaScript</a></li>
+    <li><a href="#php">PHP</a></li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#net">.NET</a></li>
+  </ul>
+  <div>
+    <div id="js">
+{% highlight javascript %}
+var uri = "/items?access_token=" + MELI.getToken()
+var param = {
+  title: "Property title",
+  category_id: "MLA1474",
+  price: 100000,
+  currency_id: "ARS",
+  available_quantity: 1,
+  buying_mode: "classified",
+  listing_type_id: "silver",
+  condition: "not_specified",
+  pictures: [
+    {
+      id: "MLA2096545948_102011"
+    },
+    {
+      source:"http://media.point2.com/p2a/htmltext/f2a4/590f/3627/f49be256595a86c91457/original.jpg"
+    }
+  ],
+  seller_contact: {
+    contact: "Contact name",
+    other_info: "Additional contact info",
+    area_code: "011",
+    phone: "4444-5555",
+    area_code2: "",
+    phone2: "",
+    email: "contact-email@somedomain.com",
+    webmail: ""
+  },
+  location: {
+    address_line: "My property address 1234",
+    zip_code: "01234567",
+    neighborhood: {
+      id: "TUxBQlBBUzgyNjBa"
+    },
+    latitude: -34.48755,
+    longitude: -58.56987,
+  },
+  attributes: [
+    {
+      id: "MLA1472-ANTIG",
+      value_id: "MLA1472-ANTIG-A_ESTRENAR"
+    },
+    {
+      id: "MLA1472-DISPOSIC",
+      value_id: "MLA1472-DISPOSIC-FRENTE"
+    },
+    {
+      id: "MLA1472-AMBQTY",
+      value_id: "MLA1472-AMBQTY-2"
+    },
+    {
+      id: "MLA1472-BATHQTY",
+      value_id: "MLA1472-BATHQTY-1"
+    },
+    {
+      id: "MLA1472-DORMQTY",
+      value_id: "MLA1472-DORMQTY-2"
+    },
+    {
+      id: "MLA1472-EDIFIC",
+      value_id: "MLA1472-EDIFIC-DEPARTAMENTO"
+    },
+    {
+      id: "MLA1472-MTRS",
+      value_name: "80"
+    },
+    {
+      id: "MLA1472-MTRSTOTAL",
+      value_name: "100"
+    }
+  ],
+  description : "<b>This is the real estate property descritpion.</b>"
+}
+MELI.post(uri, param, function(data) {
+  //Your code
+}
+{% endhighlight %}
+    </div>
+    <div id="php">
+{% highlight php5 %}
+<?php
+$item = array(
+  "title" => "Property title",
+  "category_id" => "MLA1474",
+  "price" => 100000,
+  "currency_id" => "ARS",
+  "available_quantity" => 1,
+  "buying_mode" => "classified",
+  "listing_type_id" => "silver",
+  "condition" => "not_specified",
+  "pictures" => array(
+    "id" => "MLA2096545948_102011",
+    "source" => "http://media.point2.com/p2a/htmltext/f2a4/590f/3627/f49be256595a86c91457/original.jpg"
+  ),
+  "seller_contact" => array(
+    "contact" => "Contact name",
+    "other_info" => "Additional contact info",
+    "area_code" => "011",
+    "phone" => "4444-5555",
+    "area_code2" => "",
+    "phone2" => "",
+    "email" => "contact-email@somedomain.com",
+    "webmail" => ""
+  ),
+  "location" => array(
+    "address_line" => "My property address 1234",
+    "zip_code" => "01234567",
+    "neighborhood" => array(
+      "id" => "TUxBQlBBUzgyNjBa"
+    ),
+    "latitude" => -34.48755,
+    "longitude" => -58.56987,
+  ),
+  "attributes" => array(
+    array(
+      "id" => "MLA1472-ANTIG",
+      "value_id" => "MLA1472-ANTIG-A_ESTRENAR"
+    ),
+    array(
+      "id" => "MLA1472-DISPOSIC",
+      "value_id" => "MLA1472-DISPOSIC-FRENTE"
+    ),
+    array(
+      "id" => "MLA1472-AMBQTY",
+      "value_id" => "MLA1472-AMBQTY-2"
+    ),
+    array(
+      "id" => "MLA1472-BATHQTY",
+      "value_id" => "MLA1472-BATHQTY-1"
+    ),
+    array(
+      "id" => "MLA1472-DORMQTY",
+      "value_id" => "MLA1472-DORMQTY-2"
+    ),
+    array(
+      "id" => "MLA1472-EDIFIC",
+      "value_id" => "MLA1472-EDIFIC-DEPARTAMENTO"
+    ),
+    array(
+      "id" => "MLA1472-MTRS",
+      "value_name" => "80"
+    ),
+    array(
+      "id" => "MLA1472-MTRSTOTAL",
+      "value_name" => "100"
+    ),
+  ),
+  "description" => "<b>This is the real estate property descritpion.</b>"
+);
+$item = $meli->postWithAccessToken("/items", $item);
+{% endhighlight %}
+    </div>
+    <div id="java">
+{% highlight java %}
+FluentStringsMap params = new FluentStringsMap();
+params.add("access_token", m.getAccessToken());
+Response r = m.post("/items", params, "{\"title\":\"Property title\",\"category_id\":\"MLA1474\",\"price\":100000,\"currency_id\":\"ARS\",\"available_quantity\":1,\"buying_mode\":\"classified\",\"listing_type_id\":\"silver\",\"condition\":\"not_specified\",\"pictures\":{\"id\":\"MLA2096545948_102011\",\"source\":\"http:\/\/media.point2.com\/p2a\/htmltext\/f2a4\/590f\/3627\/f49be256595a86c91457\/original.jpg\"},\"seller_contact\":{\"contact\":\"Contact name\",\"other_info\":\"Additional contact info\",\"area_code\":\"011\",\"phone\":\"4444-5555\",\"area_code2\":\"\",\"phone2\":\"\",\"email\":\"contact-email@somedomain.com\",\"webmail\":\"\"},\"location\":{\"address_line\":\"My property address 1234\",\"zip_code\":\"01234567\",\"neighborhood\":{\"id\":\"TUxBQlBBUzgyNjBa\"},\"latitude\":-34.48755,\"longitude\":-58.56987},\"attributes\":[{\"id\":\"MLA1472-ANTIG\",\"value_id\":\"MLA1472-ANTIG-A_ESTRENAR\"},{\"id\":\"MLA1472-DISPOSIC\",\"value_id\":\"MLA1472-DISPOSIC-FRENTE\"},{\"id\":\"MLA1472-AMBQTY\",\"value_id\":\"MLA1472-AMBQTY-2\"},{\"id\":\"MLA1472-BATHQTY\",\"value_id\":\"MLA1472-BATHQTY-1\"},{\"id\":\"MLA1472-DORMQTY\",\"value_id\":\"MLA1472-DORMQTY-2\"},{\"id\":\"MLA1472-EDIFIC\",\"value_id\":\"MLA1472-EDIFIC-DEPARTAMENTO\"},{\"id\":\"MLA1472-MTRS\",\"value_name\":\"80\"},{\"id\":\"MLA1472-MTRSTOTAL\",\"value_name\":\"100\"}],\"description\":\"This is the real estate property descritpion.<\/b>\"}");
+{% endhighlight %}
+    </div>
+    <div id="net">
+{% highlight csharp %}
+var p = new Parameter ();
+p.Name = "access_token";
+p.Value = m.AccessToken;
+
+var ps = new List<Parameter> ();
+ps.Add (p);
+IRestResponse r = m.Post ("/items", ps, new {title="Property title",category_id="MLA1474",price=100000,currency_id="ARS",available_quantity=1,buying_mode="classified",listing_type_id="silver",condition="not_specified",pictures={id="MLA2096545948_102011",source="http=\/\/media.point2.com\/p2a\/htmltext\/f2a4\/590f\/3627\/f49be256595a86c91457\/original.jpg"},seller_contact={contact="Contact name",other_info="Additional contact info",area_code="011",phone="4444-5555",area_code2="",phone2="",email="contact-email@somedomain.com",webmail=""},location={address_line="My property address 1234",zip_code="01234567",neighborhood={id="TUxBQlBBUzgyNjBa"},latitude=-34.48755,longitude=-58.56987},attributes=[{id="MLA1472-ANTIG",value_id="MLA1472-ANTIG-A_ESTRENAR"},{id="MLA1472-DISPOSIC",value_id="MLA1472-DISPOSIC-FRENTE"},{id="MLA1472-AMBQTY",value_id="MLA1472-AMBQTY-2"},{id="MLA1472-BATHQTY",value_id="MLA1472-BATHQTY-1"},{id="MLA1472-DORMQTY",value_id="MLA1472-DORMQTY-2"},{id="MLA1472-EDIFIC",value_id="MLA1472-EDIFIC-DEPARTAMENTO"},{id="MLA1472-MTRS",value_name="80"},{id="MLA1472-MTRSTOTAL",value_name="100"}],description="This is the real estate property descritpion.<\/b>"});
+{% endhighlight %}
+    </div>
+  </div>
+</div>
 
 A real estate property JSON is composed by the following information (an example is provided below the table):
 <table class="ch-datagrid">
@@ -236,7 +416,7 @@ To list a real estate property, you will have to choose the operation and proper
 
 <a href="https://api.mercadolibre.com/sites" target="_blank">https://api.mercadolibre.com/sites</a>
 
-Once there, you will be able to determine your SITE_ID, which is the "id" for your corresponding country. 
+Once there, you will be able to determine your SITE_ID, which is the "id" for your corresponding country.
 
 Now that you have your SITE_ID, you can access the following URL (using a browser or by sending a GET request):
 
@@ -300,8 +480,8 @@ If you were to receive an error status code on a response when communicating wit
 You can [Modify a listing](/modify-listing) field as with any other item or [Change its status](/modify-listing/#changing-status).
 
 
-Real estate listings have an expiration date. This expiration date is usually up to two months following the activation date (depending on whether a promotional pack is active or not) 
-Once an item has reached its expiration date, it will be automatically finalized and will no longer be visible to other users. 
+Real estate listings have an expiration date. This expiration date is usually up to two months following the activation date (depending on whether a promotional pack is active or not)
+Once an item has reached its expiration date, it will be automatically finalized and will no longer be visible to other users.
 When this ocurrs, you may choose to relist your property to active it again. Relisting implies the creation of a NEW item with the exact same elements as its parent.
 
 For your APP, you might want to add a process that periodically checks your listings' expiration dates so as to finalize and relist your listings before they reach their expiration date. *Only items with a "closed" status admit relisting.* You can send a PUT request with a "closed" status at any time when your item is "active" or "paused".
@@ -312,3 +492,13 @@ For your APP, you might want to add a process that periodically checks your list
 ##Error Codes Reference {#error-codes}
 
 Check <a href="/list-your-item/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.
+
+<script>
+
+  window.onload = function() { startDrawing(); }
+
+  function startDrawing(){
+      $("#code").tabNavigator();
+
+  }
+</script>

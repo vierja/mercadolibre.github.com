@@ -114,8 +114,12 @@ $item = array(
   "video_id" => "YOUTUBE_ID_HERE",
   "warranty" => "12 month by Ray Ban",
   "pictures" => array(
-    "source" => "http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg",
-    "source" => "http://en.wikipedia.org/wiki/File:Teashades.gif"
+    array(
+      "source" => "http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"
+    ),
+    array(
+      "source" => "http://en.wikipedia.org/wiki/File:Teashades.gif"
+    ),
   )
 );
 $item = $meli->postWithAccessToken("/items", $item);
