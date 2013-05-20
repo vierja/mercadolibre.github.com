@@ -11,9 +11,10 @@ menu:
 - News
 tags: 
 - news
-- homeRighte
+- homeRight
 ---
 
+![MercadoLibre and Wayra](/images/news/mercado-wayra-logos-gde.png)
 
 In MercadoLibre we want to help argentine developers carry out their own e-commerce projects and ideas. That's why a few days ago we've partnered with Wayra - Telefonica's global startup accelerator - to work together towards this goal.
 

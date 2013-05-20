@@ -18,7 +18,7 @@ menu:
 		    <div class="info-left">
 		      <small class='date-new'>{{ post.date | date: "%B %d, %Y" }}</small>
 		      <h4 class='excerpt-new'>{{ post.excerpt }}</h4>
-		      <a href="/dev-conf-bs-as/">Learn more.</a>
+		      <a href="{{ post.url }}">Read more.</a>
 		    </div>
 		      <a href="{{ post.url }}" class='banner-right'><img alt="{{ post.title }}" src="../images/news/{{ post.imageRight }}" ></a>
 		  </div>
