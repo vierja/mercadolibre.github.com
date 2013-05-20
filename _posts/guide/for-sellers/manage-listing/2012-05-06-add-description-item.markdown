@@ -51,7 +51,7 @@ How to add description with our SDK:
   <div>
     <div id="js">
 {% highlight javascript %}
-var uri = "items/ITEMID/descriptions?access_token=" + MELI.getToken()
+var uri = "/items/ITEMID/descriptions?access_token=" + MELI.getToken()
 var param = {
   text: "Need more information, Please ask. We will be happy to answer."
 }
@@ -62,17 +62,18 @@ MELI.post(uri, param, function(data) {
     </div>
     <div id="php">
 {% highlight php5 %}
+<?php
 $description = array(
   "text" => "Need more information, Please ask. We will be happy to answer."
 );
-$item = $meli->postWithAccessToken("items/ITEMID/descriptions", $description);
+$item = $meli->postWithAccessToken("/items/ITEMID/descriptions", $description);
 {% endhighlight %}
     </div>
     <div id="java">
 {% highlight java %}
 FluentStringsMap params = new FluentStringsMap();
 params.add("access_token", m.getAccessToken());
-Response r = m.post("items/ITEMID/descriptions", params, "{\"text\":\"Need more information, Please ask. We will be happy to answer.\"}");
+Response r = m.post("/items/ITEMID/descriptions", params, "{\"text\":\"Need more information, Please ask. We will be happy to answer.\"}");
 {% endhighlight %}
     </div>
     <div id="net">
@@ -83,7 +84,7 @@ p.Value = m.AccessToken;
 
 var ps = new List<Parameter> ();
 ps.Add (p);
-IRestResponse r = m.Post ("items/ITEMID/descriptions", ps, new {text="Need more information, Please ask. We will be happy to answer."});
+IRestResponse r = m.Post ("/items/ITEMID/descriptions", ps, new {text="Need more information, Please ask. We will be happy to answer."});
 {% endhighlight %}
     </div>
   </div>

@@ -342,6 +342,7 @@ MELI.login(function() {
     </div>
     <div id="php">
 {% highlight php %}
+<?php
 $meli = new Meli(array('appId' => '1234','secret' => 'a secret'));
 $userId = $meli->initConnect();
 if(userId):
