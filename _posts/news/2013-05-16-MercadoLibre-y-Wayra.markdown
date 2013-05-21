@@ -24,8 +24,8 @@ The agreement was made in the context of Wayra's mission to support young argent
 We'll participate with investments and technical training for those projects that use our API and are chosen by Wayra in their next call.
 
 ## The call
-
-There's time until May 26th to send digital business ideas and projects to be developed in Argentina. You can sign up directly in Wayra's website and those who are chosen will be able to use this investment program.
+ 
+There's time until May 26th to send digital business ideas and projects to be developed in Argentina. You can sign up directly in <a href='http://wayra.org/joinus/' target='_blank'>Wayra's website</a> and those who are chosen will be able to use this investment program.
 
 ## About Wayra
 
