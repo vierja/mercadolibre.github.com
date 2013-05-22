@@ -9,10 +9,111 @@ title: API FAQ
 
     <ul class="questions">
         <li class="ask">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout?
+            I need use my real user to test my application?
             <div class="answer">
-                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+You has to use an test user, to create him is necessary use than real user of the MercadoLibre. To see how to create your test user check this page.<br />
+The test user cannot buy a item from one real user, therefore create two test users for buy and selling.<br />
+The nickname an test user must begin with "TT".
             </div>
+        </li>
+        <li class="ask">
+            What is oAuth 2.0? How it work?
+            <div class="answer">
+OAuth 2.0 it is a flow of permission sure, where the user does not supply his credencias in the developer environment, it means that the user only allows the application. It see like the flow works:
+<br /><br />
+Server side flow:
+image-server-side-flow.jpg
+<br /><br />
+Client side flow:
+image-client-side-flow.jpg
+<br /><br />
+In this type of authentication is necessary the creation of an application by part of the developer in our platform (check <a href='/first-step/#register'>this page</a> for more informations).
+The first step is request to user for use some informations about his account. When he authorize your app, you'll get an access_token that allows you to operate in MercadoLibre.
+<br /><br />
+Documents:<br />
+<a href='/authentication-and-authorization/'>Authentication and Authorization (Documentation MercadoLibre)</a>
+<br />
+<a href='http://tools.ietf.org/pdf/draft-ietf-oauth-v2-12.pdf' target='_blank'>The OAuth 2.0 Authorization Protocol (PDF)</a>
+
+            </div>
+        </li>
+        <li class="ask">
+            How long does an access token?
+            <div class="answer">
+The access_token is valid per 3 hours.
+            </div>
+        </li>
+        <!-- <li class="ask">
+            How to check if my access token is valid?
+            <div class="answer">
+                ???????????????????
+            </div>
+        </li> -->
+        <li class="ask">
+            How long does an refresh token is valid?
+            <div class="answer">
+The refresh_token is valid forever
+            </div>
+        </li>
+        <li class="ask">
+            Which category is possible publish a item?
+            <div class="answer">
+On consult one category, you can see the parameter listing_allowed at the end of json returned,  this parameter should be <b>true</b>.
+Example:
+{% highlight javascript %}
+{
+ ....
+ "pictures":[
+    {"source":"http://yourServer/path/to/your/picture.jpg"},
+    {"source":"http://yourServer/path/to/your/otherPicture.gif"},
+    {"source":"http://yourServer/path/to/your/anotherPicture.png"}
+ ]
+ ...
+}
+{% endhighlight %}      
+            </div>
+        </li>
+        <li class="ask">
+            How to see attributes in a category? And how do I know if is required?
+            <div class="answer">
+                
+            </div>
+        </li>
+        <li class="ask">
+            Where i can get all categories in one unique call?
+            <div class="answer"></div>
+        </li>
+        <li class="ask">
+            How to send one video from youtube in a item?
+            <div class="answer"></div>
+        </li>
+        <li class="ask">
+            My image sent in variable "source" is not loading. What i did wrong?
+            <div class="answer"></div>
+        </li>
+        <li class="ask">
+            How to publish one property or car?
+            <div class="answer"></div>
+        </li>
+        <li class="ask">
+            I can make relist in a item more than once?
+            <div class="answer"></div>
+        </li>
+        <li class="ask">
+            I am receiving a lot of notifications each purchase. What is happening?
+            <div class="answer"></div>
+        </li>
+        <li class="ask">
+            How can i do for refund a payment in MercadoPago?
+            <div class="answer"></div>
+        </li>
+        <li class="ask">
+            How to list all filters and types of sort in an API?
+            <div class="answer"></div>
+        </li>
+        <li class="ask">
+            How to revoke an access from my application in MercadoLibre?
+            <div class="answer"></div>
         </li>
     </ul>
 </div>

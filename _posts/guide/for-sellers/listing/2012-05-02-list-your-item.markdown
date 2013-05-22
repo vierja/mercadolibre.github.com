@@ -115,19 +115,11 @@ $item = array(
   "warranty" => "12 month by Ray Ban",
   "pictures" => array(
     array(
-<<<<<<< HEAD
       "source" => "http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"
     ),
     array(
       "source" => "http://en.wikipedia.org/wiki/File:Teashades.gif"
-    ),
-=======
-    "source" => "http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"
-    ), 
-    array(
-    "source" => "http://en.wikipedia.org/wiki/File:Teashades.gif"
     )
->>>>>>> bfeaa7aeaca7c69a82a09d1652349838d4f7371b
   )
 );
 $item = $meli->postWithAccessToken("/items", $item);
