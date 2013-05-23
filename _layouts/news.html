@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  {% include meta-tags.html %}
+  <title>{{ page.title }}</title>
+  {% include link-tags.html %}
+  {% include script-tags-head.html %}
+</head>
+  <body>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143932955748439";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+    {% include header.html %}
+
+    <section class="main main-content">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+      
+      <div class="socialPages">
+        <div class="fb-like" data-href="" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="I liked - {{ page.title }} - " data-via="melidevelopers" data-hashtags='MercadoLibreAPI'>Tweet</a>
+        <div class="g-plusone" data-size="medium" style='width:61px !important;'></div>
+      </div>
+    </section>
+
+    <nav class="sidebar">
+      {% include sidebar-news.html %}
+    </nav>
+
+    {% include footer.html %}
+</body>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</html>

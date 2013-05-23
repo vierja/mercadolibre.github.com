@@ -1,0 +1,18 @@
+<div class="menubar">
+<h1>{{ page.menu }}</h1>
+
+{% for category in page.categories %}
+  <ul>
+    {% for post in site.tags.[category] reversed %}
+      {% assign current = nil %}
+      {% if post.id == page.id %}
+        {% assign current = 'current' %}
+      {% endif %}
+      <li class="option">
+        <a class="{{ current }}" href="{{ post.url }}">{{ post.title }}</a>
+        <small>{{ post.date | date: "%B %d, %Y" }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+</div>

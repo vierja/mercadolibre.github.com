@@ -1,15 +1,15 @@
 ---
 layout: guides
 title: Adding description
-categories: 
+categories:
 - listing
 - manage listings
 - orders
 - manage questions
 - shipping
-menu: 
+menu:
 - Listing &amp; Selling
-tags: 
+tags:
 - manage listings
 ---
 
@@ -38,6 +38,69 @@ https://api.mercadolibre.com/items/MLA430387888/descriptions?access_token=$ACCES
 
 That’s all!. Go to your item’s VIP (using the permalink field) and check the description.
 
+
+How to add description with our SDK:
+
+<div id="code">
+  <ul>
+    <li><a href="#js">JavaScript</a></li>
+    <li><a href="#php">PHP</a></li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#net">.NET</a></li>
+  </ul>
+  <div>
+    <div id="js">
+{% highlight javascript %}
+var uri = "/items/ITEMID/descriptions?access_token=" + MELI.getToken()
+var param = {
+  text: "Need more information, Please ask. We will be happy to answer."
+}
+MELI.post(uri, param, function(data) {
+  //Your code
+}
+{% endhighlight %}
+    </div>
+    <div id="php">
+{% highlight php5 %}
+<?php
+$description = array(
+  "text" => "Need more information, Please ask. We will be happy to answer."
+);
+$item = $meli->postWithAccessToken("/items/ITEMID/descriptions", $description);
+{% endhighlight %}
+    </div>
+    <div id="java">
+{% highlight java %}
+FluentStringsMap params = new FluentStringsMap();
+params.add("access_token", m.getAccessToken());
+Response r = m.post("/items/ITEMID/descriptions", params, "{\"text\":\"Need more information, Please ask. We will be happy to answer.\"}");
+{% endhighlight %}
+    </div>
+    <div id="net">
+{% highlight csharp %}
+var p = new Parameter ();
+p.Name = "access_token";
+p.Value = m.AccessToken;
+
+var ps = new List<Parameter> ();
+ps.Add (p);
+IRestResponse r = m.Post ("/items/ITEMID/descriptions", ps, new {text="Need more information, Please ask. We will be happy to answer."});
+{% endhighlight %}
+    </div>
+  </div>
+</div>
+
+
 ##Error Codes Reference {#error-codes}
 
 Check <a href="/list-your-item/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.
+
+<script>
+
+  window.onload = function() { startDrawing(); }
+
+  function startDrawing(){
+      $("#code").tabNavigator();
+
+  }
+</script>

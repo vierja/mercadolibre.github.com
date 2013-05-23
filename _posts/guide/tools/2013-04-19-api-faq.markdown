@@ -3,15 +3,314 @@ layout: 1columns
 title: API FAQ
 ---
 
-<h1>API FAQ</h1>
+# API FAQ
     
 <div class="frequent-questions">
 
     <ul class="questions">
         <li class="ask">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout?
+            I need use my real user to test my application?
             <div class="answer">
-                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+You can use your own user but we suggest create a test user that you can do the same operations and you wont will be charged by your tests.<br />
+The test user cannot buy a item from one real user, therefore create two test users for buy and selling.<br /><br />
+You can distinct an test user from a normal user by the nickname, the test users usually start with <b>"TT..."</b>.
+            </div>
+        </li>
+        <li class="ask">
+            What is OAuth 2.0? How it work?
+            <div class="answer">
+OAuth 2.0 its permission flow, where the user does not supply his credentials in the system environment, it means that the user only allows the application. Are two workflows and they looks like this:
+<br /><br />
+Server side flow:
+image-server-side-flow.jpg
+<br /><br />
+Client side flow:
+image-client-side-flow.jpg
+<br /><br />
+In booth workflows is necessary the creation of an application by part of the developer in our platform (check <a href='/first-step/#register'>this page</a> for more information).
+The first step is request to user for access some informations about his account. When he authorize your app, you will get an <b>access_token</b> that allows you to operate in MercadoLibre.
+<br /><br />
+Documents:<br />
+<a href='/authentication-and-authorization/'>Authentication and Authorization (Documentation MercadoLibre)</a>
+<br />
+<a href='http://tools.ietf.org/pdf/draft-ietf-oauth-v2-12.pdf' target='_blank'>The OAuth 2.0 Authorization Protocol (PDF)</a>
+
+            </div>
+        </li>
+        <li class="ask">
+            How long does an access token?
+            <div class="answer">
+The <b>access_token</b> is valid per 3 hours (10800 seconds) or until creation another one.
+            </div>
+        </li>
+        <li class="ask">
+            How long does an refresh token is valid?
+            <div class="answer">
+The <b>refresh_token</b> is valid forever or until creation another one.
+            </div>
+        </li>
+        <li class="ask">
+            Which category is possible publish a item?
+            <div class="answer">
+When you consult a category, you can see the parameter <b>listing_allowed</b> inside the <b>settings</b> atributtes,  this parameter should be <b><i>true</i></b>.
+<br /><br />
+Example:
+<br />
+<pre class="terminal">
+curl https://api.mercadolibre.com/categories/MLA5529
+</pre>
+{% highlight javascript %}
+{
+  "id": "MLA5529",
+  "name": "Otras Marcas",
+  "permalink": null,
+  "total_items_in_this_category": 1684,
+  "path_from_root": - [...],
+  "children_categories": [...],
+  "attribute_types": "none",
+  "settings": - {
+    ...
+    "listing_allowed": true,
+    ...
+  }
+}
+{% endhighlight %}     
+            </div>
+        </li>
+        <li class="ask">
+            How to see attributes in a category? And how do I know if is required?
+            <div class="answer">
+Some categories in MercadoLibre have "attributes", to know if the category has support consult <b>attribute_types</b> field.
+<br /><br />
+Example:
+<br />
+<pre class="terminal">
+curl https://api.mercadolibre.com/categories/MLA109299
+</pre>
+{% highlight javascript %}
+{
+  "id": "MLA109299",
+  "name": "Otras Marcas",
+  "permalink": null,
+  "total_items_in_this_category": 900,
+  "path_from_root": - [...],
+  "children_categories": [...],
+  "attribute_types": "variations",
+  ...
+}
+{% endhighlight %} 
+If the parameter <b>attribute_types</b> is equal to "variations" you can find all the attributes in resource /categories/$CATEGORY_ID/attributes. For check which attributes are required see the parameter <b>tags</b> and check if parameter <b>required</b> exist and is equal a <b><i>true</i></b>.
+<br /><br />
+Example:</br >
+<pre class="terminal">
+curl https://api.mercadolibre.com/categories/MLA109299/attributes
+</pre>
+{% highlight javascript %}
+[
+  {
+    "id": "93000",
+    "name": "Talle",
+    "type": "size",
+    "value_type": "list",
+    "tags": - {
+      "allow_variations": true,
+      "required": true,
+    },
+    "values": - [
+      - {
+        "id": "101993",
+        "name": "XS",
+      },
+    ...
+    ],
+    "attribute_group_id": "DFLT",
+    "attribute_group_name": "Otros",
+  }
+  ...
+]
+{% endhighlight %} 
+            </div>
+        </li>
+        <li class="ask">
+            Where i can get all categories in one unique call?
+            <div class="answer">
+Check <a href='/category-dump/'>this documentation</a> for see more details about dump of the whole category tree. 
+            </div>
+        </li>
+        <li class="ask">
+            My image sent in variable "source" is not loading. What i did wrong?
+            <div class="answer">
+Check if the source of image can be access by the browser, this is the most common error.<br />
+If you can access the image, then check if the extension of image is correct.
+<br /><br />
+Example for extension check:<br />
+<pre class="terminal">
+$ file image.jpg
+image.jpg: PNG image data, 500 x 500, 8-bit/color RGB, non-interlaced
+</pre>
+This example caracterize a image which have a wrong extension.
+            </div>
+        </li>
+        <li class="ask">
+            How to publish one house or a car?
+            <div class="answer">
+In MercadoLibre, houses or cars are treated as "Real Estate Listing". All the real estate listing must have attributes.
+Learn more about real estate listing in <a href='/real-estate-list-item/'>this link</a>. 
+            </div>
+        </li>
+        <li class="ask">
+            I can make relist in a item more than once?
+            <div class="answer">
+The relist is only possible once, to check if the item already relisted consult the resource /items/$ITEM_ID and search by <b>sub_status</b> parameter is already <b>"deleted"</b>.
+<br /><br />
+Example:</br >
+<pre class="terminal">
+curl https://api.mercadolibre.com/items/MLA123123
+</pre>
+{% highlight javascript %}
+{
+    "id": "123123",
+    "name": "Test item",
+    ...
+    "status": "closed",
+    "sub_status": - [
+        "deleted",
+    ],
+    ...
+    "parent_item_id": "MLB321321",
+    ...
+}
+{% endhighlight %} 
+The relist is only possible until 60 days after finalizing the item, after this time the <b>sub_status</b> gets the value "expired".
+            </div>
+        </li>
+        <li class="ask">
+            I am receiving a lot of notifications each purchase. What is happening?
+            <div class="answer">
+We send notifications on all changes the order, item, payment or questions.<br /> Usually when we talk about payments, you receive two notifications of different resources, for example orders and payments at same time, why a change in payments is reflected on order.
+            </div>
+        </li>
+        <li class="ask">
+            How can i do for refund a payment in MercadoPago?
+            <div class="answer">
+For refund or cancel a payment, you need use the collections API. For more informations see <a href='http://developers.mercadopago.com/documentation/search-received-payments?lang=en_US' target='_blank'>this page</a>.
+<br /><br />
+<b>Refund a payment</b>
+<br /><br />
+You may refund a payment within 60 days after approval. operation status: approved.
+Payments made by credit card will be refunded to the card.<br />
+Payments with vouchers will be returned by a deposit in the buyers MercadoPago account.
+<br /><br />
+Request - Curl:
+<pre class="terminal">curl -X PUT \
+-H "Content-Type: application/json" \
+'https://api.mercadolibre.com/collections/$PAYMENT_ID?access_token=$ACCESS_TOKEN' \
+-d '{"status":"refunded"}'</pre>
+Response:
+<pre><code>Status code: 200 OK</code></pre>
+<b>Cancel payments</b>
+<br /><br />
+You may cancel payments that are in the following Operation status: rejected, pending, in_mediation, in_process.<br />
+Payments by credit card which are cancelled will not switch status.<br />
+Payments made with offline methods, by deposit and/or transfer which are canceled will be deposited in the buyers MercadoPago account.
+<br /><br />
+Request - Curl:
+<pre class="terminal">curl -X PUT \
+-H "Content-Type: application/json" \
+'https://api.mercadolibre.com/collections/$PAYMENT_ID?access_token=$ACCESS_TOKEN' \
+-d '{"status":"cancelled"}'</pre>
+Response:
+<pre><code>Status code: 200 OK</code></pre>
+            </div>
+        </li>
+        <li class="ask">
+            How to list all filters and types of sort in an API?
+            <div class="answer">
+To see the filters and sortings available in a API, check inside the attribute <b>available_filters</b> and <b>available_sorts</b>, this tools is only works in call GET.
+<br /><br />
+Example:
+<pre class="terminal">
+curl https://api.mercadolibre.com/sites/MLA/search?category=MLA5529&sort=relevance&price=25.0-95.0
+</pre>
+{% highlight javascript %}
+{
+  "site_id": "MLB",
+  "paging": - {
+    "total": 928,
+    "offset": 0,
+    "limit": 1,
+  },
+  "results": - [...],
+  ...
+  "sort": - {...}, // Sorting in use
+  "available_sorts": - [ // Sortings available
+    - {
+      "id": "price_asc",
+      "name": "Lower price",
+    },
+    - {
+      "id": "price_desc",
+      "name": "Higher price",
+    },
+  ],
+  "filters": - [...], // Filters in use
+  "available_filters": - [ // Filters available
+    ...
+    - {
+      "id": "price",
+      "name": "Price range",
+      "type": "range",
+      "values": - [
+        - {
+          "id": "*-25.0",
+          "name": "Up to R$25",
+          "results": 270,
+        },
+        - {
+          "id": "25.0-95.0",
+          "name": "R$25 to R$95",
+          "results": 326,
+        },
+        - {
+          "id": "95.0-*",
+          "name": "More than R$95",
+          "results": 332,
+        },
+      ],
+    },
+    - {
+      "id": "accepts_mercadopago",
+      "name": "MercadoPago filter",
+      "type": "boolean",
+      "values": - [
+        - {
+          "id": "yes",
+          "name": "With MercadoPago",
+          "results": 922,
+        },
+      ],
+    },
+    ...
+  ],
+}
+{% endhighlight %} 
+            </div>
+        </li>
+        <li class="ask">
+            How to revoke an user access of my application on MercadoLibre?
+            <div class="answer">
+To revoke a access, you need make a "DELETE" request.
+<br /><br />
+Example:
+
+<pre class="terminal">curl -X DELETE -H "Content-Type: application/json" https://api.mercadolibre.com/users/$USER_ID/applications/6092?access_token=$ACCESS_TOKEN</pre>
+{% highlight javascript %}
+{
+    "user_id": "$USER_ID",
+    "app_id": "6092",
+    "msg": "Autorización eliminada"
+}
+{% endhighlight %} 
             </div>
         </li>
     </ul>

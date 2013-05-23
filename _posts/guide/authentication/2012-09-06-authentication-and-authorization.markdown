@@ -1,11 +1,11 @@
 ---
 layout: firststep
 title: Authentication &amp; Authorization
-categories: 
+categories:
 - Authentication
 menu:
 - Authentication
-tags: 
+tags:
 - Authentication
 ---
 
@@ -13,7 +13,7 @@ tags:
 
 MercadoLibre platform lets you access different resources through API calls. As you already know, there are some public resources that can be accessed anonymously (such as product search) and other resources that require some kind of authentication (user data, payments, modify your listed products).
 
-To handle the authentication within the platform we use [OAuth 2.0](http://tools.ietf.org/pdf/draft-ietf-oauth-v2-12.pdf) protocol. This is a standard, secure yet simple protocol that covers most use cases you should encounter when interacting with MercadoLibre's APIs. 
+To handle the authentication within the platform we use [OAuth 2.0](http://tools.ietf.org/pdf/draft-ietf-oauth-v2-12.pdf) protocol. This is a standard, secure yet simple protocol that covers most use cases you should encounter when interacting with MercadoLibre's APIs.
 
 We will explain shortly how to use [OAuth 2.0](http://tools.ietf.org/pdf/draft-ietf-oauth-v2-12.pdf) authentication in some simple cases and you can read further in the following sections.
 
@@ -45,11 +45,11 @@ Using the <a href="javascript:void(0)" onClick="goToByScroll('sdks')">SDKs</a> h
 
 ##Basic concepts {#basic-concepts}
 
-The basic idea behind OAuth protocol is that you need a token to make a secure call to an API. The rest of this guide will explain why this is needed and how to obtain that token whether you are working with client-side or server-side scripting. 
+The basic idea behind OAuth protocol is that you need a token to make a secure call to an API. The rest of this guide will explain why this is needed and how to obtain that token whether you are working with client-side or server-side scripting.
 
 ##What is a token? Why do I need one? {#tokens-explained}
-  
-A token is an encrypted string that represents the user credentials. If you have a valid token our servers can know which application is making the call, on behalf of which user, and with which permissions, making sure that all of this is authorized by the user. 
+
+A token is an encrypted string that represents the user credentials. If you have a valid token our servers can know which application is making the call, on behalf of which user, and with which permissions, making sure that all of this is authorized by the user.
 
 <div class="ch-box">
   <div id="tokens">
@@ -84,7 +84,7 @@ There are two main flows to obtain an access token:
 </ul>
 
 
-  
+
 ##Client-side flow {#client-side-brief}
 
 **Note:** This will briefly explain the authentication/authorization flow. However we **strongly** encourage you to use our provided SDKs instead of coding it by yourself since a bug in this process can lead to serious security problems.
@@ -93,8 +93,8 @@ The client side flow is better suited for applications that use client-side (doh
 <ul class="ch-list">
   <li>Your site should redirect the user to the MercadoLibre login page with the needed parameters</li>
   <li>MercadoLibre will handle the user login</li>
-  <li>If the user is correctly identified, he will be redirected to the app authorization page where he will be presented with all the permissions your app requests</li> 
-  <li>If the user grants the permissions he will be redirected to the authorization callback URL you configured in your application with the corresponding access token in the hashtag like this one (url-decoded for easy reading) 
+  <li>If the user is correctly identified, he will be redirected to the app authorization page where he will be presented with all the permissions your app requests</li>
+  <li>If the user grants the permissions he will be redirected to the authorization callback URL you configured in your application with the corresponding access token in the hashtag like this one (url-decoded for easy reading)
     <pre>http://your_domain.com/#{"client_id":your_app_id,"state":"AUTHORIZED","authorization_info":{"access_token":"the_access_token","expires_in":10800,"user_id":ml_user_id,"scopes":["offline_access","write","read"]},"domains":[domains]}</pre>
   </li>
 </ul>
@@ -141,8 +141,8 @@ After you get the access token, you can make calls to the APIs with it to gain a
 
 If you want to use the access token from your server for off-line processing, you should implement the server-side flow (do not use a client-side-generated token for server-side application, **see notes below**)
 
-In this case when the user grants the permissions to your application he will be redirected to the url as specified when you registered your application with an access_code parameter. 
-<pre>http://your_url?code=...</pre> 
+In this case when the user grants the permissions to your application he will be redirected to the url as specified when you registered your application with an access_code parameter.
+<pre>http://your_url?code=...</pre>
 Here you must exchange this code for an access token by issuing a POST request to...
 <pre>https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=SECRET_CODE&redirect_uri=$APP_CALLBACK_URL</pre>
 ...…in which response you will receive the access token, the expiration time and a refresh token (if you requested offline-access permissions) that you will use to get a new token once the current token has expired (all this takes place on the server side).
@@ -155,21 +155,21 @@ Here you must exchange this code for an access token by issuing a POST request t
         <p>User authentication and app authorization are handled at the same time by redirecting the user to our OAuth Dialog. As a result of the authorization, your application receives an authorization code (as opposed to directly delivering an access token).</p>
         <p>This authorization code can be exchanged later for an access token and a refresh token.</p>
 
-        <h3>Overview</h3> 
-        
+        <h3>Overview</h3>
+
         <p>If a refresh token is present in the authorization code exchange, then it may be used to obtain new access tokens at any time. This type of access is called **offline**, since the user does not have to be present at the browser when the application obtains a new access token. The details regarding offline-access permission are explained in <a href="/application-manager">the Application Manager guide</a>.</p>
 
         <p>When invoking this dialog, you must pass your client id that is generated when you create your application in our [Applications Portal](http://applications.mercadolibre.com/) (the client_id parameter) and the URL that the user's browser will be redirected to once the app authorization is completed (the redirect_uri parameter).</p>
 
         <h3>Step 1: Obtain a code</h3>
 
-        Make a GET request to this URL:   
+        Make a GET request to this URL:
         <pre>
           https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=Client_id&redirect_uri=REDIRECT_URL
         </pre>
 
         <h4>Parameters</h4>
-        <ul class="ch-list parameters">                                                                         
+        <ul class="ch-list parameters">
           <li>
             <code>response_type</code>: <em class="string">code</em> — Indicates that the desired operation is to obtain an authentication code.
           </li>
@@ -190,7 +190,7 @@ Here you must exchange this code for an access token by issuing a POST request t
         <p>If the user grants your application the requested data permission the OAuth Dialog will redirect the user's browser to the URL you specified in the redirect_url together with an authorization code. This redirect uses the HTTP 302 status code. The URL will look like this:</p>
 
         <pre>http://YOUR_URL?code=SERVER_GENERATED_AUTHORIZATION_CODE</pre>
-  
+
         <h3>Step 2: Exchange the code for a token</h3>
 
         <p>By using this code you can perform the next step: app authentication. After your application has been authenticated you will receive an access code which you can use when making calls to the API. The authorization code can only be exchanged once for an access token.</p>
@@ -204,7 +204,7 @@ Here you must exchange this code for an access token by issuing a POST request t
         </pre>
 
         <h4>Parameters</h4>
-        <ul class="ch-list parameters">                   
+        <ul class="ch-list parameters">
           <li>
             <code>grant_type</code>: <em class="string">authorization_code</em> — Indicates that the desired operation is to exchange the code for an access token.
           </li>
@@ -219,7 +219,7 @@ Here you must exchange this code for an access token by issuing a POST request t
           </li>
           <li>
             <code>redirect_uri</code>: <em class="string">URL</em> — The callback URL configured for your app, or one of the allowed domains.
-          </li>                     
+          </li>
         </ul>
 
         <p>If your app is succesfully authenticated and the authorization code from the user is valid, the authorization server will return the access token. An example JSON response is:</p>
@@ -289,10 +289,10 @@ Here you must exchange this code for an access token by issuing a POST request t
           <code>client_secret</code> The secret from the remote access application definition.
           </li>
         </ul>
-  
 
-  
-        <h4>Response</h4> 
+
+
+        <h4>Response</h4>
 
         The response includes the original access_token validated for 3 more hours and a new refresh token:
         {% highlight javascript %}
@@ -308,10 +308,10 @@ Here you must exchange this code for an access token by issuing a POST request t
     </div>
   </div>
 </div>
-  
+
 ##Existing SDKs {#sdks}
 
-We already provide SDKs for 
+We already provide SDKs for
 
 <ul class="ch-list">
   <li><a href="/java-sdk/">Java</a></li>
@@ -319,8 +319,55 @@ We already provide SDKs for
   <li><a href="/php-sdk/">PHP</a></li>
   <li><a href="/javascript-sdk/">Javascript (client-side)</a></li>
 </ul>
-  
+
 All of them implement OAuth flows and you are free to add new functions. Just <a href="https://github.com/mercadolibre/mercadolibre.github.com">fork repo on GitHub.</a>
+
+oAuth with our SDK.
+
+<div id="code">
+  <ul>
+    <li><a href="#js">JavaScript</a></li>
+    <li><a href="#php">PHP</a></li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#net">.NET</a></li>
+  </ul>
+  <div>
+    <div id="js">
+{% highlight javascript %}
+MELI.init({client_id: 8705});
+MELI.login(function() {
+//Your code here
+});
+{% endhighlight %}
+    </div>
+    <div id="php">
+{% highlight php %}
+<?php
+$meli = new Meli(array('appId' => '1234','secret' => 'a secret'));
+$userId = $meli->initConnect();
+if(userId):
+$user = $meli->getWithAccessToken('/users/me');
+else:
+echo '<a href="' . $meli->getLoginUrl() . '">Login with MercadoLibre</a>';
+endif;
+{% endhighlight %}
+    </div>
+    <div id="java">
+{% highlight java %}
+Meli m = new Meli(1234, "a secret");
+String redirectUrl = m.getAuthUrl("http://yourcallbackurl/");
+m.authorize("the received code", "http://somecallbackurl");
+{% endhighlight %}
+    </div>
+    <div id="net">
+{% highlight csharp %}
+Meli m = new Meli(1234, "a secret");
+string redirectUrl = m.GetAuthUrl("http://yourcallbackurl/");
+m.Authorize("the received code", "http://somecallbackurl");
+{% endhighlight %}
+    </div>
+  </div>
+</div>
 
 
 ##Some notes about tokens {#notes}
@@ -331,10 +378,10 @@ When you obtain an access token, it will be valid immediately and usable in requ
 
 There are also events which may cause an access token to become invalid before its expected expiry time. Such events include the user changing his password, an application refreshing its App Secret and, of course, the user revoking permissions to your app. Dealing with varying access token expiry times, and handling the case when an access token becomes invalid before its expected expiration time is essential for building a robust application.
 
-If the user has provided you with offline access, then by using the server-side authentication flow you will have a refresh token. This extra token can be used to refresh an expired token (not a token invalidated from other methods). By issuing a POST call to 
+If the user has provided you with offline access, then by using the server-side authentication flow you will have a refresh token. This extra token can be used to refresh an expired token (not a token invalidated from other methods). By issuing a POST call to
 
 <pre>https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=&client_secret=&refresh_token=</pre>
-you will get a new access_token and also a new refresh token. Note that a refresh token can be used only once. 
+you will get a new access_token and also a new refresh token. Note that a refresh token can be used only once.
 
 
 ##Error Codes Reference {#error-codes}
@@ -416,11 +463,12 @@ you will get a new access_token and also a new refresh token. Note that a refres
 <script type="text/javascript">
 
 window.onload = function() { startDrawing(); }
-  
+
 function startDrawing(){
   $("#tokens").expando();
   $("#clientSideLarge").expando();
   $("#serverSideLarge").expando();
-
+  $("#code").tabNavigator();
 }
+
 </script>

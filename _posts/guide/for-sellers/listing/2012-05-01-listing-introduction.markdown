@@ -1,15 +1,15 @@
 ---
 layout: guides
 title: Introduction
-categories: 
+categories:
 - listing
 - manage listings
 - orders
 - manage questions
 - shipping
-menu: 
+menu:
 - Listing &amp; Selling
-tags: 
+tags:
 - listing
 ---
 
@@ -53,27 +53,27 @@ When a user chooses an item from the result, the VIP displays the item details.
 Information displayed on the VIP:
 * (1) <a href="javascript:void(0)" onClick="goToByScroll('item-pictures')">pictures </a> of the item
 * (2) <a href="javascript:void(0)" onClick="goToByScroll('item-title')">item title</a>
-* (3) <a href="javascript:void(0)" onClick="goToByScroll('item-price')">item price</a> 
-* (4) <a href="javascript:void(0)" onClick="goToByScroll('seller-address')">address</a> 
-* (5) <a href="javascript:void(0)" onClick="goToByScroll('sold-quantity')">quantity sold</a> 
-* (6) link to [ask a question](/ask-a-question) 
+* (3) <a href="javascript:void(0)" onClick="goToByScroll('item-price')">item price</a>
+* (4) <a href="javascript:void(0)" onClick="goToByScroll('seller-address')">address</a>
+* (5) <a href="javascript:void(0)" onClick="goToByScroll('sold-quantity')">quantity sold</a>
+* (6) link to [ask a question](/ask-a-question)
 * (7) <a href="javascript:void(0)" onClick="goToByScroll('seller-reputation')">seller's reputation</a>
-* (-) <a href="javascript:void(0)" onClick="goToByScroll('seller-category')"> seller's category</a> 
-* (8) <a href="javascript:void(0)" onClick="goToByScroll('detailed-decription')">detailed description</a> 
+* (-) <a href="javascript:void(0)" onClick="goToByScroll('seller-category')"> seller's category</a>
+* (8) <a href="javascript:void(0)" onClick="goToByScroll('detailed-decription')">detailed description</a>
 
 
 ![vip](/images/vip.png)
 
 ## Items fields {#item-attribute}
 
-* Items URL 
+* Items URL
 <pre class="terminal">
 curl https://api.mercadolibre.com/items/MLB233759102
 </pre>
 
-{% highlight javascript %} 
+{% highlight javascript %}
 {
-  ....   
+  ....
   "site_id": "MLB",
   "title": "Volante Rallye Super Surf Gol Parati Saveiro G1 G2 G3 G4 G5",
   "subtitle": "Pode Ser Instalado Em Gm E Fiat /cubo Gratis + Brinde",
@@ -111,6 +111,7 @@ MELI.get("/items/MLB474720094", null, function(data) {
 		</div>
 		<div id="php">
 {% highlight php5 %}
+<?php
 $meli = new Meli(array(
   "appId" => 123456,
   "secret" => "application_secret"
@@ -139,7 +140,7 @@ In this guide, we will cover only the above-mentioned.
 <script>
 
   window.onload = function() { startDrawing(); }
-  
+
   function startDrawing(){
       $("#code").tabNavigator();
 

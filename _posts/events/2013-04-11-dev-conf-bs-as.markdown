@@ -1,6 +1,20 @@
 ---
 layout: events
 title: 1st Developers Conference - Buenos Aires
+homeTitle: MercadoLibre Developers Conference
+homeText: First Developers Conference, Buenos Aires, Argentina.
+sideTitle: 1st Developers Conference Argentina
+boxTitle: 1st MercadoLibre Developers Conference - Argentina
+boxText: 2013 - April, 11<br /><br />Golden Center<br />Parque Norte, <br />Buenos Aires,<br />Argentina
+imageRight: arDev.jpg
+categories: 
+- events
+menu: 
+- events
+tags: 
+- events
+- new
+- homeRight
 ---
 
 
