@@ -33,7 +33,6 @@ tags:
         <p style="text-align: justify">
             Given these criteria, the project highlighted in Brazil was the eShelf, created by developers Raphael Ferras, Glauber Gonçalves and Maurice Giordano. The application aims to create a virtual shelf where the seller can register their products and generate QR Codes that can be displayed on monitors media OOH (Out of home). Anyone can purchase the products instantly through their mobile phones.
         </p>
-
         <div class="ch-g1">
            <div class="ch-g1-5">
                <div class="ch-leftcolumn">
@@ -81,14 +80,12 @@ tags:
                </div>
            </div>
         </div>
-
         <p>
             <h1 class="finalists">Ranking Argentina</h1>
         </p>
         <p style="text-align: justify">
             The project highlighted in Argentina was the Mercado Insights, created by Frederico Bond and Kevin Hanna. The project calculates statistics for sellers, suggesting optimal sales price, the right title, best shipping policy etc.
         </p>
-
         <div class="ch-g1">
            <div class="ch-g1-5">
                <div class="ch-leftcolumn">
@@ -133,21 +130,17 @@ tags:
                         <li>Lucadas M.</li>
                         <li>Nacho C.</li>
                         <li>Brian B.</li>
-
                     </ul>
                </div>
            </div>
         </div>
-
-    <p class='footer-event' style="text-align: justify">
-    Congrats to all winners and all participants that have engaged at the first edition of Hackathon MercadoLibre. We're so excited for next edition!
-    </p>
-
-    <p class='footer-event' style="text-align: justify">
-        <object width="700" height="446"><param name="movie" value="http://www.youtube.com/v/01hl9DNjGGM?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/01hl9DNjGGM?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="700" height="446" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-    </p>
+        <p class='footer-event' style="text-align: justify">
+        Congrats to all winners and all participants that have engaged at the first edition of Hackathon MercadoLibre. We're so excited for next edition!
+        </p>
+        <p class='footer-event' style="text-align: justify">
+            <object width="700" height="446"><param name="movie" value="http://www.youtube.com/v/01hl9DNjGGM?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/01hl9DNjGGM?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="700" height="446" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+        </p>
   </div>
-
   <div class="box-event">
       <h3>Pictures 1st Hackathon MercadoLibre</h3>
       <div class="middle">
