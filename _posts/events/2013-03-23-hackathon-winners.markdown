@@ -164,4 +164,20 @@ tags:
 </section>
 
 
-{% include menu-events.html %}
+<nav class="sidebar">
+<div class="menubar events">
+
+<h1>Events</h1>
+<ul>
+      {% for category in page.categories %}
+        {% for post in site.tags.events | sort:date %}
+          <li class="option">
+            <a href="{{ post.url }}">{{ post.sideTitle }}</a>
+            <small>{{ post.date | date: "%B %d, %Y" }}</small>
+          </li>
+        {% endfor %}
+    {% endfor %}
+</ul>
+
+</div>
+</nav>
