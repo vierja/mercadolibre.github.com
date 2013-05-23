@@ -1,5 +1,5 @@
 ---
-layout: events
+layout: events-photos
 title: Winners 1st Hackathon MercadoLibre
 sideTitle: 1st Hackathon MercadoLibre
 categories: 
@@ -14,7 +14,7 @@ tags:
     <h1>{{ page.title }}</h1>
     <div class="ch-g1">
         <p align="center">
-            <img src="../images/hackathon_white_big.jpg" alt="1st Hackathon MercadoLibre" title="1st Hackathon MercadoLibre">
+            <img src="../images/hackathon_white_big.jpg" alt="1st Hackathon MercadoLibre" title="1st Hackathon MercadoLibre" />
         </p>
         <p style="text-align: justify">
         On Saturday 03/23, Mercadolibre held the 1st Hackathon Libre, a programming marathon to develop new features from MeLi APIs. Attended the event 86 developers (Brazil and Argentina), the mission was to think of solutions that facilitate the life of the sellers in the MercadoLibre platform.
@@ -27,9 +27,7 @@ tags:
         <p style="text-align: justify">
         The winners of this first marathon were evaluated by creativity, innovation, originality and good use of MercadoLibre APIs
         </p>
-        <p>
-            <h1 class='winners'>Ranking Brazil</h1>
-        </p>
+        <h1 class='winners'>Ranking Brazil</h1>
         <p style="text-align: justify">
             Given these criteria, the project highlighted in Brazil was the eShelf, created by developers Raphael Ferras, Glauber Gonçalves and Maurice Giordano. The application aims to create a virtual shelf where the seller can register their products and generate QR Codes that can be displayed on monitors media OOH (Out of home). Anyone can purchase the products instantly through their mobile phones.
         </p>
@@ -80,9 +78,7 @@ tags:
                </div>
            </div>
         </div>
-        <p>
-            <h1 class="finalists">Ranking Argentina</h1>
-        </p>
+        <h1 class="finalists">Ranking Argentina</h1>
         <p style="text-align: justify">
             The project highlighted in Argentina was the Mercado Insights, created by Frederico Bond and Kevin Hanna. The project calculates statistics for sellers, suggesting optimal sales price, the right title, best shipping policy etc.
         </p>
@@ -145,18 +141,18 @@ tags:
       <h3>Pictures 1st Hackathon MercadoLibre</h3>
       <div class="middle">
         <div class="big-image">
-          <img src="/images/hackathon-br/DSC_0082.JPG" />
+          <img src="/images/hackathon-br/DSC_0082.JPG" alt='First photo Hackathon Brazil' />
         </div>
       <div class="myCarousel ch-carousel">
         <ul>
-          <li><img src="/images/hackathon-br/DSC_0082.JPG" /></li>
-          <li><img src="/images/hackathon-br/DSC_0088.JPG" /></li>
-          <li><img src="/images/hackathon-br/DSC_0103.JPG" /></li>
-          <li><img src="/images/hackathon-br/DSC_0329.JPG" /></li>
-          <li><img src="/images/hackathon-br/DSC_0330.JPG" /></li>
-          <li><img src="/images/hackathon-br/DSC_0340.JPG" /></li>
-          <li><img src="/images/hackathon-br/IMG_1376.JPG" /></li>
-          <li><img src="/images/hackathon-br/IMG_1388.JPG" /></li>
+          <li><img src="/images/hackathon-br/DSC_0082.JPG" alt='Photo Hackathon Brazil' /></li>
+          <li><img src="/images/hackathon-br/DSC_0088.JPG" alt='Photo Hackathon Brazil' /></li>
+          <li><img src="/images/hackathon-br/DSC_0103.JPG" alt='Photo Hackathon Brazil' /></li>
+          <li><img src="/images/hackathon-br/DSC_0329.JPG" alt='Photo Hackathon Brazil' /></li>
+          <li><img src="/images/hackathon-br/DSC_0330.JPG" alt='Photo Hackathon Brazil' /></li>
+          <li><img src="/images/hackathon-br/DSC_0340.JPG" alt='Photo Hackathon Brazil' /></li>
+          <li><img src="/images/hackathon-br/IMG_1376.JPG" alt='Photo Hackathon Brazil' /></li>
+          <li><img src="/images/hackathon-br/IMG_1388.JPG" alt='Photo Hackathon Brazil' /></li>
         </ul>
       </div>
       </div>
@@ -164,18 +160,4 @@ tags:
 </section>
 
 
-<nav class="sidebar">
-<div class="menubar events">
-
-<h1>Events</h1>
-<ul>
-  {% for post in site.tags.events | sort:date %}
-    <li class="option">
-      <a href="{{ post.url }}">{{ post.sideTitle }}</a>
-      <small>{{ post.date | date: "%B %d, %Y" }}</small>
-    </li>
-  {% endfor %}
-</ul>
-
-</div>
-</nav>
+{% include menu-events.html %}
