@@ -1,5 +1,5 @@
 ---
-layout: events-photos
+layout: events
 title: Winners 1st Hackathon MercadoLibre
 sideTitle: 1st Hackathon MercadoLibre
 categories: 
