@@ -1,5 +1,5 @@
 ---
-layout: events
+layout: events-photos
 title: 1st Developers Conference - Buenos Aires
 homeTitle: MercadoLibre Developers Conference
 homeText: First Developers Conference, Buenos Aires, Argentina.
@@ -7,11 +7,11 @@ sideTitle: 1st Developers Conference Argentina
 boxTitle: 1st MercadoLibre Developers Conference - Argentina
 boxText: 2013 - April, 11<br /><br />Golden Center<br />Parque Norte, <br />Buenos Aires,<br />Argentina
 imageRight: arDev.jpg
-categories: 
+categories:
 - events
-menu: 
+menu:
 - events
-tags: 
+tags:
 - events
 - new
 - homeRight
@@ -56,6 +56,77 @@ tags:
 
 <iframe src="http://www.slideshare.net/slideshow/embed_code/18856277" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
 
+<h2 id="Photos">Conference Photos</h2>
+
+<div class="box-event">
+    <h3>Photos Developers Conference BsAs</h3>
+    <div class="middle">
+        <div class="big-image">
+            <img src="/images/devconfbsas/ML1001.jpg" alt='First photo Developers Conference BsAs' />
+        </div>
+        <div class="myCarousel ch-carousel">
+            <ul>
+                <li><img src="/images/devconfbsas/ML1005.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML1007.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML1010.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML1022.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML2001.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML2003.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML2006.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML2007.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML3001.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML3005.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML3011.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML3014.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML3015.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4004.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4005.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4006.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4008.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4009.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4011.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4012.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4018.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4021.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4022.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4023.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4027.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML4030.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML5006.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML5008.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6001.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6002.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6004.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6005.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6008.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6010.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6012.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6013.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6015.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML6016.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML7003.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML7004.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9001.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9004.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9006.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9013.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9014.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9016.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9017.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9019.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9020.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9021.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9023.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9024.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML9026.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML10006.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML11003.jpg" alt='Photo Developers Conference BsAs' /></li>
+                <li><img src="/images/devconfbsas/ML11006.jpg" alt='Photo Developers Conference BsAs' /></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <h2 id="videos">Conference videos</h2>
 
 <p>Comming soon...</p>
@@ -82,7 +153,8 @@ tags:
 
 <h2>Photos and Videos</h2>
 <ul>
-	<li class="option"><a href="#"> Coming soon</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('Photos')">Photos</a></li>
+	<li class="option"><a href="#"> Videos Coming soon</a></li>
 </ul>
 </div>
 </nav>
