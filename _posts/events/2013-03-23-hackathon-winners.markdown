@@ -5,7 +5,7 @@ sideTitle: 1st Hackathon MercadoLibre
 categories: 
 - events
 menu: 
-- Events
+- events
 tags: 
 - events
 ---
@@ -162,5 +162,6 @@ tags:
       </div>
     </div>
 </section>
+
 
 {% include menu-events.html %}

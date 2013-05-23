@@ -4,7 +4,7 @@ title: Next events
 categories: 
 - events
 menu: 
-- Events
+- events
 ---
 
 

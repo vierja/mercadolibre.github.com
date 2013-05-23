@@ -10,7 +10,7 @@ imageRight: arDev.jpg
 categories: 
 - events
 menu: 
-- Events
+- events
 tags: 
 - events
 - new

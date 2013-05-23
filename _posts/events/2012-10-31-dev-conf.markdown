@@ -10,7 +10,7 @@ imageRight: brDev.jpg
 categories: 
 - events
 menu: 
-- Events
+- events
 tags:
 - events
 - new
