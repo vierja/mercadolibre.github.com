@@ -169,14 +169,12 @@ tags:
 
 <h1>Events</h1>
 <ul>
-      {% for category in page.categories %}
-        {% for post in site.tags.events | sort:date %}
-          <li class="option">
-            <a href="{{ post.url }}">{{ post.sideTitle }}</a>
-            <small>{{ post.date | date: "%B %d, %Y" }}</small>
-          </li>
-        {% endfor %}
-    {% endfor %}
+  {% for post in site.tags.events | sort:date %}
+    <li class="option">
+      <a href="{{ post.url }}">{{ post.sideTitle }}</a>
+      <small>{{ post.date | date: "%B %d, %Y" }}</small>
+    </li>
+  {% endfor %}
 </ul>
 
 </div>
