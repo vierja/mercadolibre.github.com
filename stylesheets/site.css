@@ -1020,7 +1020,7 @@ section.main .home-list p.updated {
 }
 .questions .ask .answer {
 	margin-left: 40px;
-	display: none;
+	display: block;
 	font-size: 13px;
 	line-height: normal;
 	margin-top: 15px;

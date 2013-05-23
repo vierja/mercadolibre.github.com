@@ -6,7 +6,7 @@
       {% for category in page.categories %}
         {% for post in site.tags.events | sort:date %}
           <li class="option">
-            <a href="/dev-conf-bs-as/">{{ post.sideTitle }}</a>
+            <a href="{{ post.url }}">{{ post.sideTitle }}</a>
             <small>{{ post.date | date: "%B %d, %Y" }}</small>
           </li>
         {% endfor %}
