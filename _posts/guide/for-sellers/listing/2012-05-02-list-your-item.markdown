@@ -76,7 +76,7 @@ Try to post a item using our SDK's
 var uri = "/items?access_token=" + MELI.getToken()
 var param = {
   title:"Anteojos Ray Ban Wayfare",
-  subtitle:"Some subtitle here"
+  subtitle:"Some subtitle here",
   category_id:"MLA5529",
   price:10,
   currency_id:"ARS",
@@ -84,12 +84,12 @@ var param = {
   buying_mode:"buy_it_now",
   listing_type_id:"bronze",
   condition:"new",
-  description": "Item:, <strong> Ray-Ban WAYFARER Gloss Black RB2140 901 </strong> Model: RB2140. Size: 50mm. Name: WAYFARER. Color: Gloss Black. Includes Ray-Ban Carrying Case and Cleaning Cloth. New in Box",
-  "video_id": "YOUTUBE_ID_HERE",
-  "warranty": "12 month by Ray Ban"
+  description: "Item:, <strong> Ray-Ban WAYFARER Gloss Black RB2140 901 </strong> Model: RB2140. Size: 50mm. Name: WAYFARER. Color: Gloss Black. Includes Ray-Ban Carrying Case and Cleaning Cloth. New in Box",
+  video_id: "YOUTUBE_ID_HERE",
+  warranty: "12 month by Ray Ban"
   pictures:[
-    {"source":"http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"},
-    {"source":"http://en.wikipedia.org/wiki/File:Teashades.gif"}
+    {source:"http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"},
+    {source:"http://en.wikipedia.org/wiki/File:Teashades.gif"}
   ]
 }
 MELI.post(uri, param, function(data) {
@@ -102,7 +102,7 @@ MELI.post(uri, param, function(data) {
 <?php
 $item = array(
   "title" => "Anteojos Ray Ban Wayfare",
-  "subtitle" => "Some subtitle here"
+  "subtitle" => "Some subtitle here",
   "category" => "MLA5529",
   "price" => 10,
   "currency_id" => "ARS",
@@ -123,6 +123,7 @@ $item = array(
   )
 );
 $item = $meli->postWithAccessToken("/items", $item);
+?>
 {% endhighlight %}
     </div>
     <div id="java">

@@ -117,6 +117,7 @@ $meli = new Meli(array(
   "secret" => "application_secret"
 ));
 $item = $meli->get("/items/MLB474720094");
+?>
 {% endhighlight %}
 		</div>
 		<div id="java">

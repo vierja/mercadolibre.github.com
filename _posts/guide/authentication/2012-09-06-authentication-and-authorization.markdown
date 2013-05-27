@@ -350,6 +350,7 @@ $user = $meli->getWithAccessToken('/users/me');
 else:
 echo '<a href="' . $meli->getLoginUrl() . '">Login with MercadoLibre</a>';
 endif;
+?>
 {% endhighlight %}
     </div>
     <div id="java">

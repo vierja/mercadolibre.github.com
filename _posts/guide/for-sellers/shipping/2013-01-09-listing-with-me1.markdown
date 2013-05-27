@@ -1,15 +1,15 @@
 ---
 layout: guides
 title: Listing with shipping me1
-categories: 
+categories:
 - listing
 - manage listings
 - orders
 - manage questions
 - shipping
-menu: 
+menu:
 - Listing &amp; Selling
-tags: 
+tags:
 - shipping
 ---
 
@@ -285,51 +285,62 @@ https://api.mercadolibre.com/items/:item_id/shipping_options?zip_code=13565905
 
 **Response**
 
-{% highlight javascript %} 
+{% highlight javascript %}
 {
-  "destination":  {
-    "zip_code": "13565905",
-    "city":  {
-      "id": "BR-SP-25",
-      "name": "São Carlos"
+  "destination": - {
+    "zip_code": "01001000",
+    "city": - {
+      "id": "BR-SP-44",
+      "name": "São Paulo",
     },
-    "state":  {
+    "state": - {
       "id": "BR-SP",
-      "name": "São Paulo"
+      "name": "São Paulo",
     },
-    "country":  {
+    "country": - {
       "id": "BR",
-      "name": "Brasil"
-    }
-  },
-  "options":  [
-     {
-      "id": 18309945,
-      "name": "Express",
-      "currency_id": "BRL",
-      "list_cost": 14.7,
-      "cost": 14.7,
-      "tracks_shipments_status": "not_verified",
-      "display": "always",
-      "speed":  {
-        "shipping": 24,
-        "handling": 24
-      }
+      "name": "Brasil",
     },
-     {
-      "id": 18309946,
-      "name": "Standard",
+    "extended_attributes": - {
+      "address": "Praça da Sé",
+      "owner_name": null,
+      "zip_code_type": - {
+        "type": "LO",
+        "description": "Logradouro",
+      },
+      "city_type": "CP",
+      "city_name": "São Paulo",
+      "version": 6,
+    },
+  },
+  "options": - [
+    - {
+      "id": 18310062,
+      "name": "Normal",
       "currency_id": "BRL",
-      "list_cost": 12.4,
-      "cost": 0,
+      "list_cost": 13.86,
+      "cost": 13.86,
+      "tracks_shipments_status": "not_verified",
+      "display": "recommended",
+      "speed": - {
+        "shipping": 72,
+        "handling": 24,
+      },
+    },
+    - {
+      "id": 18310061,
+      "name": "Expresso",
+      "currency_id": "BRL",
+      "list_cost": 14.88,
+      "cost": 14.88,
       "tracks_shipments_status": "not_verified",
       "display": "always",
-      "speed":  {
-        "shipping": 72,
-        "handling": 24
-      }
-    }
-  ]
+      "speed": - {
+        "shipping": 24,
+        "handling": 24,
+      },
+    },
+  ],
 }
 
 {% endhighlight %}
@@ -339,8 +350,11 @@ https://api.mercadolibre.com/items/:item_id/shipping_options?zip_code=13565905
 
 - `currency_id`: The currency in which the price is charged.
 - `list cost`: The cost for this shipping option.
-- `cost`: The actual cost to be paid, for "free shipping" cost is 0. 
-- `tracks_shipments_status`: 'not_verified'.
+- `cost`: The actual cost to be paid, for "free shipping" cost is 0.
+- `tracks_shipments_status`: Indicates how this method may be tracked.
+- `tracks_shipments_status.verified` : Can be internally tracked.
+- `tracks_shipments_status.not_verified` : Tracking information must be provided by seller.
+- `tracks_shipments_status.no` : Cannot be tracked.
 - `speed.shipping`: Promise of time to deliver, expressed in hours.
 - `speed.handling`: Promise of handling time, expressed in hours.
 
@@ -357,34 +371,32 @@ https://api.mercadolibre.com/sites/MLB/shipping_services
 
 {% highlight javascript %}
 [
-    {
-        "id": 1,
-        "name": "PAC",
-        "status": "active",
-        "shipping_company": {
-            "id": 100008,
-            "name": "Correios",
-            "site_id": "MLB"
-        },
-        "site_id": "MLB",
-        "currency_id": "BRL",
-        "tracks_shipments": true,
-        "tracking_url": "http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI=#{trackingNumber}"
+  - {
+    "id": 1,
+    "name": "PAC",
+    "description": "PAC",
+    "status": "active",
+    "shipping_company": - {
+      "id": 100008,
+      "name": "Correios",
     },
-    {
-        "id": 2,
-        "name": "Sedex",
-        "status": "active",
-        "shipping_company": {
-            "id": 100008,
-            "name": "Correios",
-            "site_id": "MLB"
-        },
-        "site_id": "MLB",
-        "currency_id": "BRL",
-        "tracks_shipments": true,
-        "tracking_url": "http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI=#{trackingNumber}"
-    }
+    "site_id": "MLB",
+    "tracks_shipments": true,
+    "tracking_url": "http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI=#{trackingNumber}",
+  },
+  - {
+    "id": 2,
+    "name": "Sedex",
+    "description": "Sedex",
+    "status": "active",
+    "shipping_company": - {
+      "id": 100008,
+      "name": "Correios",
+    },
+    "site_id": "MLB",
+    "tracks_shipments": true,
+    "tracking_url": "http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI=#{trackingNumber}",
+  },
 ]
 {% endhighlight %}
 
@@ -393,7 +405,7 @@ https://api.mercadolibre.com/sites/MLB/shipping_services
 ## Post the tracking number {#tracking}
 It is an essential part of this mode that sellers provide tracking numbers allowing the buyers to be aware of the status of their packages and when is estimated to be delivered.
 
-All you have to do is a PUT to the shipment with the **service_id** and **tracking_number** attributes.
+All you have to do is a PUT to the shipment with the `service_id` and `tracking_number` attributes.
 
 <pre class="terminal">
 https://api.mercadolibre.com/shipments/:shipment_id?access_token=
@@ -406,7 +418,7 @@ https://api.mercadolibre.com/shipments/:shipment_id?access_token=
 }
 {% endhighlight %}
 
-**Note:** If the product was sent by some another service, you should send the parameter service_id with value 11.
+**Note:** If the product was sent by some another service, you should send the parameter `service_id` with value **11**.
 
 
 ##Error Codes Reference {#error-codes}

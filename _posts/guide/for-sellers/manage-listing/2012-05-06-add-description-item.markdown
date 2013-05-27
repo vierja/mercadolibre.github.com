@@ -67,6 +67,7 @@ $description = array(
   "text" => "Need more information, Please ask. We will be happy to answer."
 );
 $item = $meli->postWithAccessToken("/items/ITEMID/descriptions", $description);
+?>
 {% endhighlight %}
     </div>
     <div id="java">
