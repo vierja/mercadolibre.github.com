@@ -9,7 +9,7 @@ title: Frequently Asked Questions
 
     <ul class="questions">
         <li class="ask">
-            Do I need to use my own MercadoLibre user to test my application?
+            <span class='title'>Do I need to use my own MercadoLibre user to test my application?</span>
             <div class="answer">
 While you can use your own MercadoLibre user for testing purposes, we suggest creating a test user with which you will be able to do the same operations and not be charged by the tests made.<br />
 Test users cannot buy a item from a non-test user, therefore you should create two test users for buy and selling testing pruposes.<br /><br />
@@ -18,7 +18,7 @@ You can usually differenciate a test user from a non-test one by chekcing the ni
             </div>
         </li>
         <li class="ask">
-            What is OAuth 2.0? How does it work?
+            <span class='title'>What is OAuth 2.0? How does it work?</span>
             <div class="answer">
 OAuth 2.0 is an authentication and authorization protocol, in which the user does not supply his credentials in the system environment, meaning that the user only allows the application to act on its behalf, never sending his credential directly to the application, but providing credentials in a trusted site instead. There are two workflows which look like this:
 <br /><br />
@@ -38,19 +38,19 @@ Documents:<br />
             </div>
         </li>
         <li class="ask">
-            For how long is an access token valid?
+            <span class='title'>For how long is an access token valid?</span>
             <div class="answer">
 Each <b>access_token</b> is valid for 3 hours (10800 seconds) or until creation of a new one for that user, whichever happens first.
             </div>
         </li>
         <li class="ask">
-            For how long is a refresh token valid?
+            <span class='title'>For how long is a refresh token valid?</span>
             <div class="answer">
 <b>Refresh tokens</b> do not have a time expiration, but will expire after its first use in exchange for a new access token. Together with the new access token, you will also receive a new refresh token for the next time you need to get an access token. Keep in mind that for your app to receive a refresh token, the scope “offline access” must be checked within you app settings.
             </div>
         </li>
         <li class="ask">
-            How do I recognize categories that allow listings?
+            <span class='title'>How do I recognize categories that allow listings?</span>
             <div class="answer">
 When you check a category, you will be able to see the parameter <b>listing_allowed</b> within the <b>settings atributte</b>. If value is true, then listing in that category is allowed, otherwise it is not.
 <br /><br />
@@ -78,7 +78,7 @@ curl https://api.mercadolibre.com/categories/MLA5529
             </div>
         </li>
         <li class="ask">
-            How can I check the attributes in a category? How do I know if an attribute is required?
+            <span class='title'>How can I check the attributes in a category? How do I know if an attribute is required?</span>
             <div class="answer">
 Some categories in MercadoLibre have attributes. To check if a category has attributes, check the <b>attribute_types</b> field.
 <br /><br />
@@ -132,13 +132,13 @@ curl https://api.mercadolibre.com/categories/MLA109299/attributes
             </div>
         </li>
         <li class="ask">
-            Can I get all categories making just one request?
+            <span class='title'>Can I get all categories making just one request?</span>
             <div class="answer">
 Check <a href='/category-dump/'>this documentation</a> for further detail about getting a dump of the entire categories tree.
             </div>
         </li>
         <li class="ask">
-            Images sent as “source” in “pictures” attribute are not being uploaded correctly. What's wrong?
+            <span class='title'>Images sent as “source” in “pictures” attribute are not being uploaded correctly. What's wrong?</span>
             <div class="answer">
 The first step is waiting a few minutes. Our pictures API make take around 5 minutes to get the picture in the url provided, uploading it to our servers and indexing it. If after a while the image has not been uploaded, check if the source of the image can be access by browser (this is the most common error). If you cannot access by browser, please check the url provided. If you can access the image by browser, then check if the extension of image is correct (example: the image has a .jpg filename extension, where in reality its format is png or other).
 <br /><br />
@@ -152,13 +152,13 @@ This example shows an image that has a wrong extension (jpg) with a current png 
             </div>
         </li>
         <li class="ask">
-            How do I publish a real estate or a vehicle item?
+            <span class='title'>How do I publish a real estate or a vehicle item?</span>
             <div class="answer">
 All real estate and vehicle listings have attributes. Learn more about real estate listing at <a href='/real-estate-list-item/'>this link</a>. 
             </div>
         </li>
         <li class="ask">
-            How many times can I relist an item?
+            <span class='title'>How many times can I relist an item?</span>
             <div class="answer">
 You can only relist an item once. The new relisted is a totally different item but will inherit the same charateristics as its prent item. Only once this new relisted item is closed you will be able to relist this latter, and so on. To check if an item is already relisted, check the resource /items/$ITEM_ID and check the <b>parent_item_id</b> attribute.
 <br /><br />
@@ -184,14 +184,14 @@ Relisting is only possible up to 60 days after an item is closed. After this per
             </div>
         </li>
         <li class="ask">
-            I receive more than one notification per purchase. What´s happening?
+            <span class='title'>I receive more than one notification per purchase. What´s happening?</span>
             <div class="answer">
 We send notifications on every change suffered by an order, item, payment or question.<br />
 Regarding payments, you will receive two notifications (from different resources). For example orders and payments, because a change in a payment affects an order as well.
             </div>
         </li>
         <li class="ask">
-            How do I request a payment refund in MercadoPago?
+            <span class='title'>How do I request a payment refund in MercadoPago?</span>
             <div class="answer">
 To refund or cancel a payment, you will need to send a request to the Collections resource. Check  <a href='http://developers.mercadopago.com/documentation/search-received-payments?lang=en_US' target='_blank'>this page</a> for further information.
 <br /><br />
@@ -224,7 +224,7 @@ Response:
             </div>
         </li>
         <li class="ask">
-            How can I list all filters and sort types in a resource?
+            <span class='title'>How can I list all filters and sort types in a resource?</span>
             <div class="answer">
 To see the available filters and sortings in a resource, check the <b>available_filters</b> and <b>available_sorts</b> attributes. This will only work in a GET request.
 <br /><br />
@@ -297,7 +297,7 @@ curl https://api.mercadolibre.com/sites/MLA/search?category=MLA5529&sort=relevan
             </div>
         </li>
         <li class="ask">
-            How can I revoke permission to a user who allowed my application?
+            <span class='title'>How can I revoke permission to a user who allowed my application?</span>
             <div class="answer">
 To revoke access, you will need make a DELETE request to our Applications resource.
 <br /><br />
@@ -317,11 +317,11 @@ Example:
 </div>
 <script type="text/javascript">
 window.onload = function() {
-	$(".questions .ask").click(function() {
-		if($(this).find(".answer").css('display') == 'none') {
-			$(this).find(".answer").slideDown()
+	$(".questions .ask span.title").click(function() {
+		if($(this).parent().find(".answer").css('display') == 'none') {
+			$(this).parent().find(".answer").slideDown()
 		} else {
-			$(this).find(".answer").slideUp()
+			$(this).parent().find(".answer").slideUp()
 		}
 	});
 }
