@@ -141,7 +141,7 @@ var param = {
 }
 MELI.post(uri, param, function(data) {
   //Your code
-}
+});
 {% endhighlight %}
     </div>
     <div id="php">
