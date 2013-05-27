@@ -1,15 +1,15 @@
 ---
 layout: guides
 title: Giving feedback to an order
-categories: 
+categories:
 - listing
 - manage listings
 - orders
 - manage questions
 - shipping
-menu: 
+menu:
 - Listing &amp; Selling
-tags: 
+tags:
 - orders
 ---
 
@@ -58,13 +58,67 @@ Posting positive feedback after a seller ships a product to the buyer.
 <pre class="terminal">
 curl -X POST -H "Content-Type: application/json" -d
 '{
-  "rating":"positive",  
-  "fulfilled":true, 
+  "rating":"positive",
+  "fulfilled":true,
   "message":"The product was paid in time and shipped to the buyer."
 }'
 
-https://api.mercadolibre.com/orders/$ORDER_ID/feedback?access_token=$ACCESS_TOKEN  
+https://api.mercadolibre.com/orders/$ORDER_ID/feedback?access_token=$ACCESS_TOKEN
 </pre>
+
+<div id="code">
+  <ul>
+    <li><a href="#js">JavaScript</a></li>
+    <li><a href="#php">PHP</a></li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#net">.NET</a></li>
+  </ul>
+  <div>
+    <div id="js">
+{% highlight javascript %}
+var uri = "/orders/ORDER_ID/feedback?access_token=" + MELI.getToken()
+var param = {
+  rating:"positive",
+  fulfilled:true,
+  message: "The product was paid in time and shipped to the buyer."
+}
+MELI.post(uri, param, function(data) {
+  //Your code
+}
+{% endhighlight %}
+    </div>
+    <div id="php">
+{% highlight php5 %}
+<?php
+$feedback = array(
+  "rating" => "positive",
+  "fulfilled" => true,
+  "message" => "The product was paid in time and shipped to the buyer."
+);
+$item = $meli->postWithAccessToken("/orders/ORDER_ID/feedback", $feedback);
+?>
+{% endhighlight %}
+    </div>
+    <div id="java">
+{% highlight java %}
+FluentStringsMap params = new FluentStringsMap();
+params.add("access_token", m.getAccessToken());
+Response r = m.post("/orders/ORDER_ID/feedback", params, "{\"rating\":\"positive\",\"fulfilled\":true,\"message\":\"The product was paid in time and shipped to the buyer.\"}");
+{% endhighlight %}
+    </div>
+    <div id="net">
+{% highlight csharp %}
+var p = new Parameter ();
+p.Name = "access_token";
+p.Value = m.AccessToken;
+
+var ps = new List<Parameter> ();
+ps.Add (p);
+IRestResponse r = m.Post ("/orders/ORDER_ID/feedback", ps, new {rating:"positive",fulfilled":true,message:"The product was paid in time and shipped to the buyer."});
+{% endhighlight %}
+    </div>
+  </div>
+</div>
 
 ###Valid response
 
@@ -83,14 +137,70 @@ Suppose the product size is not what the buyer wanted, so he rates the transacti
 <pre class="terminal">
 curl -X POST -H "Content-Type: application/json" -d
 '{
-  "rating":"NEGATIVE",
+  "rating":"negative",
   "fulfilled":false,
   "reason": "DESCRIPTION_DIDNT_MATCH_ARTICLE",
   "message":"The product is not what I expected. It is too small."
 }'
 
-https://api.mercadolibre.com/orders/$ORDER_ID/feedback?access_token=$ACCESS_TOKEN  
+https://api.mercadolibre.com/orders/$ORDER_ID/feedback?access_token=$ACCESS_TOKEN
 </pre>
+
+<div id="code2">
+  <ul>
+    <li><a href="#js">JavaScript</a></li>
+    <li><a href="#php">PHP</a></li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#net">.NET</a></li>
+  </ul>
+  <div>
+    <div id="js">
+{% highlight javascript %}
+var uri = "/orders/ORDER_ID/feedback?access_token=" + MELI.getToken()
+var param = {
+  rating:"negative",
+  fulfilled:false,
+  reason: "DESCRIPTION_DIDNT_MATCH_ARTICLE",
+  message: "The product is not what I expected. It is too small."
+}
+MELI.post(uri, param, function(data) {
+  //Your code
+}
+{% endhighlight %}
+    </div>
+    <div id="php">
+{% highlight php5 %}
+<?php
+$feedback = array(
+  "rating" => "negative",
+  "fulfilled" => false,
+  "reason" => "DESCRIPTION_DIDNT_MATCH_ARTICLE",
+  "message" => "The product is not what I expected. It is too small."
+);
+$item = $meli->postWithAccessToken("/orders/ORDER_ID/feedback", $feedback);
+?>
+{% endhighlight %}
+    </div>
+    <div id="java">
+{% highlight java %}
+FluentStringsMap params = new FluentStringsMap();
+params.add("access_token", m.getAccessToken());
+Response r = m.post("/orders/ORDER_ID/feedback", params, "{\"rating\":\"negative\",\"fulfilled\":false,\"reason\":\"DESCRIPTION_DIDNT_MATCH_ARTICLE\",\"message\":\"The product is not what I expected. It is too small.\"}");
+{% endhighlight %}
+    </div>
+    <div id="net">
+{% highlight csharp %}
+var p = new Parameter ();
+p.Name = "access_token";
+p.Value = m.AccessToken;
+
+var ps = new List<Parameter> ();
+ps.Add (p);
+IRestResponse r = m.Post ("/orders/ORDER_ID/feedback", ps, new {rating:"negative",fulfilled":false,reason:"DESCRIPTION_DIDNT_MATCH_ARTICLE",message:"The product is not what I expected. It is too small."});
+{% endhighlight %}
+    </div>
+  </div>
+</div>
 
 ##Reply to feedback {#reply-feedback}
 
@@ -124,7 +234,7 @@ EXAMPLES:
 <pre class="terminal">
 curl -X POST -H "Content-Type: application/json" -d
 '{
-  "reply": "The size was detailed in the description, however if you send it back we can refund you the money." 
+  "reply": "The size was detailed in the description, however if you send it back we can refund you the money."
 }'
 
 https://api.mercadolibre.com/orders/$ORDER_ID/feedback/purchase?access_token={aSellersAccessToken}
@@ -136,7 +246,7 @@ https://api.mercadolibre.com/orders/$ORDER_ID/feedback/purchase?access_token={aS
 <pre class="terminal">
 curl -X POST -H "Content-Type: application/json" -d
 '{
-  "reply": "I expected you to send me the correct size from the start." 
+  "reply": "I expected you to send me the correct size from the start."
 }'
 
 https://api.mercadolibre.com/orders/$ORDER_ID/feedback/sale?access_token={aBuyersAccessToken}
@@ -174,3 +284,15 @@ https://api.mercadolibre.com/orders/$ORDER_ID/feedback/sale?access_token={aSelle
 ##Error Codes Reference {#error-codes}
 
 Check <a href="/orders/#error-codes">this link</a> for most common errors. For further assistance, please check our <a href='/community' target='_blank'>forums</a> or connect to our irc channel (#meli@irc.freenode.net). In case you find an issue in our API, please report it on <a href='https://github.com/mercadolibre/api/issues' target='_blank'>GitHub</a>.
+
+
+<script>
+
+  window.onload = function() { startDrawing(); }
+
+  function startDrawing(){
+      $("#code").tabNavigator();
+      $("#code2").tabNavigator();
+
+  }
+</script>

@@ -1,7 +1,7 @@
 ---
 layout: guides
 title: Managing Orders
-categories: 
+categories:
 - listing
 - manage listings
 - orders
@@ -9,7 +9,7 @@ categories:
 - shipping
 menu:
 - Orders
-tags: 
+tags:
 - orders
 ---
 
@@ -30,7 +30,7 @@ tags:
 
 An Order is a request for a purchase of a certain Item or a group of Items, placed by a certain Customer. It is defined mainly by its quantity and price parameters, but could also include some other information in order to complete the description of what the customer is buying, often a certain variation on the item (eg: size and color of a pair of shoes).
 
-##Get an Order {#getorder} 
+##Get an Order {#getorder}
 
 To get an order you will need an **access token** and the **order id**, then execute the following GET request:
 
@@ -42,74 +42,101 @@ This is how an Order looks like:
 
 {% highlight javascript %}
 {
-  "id":208446080,
-  "status":"confirmed",
-  "status_detail":null,
-  "date_created":"2012-12-11T19:32:57.000-04:00",
-  "date_closed":"2012-12-11T19:32:57.000-04:00",
-  "order_items":[
-      {
-        "item":{
-                "id":"MLU406027250",
-                "title":"Item De Prueba",
-                "variation_id":null,
-                "variation_attributes":[]
-        },
-        "quantity":1,
-        "unit_price":1,
-        "currency_id":"UYU"
-      }
+  "id": 768570754,
+  "status": "paid",
+  "status_detail": null,
+  "date_created": "2013-05-27T10:01:50.000-04:00",
+  "date_closed": "2013-05-27T10:04:07.000-04:00",
+  "order_items": - [
+    - {
+      "item": - {
+        "id": "MLB12345678",
+        "title": "Samsung Galaxy",
+        "variation_id": null,
+        "variation_attributes": [
+        ],
+      },
+      "quantity": 1,
+      "unit_price": 499,
+      "currency_id": "BRL",
+    },
   ],
-  "total_amount":1,
-  "currency_id":"UYU",
-  "buyer":{
-           "id":130298679,
-           "nickname":"TT360423",
-           "email":"test_user_6945@testuser.com",
-           "phone":{
-                   "area_code":"01",
-                   "number":"1111-1111",
-                   "extension":null
-            },
-           "first_name":"Test",
-           "last_name":"Test",
-           "billing_info":{
-                           "doc_type":null,
-                           "doc_number":null
-            }
+  "total_amount": 499,
+  "currency_id": "BRL",
+  "buyer": - {
+    "id": "123456789",
+    "nickname": "COMPRADORTESTE",
+    "email": "b@b.com",
+    "phone": - {
+      "area_code": "11",
+      "number": "12345678",
+      "extension": null,
+    },
+    "first_name": "Comprador de testes",
+    "last_name": "da Silva",
+    "billing_info": - {
+      "doc_type": "CPF",
+      "doc_number": "12345678910",
+    },
   },
-  "seller":{
-            "id":130299969,
-            "nickname":"TT279486",
-            "email":"test_user_1635@testuser.com",
-            "phone":{
-                      "area_code":"01",
-                      "number":"1111-1111",
-                      "extension":null
-            },
-            "first_name":"Test",
-            "last_name":"Test"
+  "seller": - {
+    "id": "123456789",
+    "nickname": "VENDEDORTESTES",
+    "email": "a@a.com",
+    "phone": - {
+      "area_code": null,
+      "number": "11 12345678",
+      "extension": "11",
+    },
+    "first_name": "Vendedor de Testes",
+    "last_name": "testes de documentacao",
   },
-  "payments":[],
-  "feedback":{
-            "purchase":{
-                        "date_created":"2012-12-12T12:31:49.000-04:00",
-                        "fulfilled":true,
-                        "rating":"positive"
-            },
-            "sale":{
-                    "date_created":"2012-12-12T12:33:50.000-04:00",
-                    "fulfilled":true,
-                    "rating":"positive"
-            }
+  "payments": - [
+    - {
+      "id": "596707837",
+      "transaction_amount": 499,
+      "currency_id": "BRL",
+      "status": "approved",
+      "date_created": null,
+      "date_last_modified": null,
+    },
+  ],
+  "feedback": - {
+    "purchase": null,
+    "sale": null,
   },
-  "shipping":{
-              "status":"to_be_agreed"
+  "shipping": - {
+    "id": 20676482441,
+    "shipment_type": "shipping",
+    "status": "handling",
+    "date_created": "2013-05-27T10:03:28.000-04:00",
+    "receiver_address": - {
+      "id": 12345678,
+      "address_line": "Rua dos testes 123  ",
+      "zip_code": "01001000",
+      "city": - {
+        "id": "BR-SP-44",
+        "name": "São Paulo",
+      },
+      "state": - {
+        "id": "BR-SP",
+        "name": "São Paulo",
+      },
+      "country": - {
+        "id": "BR",
+        "name": "Brasil",
+      },
+      "latitude": null,
+      "longitude": null,
+      "comment": null,
+    },
+    "currency_id": "BRL",
+    "cost": 0,
   },
-  "tags":[
-          "paid",
-          "not_delivered"
-  ]
+  "tags": - [
+    "paid",
+    "not_delivered",
+  ],
 }
 {% endhighlight %}
 
@@ -117,17 +144,44 @@ This is how an Order looks like:
 
 - `id` - The order identifier.
 - `status` - The actual order status. See status.
-- `status_detail` - Status detail, in case the order was cancelled. 
+- `status.confirmed` - Initial state of an order, and it has no payment yet.
+- `status.payment_required` - The order needs a payment to become confirmed and show users information.
+- `status.payment_in_process` - There is a payment related with the order, but it has not accredited yet.
+- `status.paid` - The order has a related payment and it has been accredited.
+- `status.cancelled` - The order has not completed by some reason.
+- `status_detail` - Status detail, in case the order was cancelled.
 - `date_created` - Date when the order was created.
 - `date_closed` - Date when the order was confirmed.
 - `order_items` - An array of items included in the order.
-- `total_amount` - Total order amount (items cost per quantity) without shipping cost. 
-- `currency_id` - Order currency ID. 
+- `order_items.item_id` - Item ID.
+- `order_items.title` - Item title.
+- `order_items.variation_id` - Item variation ID.
+- `order_items.variation_attributes` - Variation attributes.
+- `order_items.variation_attributes.id` - Attributes ID.
+- `order_items.variation_attributes.name` - Attributes name.
+- `order_items.variation_attributes.value_id` - Attributes value id.
+- `order_items.variation_attributes.value_name` - Attributes value name.
+- `order_items.quantity` - Item quantity.
+- `order_items.unit_price` - Item price.
+- `order_items.currency_id` - Currency ID.
+- `total_amount` - Total order amount (items cost per quantity) without shipping cost.
+- `currency_id` - Order currency ID.
 - `buyer` - Buyer information.
 - `seller` - Seller information.
 - `payments` - Payments related to the order.
-- `feedback` - Feedback given by the buyer and/or seller. 
+- `payments.transaction_amount` - Payment transaction amount.
+- `payments.currency_id` - Payment currency ID.
+- `payments.status` - Payment status.
+- `feedback` - Feedback given by the buyer and/or seller.
 - `shipping` - Shipping information.
+- `shipping.status` -
+- `shipping.status.pending` - Pending to be shipped, not yet paid.
+- `shipping.status.handling` - Ready to be shipped. When the payment become active.
+- `shipping.status.shipped` - Shipped
+- `shipping.status.delivered` - Delivered. Automatic update with the shipment tracking number.
+- `shipping.status.not_delivered` - Not delivered. Automatic update with the shipment tracking number.
+- `shipping.status.cancelled` - Cancelled by sender or receiver.
+- `tags` - List of seller selected tags, such as delivered, paid.
 
 
 ##Status {#status}
@@ -147,15 +201,15 @@ Each order is associated with several resources:
 * Items.
 * Payments.
 * Feedback.
-* Shipping - Not available yet. 
+* Shipping - Not available yet.
 
 Checkout others available resources in [API Directory](/API-directory/) under Order Management.
 
-##Searching Orders {#searchorder} 
+##Searching Orders {#searchorder}
 
 ###Recent Orders
 
-Another thing that we can do using orders api is searching for orders. Both as buyer or seller you can obtain all the orders that the user is involved. The response will include orders with less than 21 days and any order not qualified by both parties. 
+Another thing that we can do using orders api is searching for orders. Both as buyer or seller you can obtain all the orders that the user is involved. The response will include orders with less than 21 days and any order not qualified by both parties.
 
 <pre class="terminal">
 https://api.mercadolibre.com/orders/search?seller=seller_id&#038;access_token={...}
@@ -169,13 +223,13 @@ https://api.mercadolibre.com/orders/search?buyer=buyer_id&#038;access_token={...
 
 ###Archived Orders
 
-If you are looking for an older order, more than 21 days or qualified by both parties, you can use archived resource: 
+If you are looking for an older order, more than 21 days or qualified by both parties, you can use archived resource:
 
 <pre class="terminal">
 https://api.mercadolibre.com/orders/search/archived?seller=seller_id&#038;access_token={...}
 </pre>
 
-The same request works with buyers. 
+The same request works with buyers.
 
 
 ##Error Codes Reference {#error-codes}
