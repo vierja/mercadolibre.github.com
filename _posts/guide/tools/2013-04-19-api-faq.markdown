@@ -1,34 +1,34 @@
 ---
 layout: 1columns
-title: API FAQ
+title: Frequently Asked Questions
 ---
 
-# API FAQ
+# Frequently Asked Questions
     
 <div class="frequent-questions">
 
     <ul class="questions">
         <li class="ask">
-            I need use my real user to test my application?
+            Do I need to use my own MercadoLibre user to test my application?
             <div class="answer">
-You can use your own user but we suggest create a test user that you can do the same operations and you wont will be charged by your tests.<br />
-The test user cannot buy a item from one real user, therefore create two test users for buy and selling.<br /><br />
-You can distinct an test user from a normal user by the nickname, the test users usually start with <b>"TT..."</b>.
+While you can use your own MercadoLibre user for testing purposes, we suggest creating a test user with which you will be able to do the same operations and not be charged by the tests made.<br />
+Test users cannot buy a item from a non-test user, therefore you should create two test users for buy and selling testing pruposes.<br /><br />
+• Instructions on how to create a test user are listed <a href='/test-users/'>here</a><br /><br />
+You can usually differenciate a test user from a non-test one by chekcing the nickname. Test users' nickname usually start with a “TT” prefix.
             </div>
         </li>
         <li class="ask">
-            What is OAuth 2.0? How it work?
+            What is OAuth 2.0? How does it work?
             <div class="answer">
-OAuth 2.0 its permission flow, where the user does not supply his credentials in the system environment, it means that the user only allows the application. Are two workflows and they looks like this:
+OAuth 2.0 is an authentication and authorization protocol, in which the user does not supply his credentials in the system environment, meaning that the user only allows the application to act on its behalf, never sending his credential directly to the application, but providing credentials in a trusted site instead. There are two workflows which look like this:
 <br /><br />
-Server side flow:
-image-server-side-flow.jpg
+<h4>Server-side flow:</h4>
+<img src='../images/image-server-side-flow.png' alt='Server-side Flow' />
+<br /><br /><br /><br />
+<h4>Client-side flow:</h4>
+<img src='../images/image-client-side-flow.png' alt='Client-side Flow' />
 <br /><br />
-Client side flow:
-image-client-side-flow.jpg
-<br /><br />
-In booth workflows is necessary the creation of an application by part of the developer in our platform (check <a href='/first-step/#register'>this page</a> for more information).
-The first step is request to user for access some informations about his account. When he authorize your app, you will get an <b>access_token</b> that allows you to operate in MercadoLibre.
+Both workflows require the creation of an application by the developer in our platform (check <a href='/first-step/#register'>this page</a> for more information). The first step is requesting the user to provide information about his credentials. Once it allows your app, you will get an <b>access_token</b> that will allow you to perform actions in MercadoLibre on behalf that user.
 <br /><br />
 Documents:<br />
 <a href='/authentication-and-authorization/'>Authentication and Authorization (Documentation MercadoLibre)</a>
@@ -38,21 +38,21 @@ Documents:<br />
             </div>
         </li>
         <li class="ask">
-            How long does an access token?
+            For how long is an access token valid?
             <div class="answer">
-The <b>access_token</b> is valid per 3 hours (10800 seconds) or until creation another one.
+Each <b>access_token</b> is valid for 3 hours (10800 seconds) or until creation of a new one for that user, whichever happens first.
             </div>
         </li>
         <li class="ask">
-            How long does an refresh token is valid?
+            For how long is a refresh token valid?
             <div class="answer">
-The <b>refresh_token</b> is valid forever or until creation another one.
+<b>Refresh tokens</b> do not have a time expiration, but will expire after its first use in exchange for a new access token. Together with the new access token, you will also receive a new refresh token for the next time you need to get an access token. Keep in mind that for your app to receive a refresh token, the scope “offline access” must be checked within you app settings.
             </div>
         </li>
         <li class="ask">
-            Which category is possible publish a item?
+            How do I recognize categories that allow listings?
             <div class="answer">
-When you consult a category, you can see the parameter <b>listing_allowed</b> inside the <b>settings</b> atributtes,  this parameter should be <b><i>true</i></b>.
+When you check a category, you will be able to see the parameter <b>listing_allowed</b> within the <b>settings atributte</b>. If value is true, then listing in that category is allowed, otherwise it is not.
 <br /><br />
 Example:
 <br />
@@ -78,9 +78,9 @@ curl https://api.mercadolibre.com/categories/MLA5529
             </div>
         </li>
         <li class="ask">
-            How to see attributes in a category? And how do I know if is required?
+            How can I check the attributes in a category? How do I know if an attribute is required?
             <div class="answer">
-Some categories in MercadoLibre have "attributes", to know if the category has support consult <b>attribute_types</b> field.
+Some categories in MercadoLibre have attributes. To check if a category has attributes, check the <b>attribute_types</b> field.
 <br /><br />
 Example:
 <br />
@@ -99,7 +99,7 @@ curl https://api.mercadolibre.com/categories/MLA109299
   ...
 }
 {% endhighlight %} 
-If the parameter <b>attribute_types</b> is equal to "variations" you can find all the attributes in resource /categories/$CATEGORY_ID/attributes. For check which attributes are required see the parameter <b>tags</b> and check if parameter <b>required</b> exist and is equal a <b><i>true</i></b>.
+If the parameter <b>attribute_types</b> equals "variations" you will find all the attributes in the resource /categories/$CATEGORY_ID/attributes. To check which attributes are mandatory, check the parameter <b>tags</b> and if parameter <b>required</b> exists and its value is <b>true</b>, then its mandatory and you will not be able to list an item in this category until you send this parameter within the body of the item POST. 
 <br /><br />
 Example:</br >
 <pre class="terminal">
@@ -132,36 +132,35 @@ curl https://api.mercadolibre.com/categories/MLA109299/attributes
             </div>
         </li>
         <li class="ask">
-            Where i can get all categories in one unique call?
+            Can I get all categories making just one request?
             <div class="answer">
-Check <a href='/category-dump/'>this documentation</a> for see more details about dump of the whole category tree. 
+Check <a href='/category-dump/'>this documentation</a> for further detail about getting a dump of the entire categories tree.
             </div>
         </li>
         <li class="ask">
-            My image sent in variable "source" is not loading. What i did wrong?
+            Images sent as “source” in “pictures” attribute are not being uploaded correctly. What's wrong?
             <div class="answer">
-Check if the source of image can be access by the browser, this is the most common error.<br />
-If you can access the image, then check if the extension of image is correct.
+The first step is waiting a few minutes. Our pictures API make take around 5 minutes to get the picture in the url provided, uploading it to our servers and indexing it. If after a while the image has not been uploaded, check if the source of the image can be access by browser (this is the most common error). If you cannot access by browser, please check the url provided. If you can access the image by browser, then check if the extension of image is correct (example: the image has a .jpg filename extension, where in reality its format is png or other).
 <br /><br />
-Example for extension check:<br />
+Example for filename extension and file current format check:<br />
 <pre class="terminal">
 $ file image.jpg
+
 image.jpg: PNG image data, 500 x 500, 8-bit/color RGB, non-interlaced
 </pre>
-This example caracterize a image which have a wrong extension.
+This example shows an image that has a wrong extension (jpg) with a current png file format.
             </div>
         </li>
         <li class="ask">
-            How to publish one house or a car?
+            How do I publish a real estate or a vehicle item?
             <div class="answer">
-In MercadoLibre, houses or cars are treated as "Real Estate Listing". All the real estate listing must have attributes.
-Learn more about real estate listing in <a href='/real-estate-list-item/'>this link</a>. 
+All real estate and vehicle listings have attributes. Learn more about real estate listing at <a href='/real-estate-list-item/'>this link</a>. 
             </div>
         </li>
         <li class="ask">
-            I can make relist in a item more than once?
+            How many times can I relist an item?
             <div class="answer">
-The relist is only possible once, to check if the item already relisted consult the resource /items/$ITEM_ID and search by <b>sub_status</b> parameter is already <b>"deleted"</b>.
+You can only relist an item once. The new relisted is a totally different item but will inherit the same charateristics as its prent item. Only once this new relisted item is closed you will be able to relist this latter, and so on. To check if an item is already relisted, check the resource /items/$ITEM_ID and check the <b>parent_item_id</b> attribute.
 <br /><br />
 Example:</br >
 <pre class="terminal">
@@ -181,25 +180,26 @@ curl https://api.mercadolibre.com/items/MLA123123
     ...
 }
 {% endhighlight %} 
-The relist is only possible until 60 days after finalizing the item, after this time the <b>sub_status</b> gets the value "expired".
+Relisting is only possible up to 60 days after an item is closed. After this period, the <b>sub_status</b> will get an "expired" value.
             </div>
         </li>
         <li class="ask">
-            I am receiving a lot of notifications each purchase. What is happening?
+            I receive more than one notification per purchase. What´s happening?
             <div class="answer">
-We send notifications on all changes the order, item, payment or questions.<br /> Usually when we talk about payments, you receive two notifications of different resources, for example orders and payments at same time, why a change in payments is reflected on order.
+We send notifications on every change suffered by an order, item, payment or question.<br />
+Regarding payments, you will receive two notifications (from different resources). For example orders and payments, because a change in a payment affects an order as well.
             </div>
         </li>
         <li class="ask">
-            How can i do for refund a payment in MercadoPago?
+            How do I request a payment refund in MercadoPago?
             <div class="answer">
-For refund or cancel a payment, you need use the collections API. For more informations see <a href='http://developers.mercadopago.com/documentation/search-received-payments?lang=en_US' target='_blank'>this page</a>.
+To refund or cancel a payment, you will need to send a request to the Collections resource. Check  <a href='http://developers.mercadopago.com/documentation/search-received-payments?lang=en_US' target='_blank'>this page</a> for further information.
 <br /><br />
-<b>Refund a payment</b>
+<b>Request a payment refund</b>
 <br /><br />
-You may refund a payment within 60 days after approval. operation status: approved.
-Payments made by credit card will be refunded to the card.<br />
-Payments with vouchers will be returned by a deposit in the buyers MercadoPago account.
+You may request a payment refund up to 60 days after its approval  (operation status: approved). <br />Payments made by credit card will be refunded to the credit card.<br />
+Payments made by offline payment methods will be returned by a deposit, in the buyer's MercadoPago account. 
+
 <br /><br />
 Request - Curl:
 <pre class="terminal">curl -X PUT \
@@ -208,11 +208,11 @@ Request - Curl:
 -d '{"status":"refunded"}'</pre>
 Response:
 <pre><code>Status code: 200 OK</code></pre>
-<b>Cancel payments</b>
+<b>Payments cancellation </b>
 <br /><br />
-You may cancel payments that are in the following Operation status: rejected, pending, in_mediation, in_process.<br />
-Payments by credit card which are cancelled will not switch status.<br />
-Payments made with offline methods, by deposit and/or transfer which are canceled will be deposited in the buyers MercadoPago account.
+You may request payments cancellations for payments that are in one of the following operation status: rejected, pending, in_mediation or in_process.<br />
+Payments made by credit card and are cancelled will not change their status.<br />
+Payments made by offline payment methods (by deposit and/or electronic transfer) and are canceled will be returned in a deposit, in the buyer's MercadoPago account.
 <br /><br />
 Request - Curl:
 <pre class="terminal">curl -X PUT \
@@ -224,9 +224,9 @@ Response:
             </div>
         </li>
         <li class="ask">
-            How to list all filters and types of sort in an API?
+            How can I list all filters and sort types in a resource?
             <div class="answer">
-To see the filters and sortings available in a API, check inside the attribute <b>available_filters</b> and <b>available_sorts</b>, this tools is only works in call GET.
+To see the available filters and sortings in a resource, check the <b>available_filters</b> and <b>available_sorts</b> attributes. This will only work in a GET request.
 <br /><br />
 Example:
 <pre class="terminal">
@@ -297,9 +297,9 @@ curl https://api.mercadolibre.com/sites/MLA/search?category=MLA5529&sort=relevan
             </div>
         </li>
         <li class="ask">
-            How to revoke an user access of my application on MercadoLibre?
+            How can I revoke permission to a user who allowed my application?
             <div class="answer">
-To revoke a access, you need make a "DELETE" request.
+To revoke access, you will need make a DELETE request to our Applications resource.
 <br /><br />
 Example:
 

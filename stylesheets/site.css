@@ -526,7 +526,7 @@ footer {
 }
 
 .extra-report-issue,
-.extra-social
+.extra-social, .extra-api-faq
 {
 	float: right;
 	text-align: right;
@@ -1014,16 +1014,24 @@ section.main .home-list p.updated {
 	font-size: 17px;
 	border-bottom: 1px solid #EFEFEF;
 	padding-bottom: 15px;
+	width: 980px;
+}
+.questions .ask:hover {
+	color: #0637B3;
+}
+.questions .ask:hover .answer {
+	color: black;
 }
 .questions .ask:last-child {
 	border: none;
 }
 .questions .ask .answer {
 	margin-left: 40px;
-	display: block;
+	display: none;
 	font-size: 13px;
 	line-height: normal;
 	margin-top: 15px;
+	width: 895px;
 }
 
 
