@@ -154,12 +154,7 @@ tags:
 	<li class="option"><a href="javascript:void(0)" onClick="goToByScroll('javier')">Social design &#38; Facebook platform</a></li>
 	<li class="option"><a href="javascript:void(0)" onClick="goToByScroll('helisson')">MercadoLibre platform</a></li>
 	<li class="option"><a href="javascript:void(0)" onClick="goToByScroll('fersca')">Announcing an item</a></li>
-
-
-		<li class="option"><a href="javascript:void(0)" onClick="goToByScroll('summary')">Summary</a></li>
-
-
-
+	<li class="option"><a href="javascript:void(0)" onClick="goToByScroll('summary')">Summary</a></li>
 </ul>
 <h2>Photos</h2>
 <ul>

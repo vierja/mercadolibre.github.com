@@ -56,6 +56,53 @@ tags:
 
 <iframe src="http://www.slideshare.net/slideshow/embed_code/18856277" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
 
+
+<h2 id="videos">Conference videos</h2>
+
+<h2 id="marcos">Event opening by Marcos Galperin</h2>
+
+<iframe src="http://www.youtube.com/embed/jBEF5NnldMM" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="daniel">MercadoLibre &#38; API history by Daniel Rabinovich</h2>
+
+<iframe src="http://www.youtube.com/embed/kPeOKHf_TPg" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="esteban">The developer role in a platform by Esteban Kozak (Twitter)</h2>
+
+<iframe src="http://www.youtube.com/embed/Cu9SEqkgd1Q" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="dario">API general overview by Darío Simonassi &#38; Jonathan Leibiusky</h2>
+
+<iframe src="http://www.youtube.com/embed/m6S1KIYUQ-o" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="wesley">Authorization and authentication by Wesley Nascimento</h2>
+
+<iframe src="http://www.youtube.com/embed/vdSQxSAJASo" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="pablo">Demand by Pablo Moretti</h2>
+
+<iframe src="http://www.youtube.com/embed/qzogxYXoAUU" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="fernando">Announcing an item by Fernando Scasserra</h2>
+
+<iframe src="http://www.youtube.com/embed/dYDwzJPsqJQ" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="soledad">Managing Sales by Soledad Dematteo</h2>
+
+<iframe src="http://www.youtube.com/embed/gLZj-2GcLY8" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="hernan">Mercado Pago by Hernán Di Chello</h2>
+
+<iframe src="http://www.youtube.com/embed/j57h2GttwC8" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="matias">Mobile APIs by Matías Di Gregorio</h2>
+
+<iframe src="http://www.youtube.com/embed/-bFmXnmMlwE" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
+<h2 id="federico">Business Opportunities and Summary by Federico Procaccini &#38; Daniel Rabinovich</h2>
+
+<iframe src="http://www.youtube.com/embed/wI73JUVqHdc" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+
 <h2 id="Photos">Conference Photos</h2>
 
 <div class="box-event">
@@ -127,9 +174,6 @@ tags:
     </div>
 </div>
 
-<h2 id="videos">Conference videos</h2>
-
-<p>Comming soon...</p>
 </section>
 
 
@@ -150,11 +194,24 @@ tags:
       <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('ManagingSales')">Managing Sales</a></li>
 
 </ul>
-
-<h2>Photos and Videos</h2>
+<h2>Videos</h2>
 <ul>
-    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('Photos')">Photos</a></li>
-	<li class="option"><a href="#"> Videos Coming soon</a></li>
+
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('marcos')">Event opening by Marcos Galperin</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('daniel')">MercadoLibre &#38; API history</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('esteban')">The developer role in a platform</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('dario')">API general overview</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('wesley')">Authorization and authentication </a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('pablo')">Demand</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('fernando')">Announcing an item</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('soledad')">Managing Sales</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('hernan')">Mercado Pago</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('matias')">Mobile APIs</a></li>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('federico')">Business Opportunities and Summary</a></li>
+</ul>
+<h2>Photos</h2>
+<ul>
+    <li class="option"><a href="javascript:void(0)" onClick="goToByScroll('Photos')">Event</a></li>
 </ul>
 </div>
 </nav>
