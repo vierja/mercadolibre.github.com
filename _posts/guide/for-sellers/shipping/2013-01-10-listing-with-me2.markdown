@@ -131,7 +131,7 @@ The API to obtain a label, or a set of labels, receives a list of shipment IDs, 
 
 **Shipping labels URL**
 <pre class="terminal">
-https://api.mercadolibre.com/shipment_labels?shipment_ids=20178600648,20182100995&access_token=
+https://api.mercadolibre.com/shipment_labels?shipment_ids=20178600648,20182100995&savePdf=Y&access_token=
 </pre>
 
 The response will be a PDF file containing one or more pre-paid shipping labels ready to print.
