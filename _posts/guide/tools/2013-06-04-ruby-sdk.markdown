@@ -1,0 +1,93 @@
+---
+layout: 2columns
+title: Ruby SDK
+categories:
+- sdks
+- more tools
+- samples
+menu:
+- Tools
+tags:
+- sdks
+---
+
+
+
+The Ruby SDK enables you to access the API from a web application developed in [Ruby](http://www.ruby-lang.org/).
+It hides all the complexity of OAuth 2.0 and lets you focus on writing application code.
+
+You'll find the source code in the following location: [https://github.com/mercadolibre/ruby-sdk](https://github.com/mercadolibre/ruby-sdk)
+
+With the source code you'll find documentation on how to use the SDK.
+
+The first thing to do is to instance a __Meli__ class. You'll need to give a __clientId__ and a __clientSecret__. You can obtain both after creating your own application. For more information on this please read: [creating an application](http://developers.mercadolibre.com/creating-your-own-application/)
+
+### Including the Lib
+Include the lib meli in your project
+
+{% highlight ruby %}
+require 'lib/meli'
+{% endhighlight %}
+Start the development!
+
+### Create an instance of Meli class
+Simple like this
+{% highlight ruby %}
+meli = Meli.new(1234, "a secret")
+{% endhighlight %}
+With this instance you can start working on MercadoLibre's APIs.
+
+There are some design considerations worth to mention.
+
+1. This SDK is just a thin layer on top of an http client to handle all the OAuth WebServer flow for you.
+
+2. There is JSON parsing.this SDK will include [json](http://rubygems.org/gems/json) gem for internal usage.
+
+3. If you already have the access_token and the refresh_token you can pass in the constructor
+
+{% highlight ruby %}
+meli = Meli.new(1234, "a secret", "Access_Token", "Refresh_Token")
+{% endhighlight %}
+#### Making GET calls
+
+{% highlight ruby %}
+params = {:access_token => meli.access_token}
+response = meli.get("/users/me", params)
+{% endhighlight %}
+#### Making POST calls
+
+{% highlight ruby %}
+params = {:access_token => meli.access_token}
+
+ #we are cool, the sdk will convert this body into json for you
+body = {:foo => "bar", :bar => "foo"}
+
+response = meli.post("/items", body, params)
+{% endhighlight %}
+
+#### Making PUT calls
+
+{% highlight ruby %}
+params = {:access_token => meli.access_token}
+
+ #we are cool, the sdk will convert this body into json for you
+body = {:foo => "bar", :bar => "foo"}
+
+response = meli.put("/items/123", body, params)
+{% endhighlight %}
+
+#### Making DELETE calls
+{% highlight ruby %}
+params = {:access_token => meli.access_token}
+response = meli.delete("/items/123", params)
+{% endhighlight %}
+
+## Examples
+
+Don't forget to check out our [examples](https://github.com/mercadolibre/ruby-sdk/tree/master/examples) codes
+
+## I want to contribute!
+
+That is great! Just fork the project in [GitHub](https://github.com/mercadolibre/ruby-sdk). Create a topic branch, write some code, and add some tests for your new code.
+
+Thanks for helping!
