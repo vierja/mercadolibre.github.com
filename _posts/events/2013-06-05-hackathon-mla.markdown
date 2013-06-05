@@ -27,10 +27,10 @@ tags:
 <p>Oficinas de MercadoLibre. Arias 3751, piso 7, Ciudad de Buenos Aires.</p>
 <p>15 de Junio, desde las 11hs del sábado hasta las 11hs del domingo.</p>
 
-<a href="https://eventioz.com.ar/events/hackaton-mercadolibre-redinnova" class="ch-btn">Reservá tu lugar</a>
+<a href="https://eventioz.com.ar/events/hackaton-mercadolibre-redinnova/registrations/new" class="ch-btn">Reservá tu lugar</a>
 
 <br /><br />
-<p>Por participar, te llevás un pase gratis a Red Innova Buenos Aires. <a href="http://www.redinnova.com/buenos-aires/en/">ver más</a></p>
+<p>Por participar, te llevás un pase gratis a Red Innova Buenos Aires. <a href="http://www.redinnova.com/buenos-aires/en/">Ver más</a></p>
 
 <h3>Mapa</h3>
 <p>
