@@ -1,9 +1,9 @@
 ---
 layout: events
-title: Next events
-categories: 
+title: Events
+categories:
 - events
-menu: 
+menu:
 - events
 ---
 
