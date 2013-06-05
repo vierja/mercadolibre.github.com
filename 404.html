@@ -4,136 +4,211 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
 <!--[if (gt IE 8)|!(IE)]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-	<title>404</title>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta name="robots" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Design Considerations</title>
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+<link rel="stylesheet" href="http://static.mlstatic.com/org-img/ch/ui/0.11/chico-mesh.min.css">
+<link rel="stylesheet" href="/stylesheets/site.css">
+<link rel="canonical" href="/design-considerations" />
+<link href="/feed/" rel="alternate" type="application/rss+xml" title="MELI dev feed" />
+  <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8863458-51']);
+    _gaq.push(['_trackPageview']);
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 
-	<link rel="stylesheet" href="/stylesheets/pygment_trac.css" />
-	<link rel="stylesheet" href="http://static.mlstatic.com/org-img/ch/ui/0.10.5/chico-mesh.min.css" />
-	<link rel="stylesheet" href="/stylesheets/site.css" />
-	<link href="/feed/" rel="alternate" type="application/rss+xml" title="MELI dev feed" />
-
-	<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 </head>
-<body>
+  <body>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143932955748439";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+    <style>
+
+.titlelink:hover {
+  text-decoration: none;
+  color:#999;
+}
+.titlelink:active {
+  text-decoration: none;
+  color:#999;
+}
+.titlelink:link {
+  text-decoration: none;
+  color:#999;
+}
+.titlelink:visited {
+  text-decoration: none;
+  color:#999;
+}
+
+
+</style>
+
 <header class="ch-g1 main">
-    <hgroup class="ch-g1-3">
+    <hgroup class="ch-g1-6">
     <h1><a href="/">MELI</a></h1>
-    <h2>Developers</h2>
+    <h2><span><a href="/" class="titlelink">Developers</a></span></h2>
     </hgroup>
-      <nav class="ch-g2-3">
+      <nav class="ch-g4-7">
         <ul>
-         {% assign current = nil %}
-         {% if page.menu[0] == 'First Steps' %}
-            {% assign current = 'current' %}
-         {% endif %}
-          <li class="option">
-            <a class="{{ current }}" href="/first-step">Getting Started</a>
-          </li>
-          {% assign current = nil %}
-          {% if page.menu[0] == 'Overview' %}
-            {% assign current = 'current' %}
-          {% endif %}
-          <li class="option">
-            <a class="{{ current }}" href="/core-concepts">Why with us</a>
-          </li>
 
-          <li class="option">
-            <div id="guides-menu" class="ch-dropdown-skin">
-            {% assign current = nil %}
-            {% if page.layout == 'guides' %}
-              {% assign current = 'current' %}
-            {% endif %}
 
-            <span><a class="{{ current }}" href="">Documentation</a></span>
-              <ul>
-                {% assign current = nil %}
-                {% if page.menu[0] == 'Design Considerations' %}
-                    {% assign current = 'current' %}
-                {% endif %}
-                <li><a class="{{ current }}" href="/design-considerations">Design Considerations</a></li>
-                {% assign current = nil %}
-                {% if page.menu[0] == 'Authentication' %}
-                    {% assign current = 'current' %}
-                {% endif %}
-                <li><a class="{{ current }}" href="/authentication-and-authorization">Authentication</a></li>
-                {% assign current = nil %}
-                {% if page.menu[0] == 'Buying Items' %}
-                    {% assign current = 'current' %}
-                {% endif %}
-                <li><a class="{{ current }}" href="/bookmarks">Buying Items</a></li>
-                {% assign current = nil %}
-                {% if page.menu[0] == 'Searching for Items' %}
-                    {% assign current = 'current' %}
-                {% endif %}
-                <li><a class="{{ current }}" href="/search-visual-introduction">Searching for Items</a></li>
-                {% assign current = nil %}
-                {% if page.menu[0] == 'Sellers &amp; Integrators' %}
-                    {% assign current = 'current' %}
-                {% endif %}
-                <li><a class="{{ current }}" href="/listing-introduction">Sellers &amp; Integrators</a></li>
-                {% assign current = nil %}
-                {% if page.menu[0] == 'Notifications' %}
-                    {% assign current = 'current' %}
-                {% endif %}
-                <li><a class="{{ current }}" href="/notifications">Notifications</a></li>
-                <li><a href="https://developers.mercadopago.com/" target="_blank">Payment &amp; Collection</a></li>
-                {% assign current = nil %}
-                {% if page.menu[0] == 'API Directory' %}
-                    {% assign current = 'current' %}
-                {% endif %}
-                <li><a class="{{ current }}" href="/API-directory">API Directory</a></li>
+
+          <li id="guides-menu" class="option ch-dropdown-skin">
+
+
+
+            <span class="">Documentation</span>
+              <ul class="ch-hide">
+
+
+
+
+
+                 <li><a class="" href="/first-step">Getting Started</a></li>
+
+
+
+
+
+
+
+                <li><a class="current" href="/design-considerations">Design Considerations</a></li>
+
+
+
+
+                <li><a class="" href="/authentication-and-authorization">Authentication</a></li>
+
+
+                <li><a class="" href="/bookmarks">Shopping</a></li>
+
+
+                <li><a class="" href="/search-visual-introduction">Searching</a></li>
+
+
+                <li><a class="" href="/listing-introduction">Listing &amp; Selling</a></li>
+
+
+
+                <li><a class="" href="/notifications">Notifications</a></li>
+
+                <li><a href="https://developers.mercadopago.com/" target="_blank">Payments &amp; Collections</a></li>
+
+
+
+                <li><a class="" href="/API-directory">API Directory</a></li>
+                <li><a class="" href="/api-faq">FAQ</a></li>
+
               </ul>
-            </div>
-          </li>
+            </li>
 
-         {% assign current = nil %}
-         {% if page.menu[0] == 'Tools' %}
-            {% assign current = 'current' %}
-         {% endif %}
-          <li class="option">
-            <a class="{{ current }}" href="/javascript-sdk">Tools</a>
-          </li>
-         {% assign current = nil %}
-         {% if page.menu == 'community' %}
-            {% assign current = 'current' %}
-         {% endif %}
-          <li class="option">
-            <a class="{{ current }}" href="/community">Community</a>
-          </li>
-          <li class="option">
-            <form action="/search"><input id="q" type="search" name="q" placeholder="Search this site"/><noscript><input id="search" type="submit" value="Go" class="ch-btn-skin ch-btn-small"/></noscript></form>
-          </li>
+
+
+          <li class="option"><a class="" href="/javascript-sdk">Tools</a></li>
+
+
+          <li class="option"><a class="" href="/community">Community</a></li>
+
+
+
+
+          <li class="option"><a class="" href="/version">API Versioning</a></li>
+
+
+
+          <li class="option"><a class="" href="/api-health/">API Health</a></li>
+
+          <li class="option"><a class="" href="/next-events/">Events</a></li>
+
+          <li class="option"><a class="" href="/news/">News</a></li>
+
+          <li class="option"><form action="/search"><input id="q" type="search" name="q" placeholder="Search this site" class="head-search-input"><noscript><input id="search" type="submit" value="Go" class="ch-btn-skin ch-btn-small"/></noscript></form></li>
         </ul>
     </nav>
 </header>
 
 
+  <section class="main ch-g1">
+    <h2>Sorry, we can't find the page you're looking for. <span class="error404">(Error 404)</span></h2>
+    <p>Would you like to add content to the site? You can <a href="https://github.com/mercadolibre/mercadolibre.github.com">fork repo on GitHub</a> and contribute!</p>
+  </section>
 
+      <footer class="ch-g1">
+    <div id="toTop">^ Back to Top</div>
+    <ul class="extra">
+      <li class="extra-copyright">©2013 MercadoLibre</li>
+      <li class="extra-termns"><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+      <li class="extra-report-issue"><a href="https://github.com/mercadolibre/API/issues" target="_blank">Report an issue</a></li>
+      <li class="extra-api-faq"><a href="/api-faq">FAQ</a></li>
 
-	<section class="main ch-g1">
-		<h2>Sorry, we can't find the page you're looking for. <span class="error404">(Error 404)</span></h2>
-		<p>Would you like to add content to the site? You can <a href="https://github.com/mercadolibre/mercadolibre.github.com">fork repo on GitHub</a> and contribute!</p>
-	</section>
-
-  <footer class="ch-g1">
-    <div class="ch-g2-3 extras">
-      <ul>
-       <li>©2013 MercadoLibre</li>
-      </ul>
-    </div>
-      <p class="ch-g1-3 maintained-by"><img src="/images/github.png" alt="Github">Report an issue on <a href="https://github.com/mercadolibre/API/issues" target="_blank">Github</a>&nbsp;&nbsp;&nbsp;<a href="http://www.twitter.com/MercadoLibre" target="_blank"><img src="/images/twitter.png" alt="Twitter">Follow us!!</a></p>
+      <li class="extra-social">
+        <a href="https://twitter.com/melidevelopers" target="_blank" title='Follow us on twitter' class='twitter'>Twitter</a>
+        <a href="http://www.facebook.com/MercadoLivreDevelopers" target="_blank" title='Follow us on facebook' class='facebook'>Facebook</a>
+      </li>
+    </ul>
   </footer>
-	 <script src="http://static.mlstatic.com/org-img/ch/ui/0.11/chico-jquery.min.js"></script>
+  <script src="http://static.mlstatic.com/org-img/ch/ui/0.11/chico-jquery.min.js"></script>
   <script src="http://static.mlstatic.com/org-img/sdk/mercadolibre-1.0.1.js"></script>
   <script type="text/javascript">
-     var foo = $("#guides-menu").dropdown();
+    <!--
+    var foo = $("#guides-menu").dropdown();
+    -->
   </script>
-	<script src="javascripts/scale.fix.js"></script>
-	<!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+      <script>
+    $(function() {
+      $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+          $('#toTop').fadeIn();
+        } else {
+          $('#toTop').fadeOut();
+        }
+      });
+
+      $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+      });
+    });
+    </script>
+    <script type="text/javascript">
+      function goToByScroll(id){
+          $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+      }
+    </script>
+  <script src="/javascripts/scale.fix.js"></script>
+
+
+
+
+
+
+  <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+
 </body>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 </html>
