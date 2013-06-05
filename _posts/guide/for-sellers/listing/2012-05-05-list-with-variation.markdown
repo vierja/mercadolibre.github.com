@@ -162,7 +162,7 @@ MELI.post(uri, param, function(data) {
 $item = array(
   "title" => "Item de testes com variação - Não ofertar",
   "subtitle" => "Some subtitle here",
-  "category" => "MLB103661",
+  "category_id" => "MLB103661",
   "price" => 10,
   "currency_id" => "BRL",
   "buying_mode" => "buy_it_now",
@@ -190,6 +190,8 @@ $item = array(
       "picture_ids" => array(
         "http://www.mundodofutebol.com.br/imagens/produto/6484_0181.jpg"
       ),
+    ),
+    array(
       "attribute_combinations" => array(
         array(
           "id" => "63000",
@@ -220,7 +222,7 @@ $item = $meli->postWithAccessToken("/items", $item);
 {% highlight java %}
 FluentStringsMap params = new FluentStringsMap();
 params.add("access_token", m.getAccessToken());
-Response r = m.post("/items", params, "{\"title\":\"Item de testes com variacao - Nao ofertar\",\"subtitle\":\"Some subtitle here\",\"category\":\"MLB103661\",\"price\":10,\"currency_id\":\"BRL\",\"buying_mode\":\"buy_it_now\",\"listing_type_id\":\"bronze\",\"condition\":\"new\",\"description\":\"Item com variacao !<\/b>\",\"variations\":[{\"attribute_combinations\":[{\"id\":\"63000\",\"value_id\":\"71996\"},{\"id\":\"33000\",\"value_id\":\"52045\"},{\"id\":\"43000\",\"value_id\":\"52071\"}],\"available_quantity\":1,\"price\":10,\"picture_ids\":[\"http:\/\/www.glamour.com.br\/arquivos\/ids\/550471_10\/78911931_1.jpg\"]}]}");
+Response r = m.post("/items", params, "{\"title\":\"Item de testes com variacao - Nao ofertar\",\"subtitle\":\"Some subtitle here\",\"category_id\":\"MLB103661\",\"price\":10,\"currency_id\":\"BRL\",\"buying_mode\":\"buy_it_now\",\"listing_type_id\":\"bronze\",\"condition\":\"new\",\"description\":\"Item com variacao !<\/b>\",\"variations\":[{\"attribute_combinations\":[{\"id\":\"63000\",\"value_id\":\"71996\"},{\"id\":\"33000\",\"value_id\":\"52045\"},{\"id\":\"43000\",\"value_id\":\"52071\"}],\"available_quantity\":1,\"price\":10,\"picture_ids\":[\"http:\/\/www.glamour.com.br\/arquivos\/ids\/550471_10\/78911931_1.jpg\"]}]}");
 {% endhighlight %}
     </div>
     <div id="net">
