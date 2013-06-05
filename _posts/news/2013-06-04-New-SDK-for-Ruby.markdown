@@ -1,9 +1,9 @@
 ---
 layout: news
-title: New SDK for Ruby Programming
+title: New Meli SDK for Ruby Programming
 homeTitle: News
-homeText: We've lauch a new SDK for Ruby development.
-excerpt: We've lauch a new SDK for Ruby development.
+homeText: We have lauched a new Meli SDK for Ruby. Now you can use more easily Ruby to build Meli applications.
+excerpt: We have lauched a new Meli SDK for Ruby. Start the development now.
 imageRight: ruby.jpg
 categories:
 - news
@@ -18,8 +18,10 @@ tags:
 
 ![New SDK for Ruby](/images/news/ruby.jpg)
 
-We have lauch a new SDK for Ruby development
+We have lauched a new SDK for Ruby development
 
-Checkout the source code in the github [https://github.com/mercadolibre/ruby-sdk](https://github.com/mercadolibre/ruby-sdk)
+Now you can use more easily Ruby to build Meli applications!
 
-More details and documentation in [Tools](http://developers.mercadolibre.com/ruby-sdk) section
+Check out the source code in the github [https://github.com/mercadolibre/ruby-sdk](https://github.com/mercadolibre/ruby-sdk)
+
+More details and documentation in [Tools](/ruby-sdk) section
