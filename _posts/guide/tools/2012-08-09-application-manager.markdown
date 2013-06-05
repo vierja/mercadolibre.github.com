@@ -1,17 +1,17 @@
 ---
 layout: 2columns
 title: Application Manager
-categories: 
+categories:
 - sdks
 - more tools
 - samples
-menu: 
+menu:
 - Tools
-tags: 
+tags:
 - more tools
 ---
 
-To create an _App_, you must use the [Application Manager](http://applications.mercadolibre.com). **You need to choose your country to create a new one**. 
+To create an _App_, you must use the [Application Manager](http://applications.mercadolibre.com). **You need to choose your country to create a new one**.
 
 <center>
 	<br /><br />
@@ -29,21 +29,21 @@ There are three groups of information in this form: Basic application Info, Auth
 ###Basic Application Info
 
 
-**- ID: ** This is your `client_id`. It must be used to retrieve an access token. 
+**- ID: ** This is your `client_id`. It must be used to retrieve an access token.
 
 **- Secret Key: ** This is used to retrieve an access token too. Don't share this secret with anyone.
 
 **- Name: ** Name of your application. It must be unique.
 
-**- Short Name: ** Name that Meli uses to generate your application's URL. 
+**- Short Name: ** Name that Meli uses to generate your application's URL.
 
-**- Description: ** This description (up to 150 characteres) will be shown when the application requests an authorization. 
-
-
-###Authentication &amp; Security 
+**- Description: ** This description (up to 150 characteres) will be shown when the application requests an authorization.
 
 
-**- Callback URL: Redirect URI. ** URL to return users to your app after they grant access. 
+###Authentication &amp; Security
+
+
+**- Callback URL: Redirect URI. ** URL to return users to your app after they grant access.
 
 **- Domains: ** Authorized Javascript Origins. Comma-separated list of fully-qualified domain name of all pages that will use the client-side authentication. Only needed if using Javascript API. Don't include protocol, port or "localhost".
 
@@ -69,6 +69,6 @@ There are several types of applications. However we will divide them in three gr
 ###Notification Settings
 
 
-**- Notifications callback URL: ** Configure the public URL of your domain where you want to receive the notifications on the different topics. 
+**- Notifications callback URL: ** Configure the public URL of your domain where you want to receive the notifications on the different topics.
 
-**- Topics: ** Comma-separated list of ‘topics’ you want to subscribe to. There are three possible topics: orders, items, questions, payments.
+**- Topics: ** List of ‘topics’ you want to subscribe to. There are three possible topics: orders, items, questions, payments.
