@@ -5,7 +5,7 @@ homeTitle: 2nd Hackathon MercadoLibre
 homeText: 2<sup>nd</sup> Hackathon, Buenos Aires, Argentina.
 sideTitle: 2nd Hackathon MercadoLibre Argentina
 boxTitle: 2nd Hackathon MercadoLibre, Argentina
-boxText: 2013 - Jun, 15<br /><br />Oficinas MercadoLibre<br />Arias, 3751 - Piso 7<br />Buenos Aires,<br />Argentina
+boxText: 2013 - Jun, 15<br /><br />MercadoLibre's Office<br />Arias, 3751 - 7th Floor<br />Buenos Aires,<br />Argentina
 imageRight: hack_2013_15jun.png
 categories:
 - events
