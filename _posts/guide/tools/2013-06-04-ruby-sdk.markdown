@@ -79,7 +79,7 @@ response = meli.put("/items/123", body, params)
 #### Making DELETE calls
 {% highlight ruby %}
 params = {:access_token => meli.access_token}
-response = meli.delete("/items/123", params)
+response = meli.delete("/questions/123", params)
 {% endhighlight %}
 
 ## Examples
