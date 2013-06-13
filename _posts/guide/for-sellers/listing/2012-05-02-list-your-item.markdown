@@ -103,7 +103,7 @@ MELI.post(uri, param, function(data) {
 $item = array(
   "title" => "Anteojos Ray Ban Wayfare",
   "subtitle" => "Some subtitle here",
-  "category" => "MLA5529",
+  "category_id" => "MLA5529",
   "price" => 10,
   "currency_id" => "ARS",
   "available_quantity" => 1,
