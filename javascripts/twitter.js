@@ -11,15 +11,9 @@ JQTWEET = {
     // core function of jqtweet
     loadTweets: function() {
         $.ajax({
-            url: 'https://api.twitter.com/1/statuses/user_timeline.json/',
+            url: 'http://vast-ravine-5777.herokuapp.com/',
             type: 'GET',
             dataType: 'jsonp',
-            data: {
-                screen_name: JQTWEET.user,
-                include_rts: true,
-                count: JQTWEET.numTweets,
-                include_entities: true
-            },
             success: function(data, textStatus, xhr) {
  
                 
@@ -54,18 +48,18 @@ JQTWEET = {
     }, 
     apiStatus: function() {
         $.ajax({
-            url: 'http://search.twitter.com/search.json',
+            url: 'http://vast-ravine-5777.herokuapp.com/apiStatus.php',
             type: 'GET',
             dataType: 'jsonp',
             data: {
-                q: "from:melidevelopers+apiStatus+green+OR+%22red%22+OR+%22yellow%22",
-                rpp: 1  
+                q: "from:melidevelopers+apiStatus+green+OR+red+OR+yellow",
+                count: 1  
             },
             success: function(data, textStatus, xhr) {
  
               var html = '<div class="tweet">STATUS_IMAGE TWEET_TEXT<div class="time">AGO</div></div>';
               
-              var status = data.results;
+              var status = data.statuses;
 
               if(status.length == 1){
               
@@ -90,43 +84,6 @@ JQTWEET = {
             }   
         });
          
-    }, 
-    feedStatus: function() {
-        $.ajax({
-            url: 'http://search.twitter.com/search.json',
-            type: 'GET',
-            dataType: 'jsonp',
-            data: {
-                q: 'from:melidevelopers+feedStatus+green+OR+%22red%22+OR+%22yellow%22',
-                rpp: 1  
-            },
-            success: function(data, textStatus, xhr) {
- 
-              var html = '<div class="tweet">STATUS_IMAGE TWEET_TEXT<div class="time">AGO</div></div>';
-              var status = data.results;
-
-              if(status.length == 1){
-
-                var tweetText = status[0].text.replace('#feedStatus', '');
-                
-                // $(JQTWEET.feedStatusDiv).html(
-                //     JQTWEET.ify.lightColor(tweetText).
-                //           replace('TWEET_TEXT', JQTWEET.ify.clean(tweetText) )
-                //           + " " + JQTWEET.ify.statusText('Feed', tweetText)
-                //           .replace('AGO', JQTWEET.timeAgo(status[0].created_at) )
-                //   );
-
-              }else{
-                 // $(JQTWEET.feedStatusDiv).html('<div class="tweet"><IMG src="/images/icn-green.png"/> Feeds are up</div>');
-                if(!$('#status_color_api').is(".yellow,.red,.green"))
-                {
-                  $('#status_color_api').addClass('green');
-                  $('#general_status').width('31%');
-                  $('#general_status').append('<p>Platform up and running</p>');
-                }
-              }    
-            }
-        });
     }, 
     /**
       * relative time calculator FROM TWITTER
