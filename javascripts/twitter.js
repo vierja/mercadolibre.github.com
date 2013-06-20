@@ -11,7 +11,7 @@ JQTWEET = {
     // core function of jqtweet
     loadTweets: function() {
         $.ajax({
-            url: 'http://vast-ravine-5777.herokuapp.com/',
+            url: 'http://tranquil-thicket-7991.herokuapp.com/',
             type: 'GET',
             dataType: 'jsonp',
             success: function(data, textStatus, xhr) {
@@ -48,7 +48,7 @@ JQTWEET = {
     }, 
     apiStatus: function() {
         $.ajax({
-            url: 'http://vast-ravine-5777.herokuapp.com/apiStatus.php',
+            url: 'http://tranquil-thicket-7991.herokuapp.com/apiStatus.php',
             type: 'GET',
             dataType: 'jsonp',
             data: {
