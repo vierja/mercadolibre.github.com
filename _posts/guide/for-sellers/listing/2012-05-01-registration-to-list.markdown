@@ -23,7 +23,8 @@ When you first register on MercadoLibre, you are immediately able to buy items. 
 - **2. Start list flow:** Click on the sell button on the home page
 
 
-<img src="/images/list-flow-1.png"><br>
+<img src="/images/list-flow-1.png">
+
 
 - **3. Complete the form:** The first time you start selling you should get a form like the one below. Fill in and confirm the form; now you are ready to list items through the site or the APIs.<br>
 
