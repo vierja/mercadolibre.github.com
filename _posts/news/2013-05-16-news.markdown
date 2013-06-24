@@ -10,7 +10,7 @@ menu:
 {% for category in page.categories %}
 
   <ul>
-    {% for post in site.tags.[category] reversed %}
+    {% for post in site.tags.[category] %}
 
 	    <div class="box-event news">
 		  <h3>{{ post.title }}</h3>
