@@ -1034,7 +1034,10 @@ section.main .home-list p.updated {
 	width: 895px;
 }
 
-
+#responseCode img.code {
+	margin-bottom: -4px;
+	margin-left: 8px;
+}
 
 
 
