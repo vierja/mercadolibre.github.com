@@ -10,38 +10,30 @@ tags:
 ---
 
 <style>
-
 table {
   width:100%;
 }
-
 tr {
   border-bottom:  1px dotted #CCC;
 }
-
 td {
   padding: 8px 0;
 }
-
 th {
   padding: 8px 0;
   text-align: left;
   border-bottom:  1px dotted #CCC;
   border-top:  1px dotted #CCC;
 }
-
 th p{
   float:left;
 }
-
 .left_column {
   width:35%;
 }
-
 .right_column {
   width: 65%;
 }
-
 </style>
 
 #REST API Resources.

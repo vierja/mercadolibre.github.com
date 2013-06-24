@@ -222,7 +222,7 @@ $item = $meli->postWithAccessToken("/items", $item);
 {% highlight java %}
 FluentStringsMap params = new FluentStringsMap();
 params.add("access_token", m.getAccessToken());
-Response r = m.post("/items", params, "{\"title\":\"Item de testes com variacao - Nao ofertar\",\"subtitle\":\"Some subtitle here\",\"category_id\":\"MLB103661\",\"price\":10,\"currency_id\":\"BRL\",\"buying_mode\":\"buy_it_now\",\"listing_type_id\":\"bronze\",\"condition\":\"new\",\"description\":\"Item com variacao !<\/b>\",\"variations\":[{\"attribute_combinations\":[{\"id\":\"63000\",\"value_id\":\"71996\"},{\"id\":\"33000\",\"value_id\":\"52045\"},{\"id\":\"43000\",\"value_id\":\"52071\"}],\"available_quantity\":1,\"price\":10,\"picture_ids\":[\"http:\/\/www.glamour.com.br\/arquivos\/ids\/550471_10\/78911931_1.jpg\"]}]}");
+Response r = m.post("/items", params, "{\"title\":\"Item de testes com variacao - Nao ofertar\",\"subtitle\":\"Some subtitle here\",\"category_id\":\"MLB103661\",\"price\":10,\"currency_id\":\"BRL\",\"buying_mode\":\"buy_it_now\",\"listing_type_id\":\"bronze\",\"condition\":\"new\",\"description\":\"Item com variacao !\",\"variations\":[{\"attribute_combinations\":[{\"id\":\"63000\",\"value_id\":\"71996\"},{\"id\":\"33000\",\"value_id\":\"52045\"},{\"id\":\"43000\",\"value_id\":\"52071\"}],\"available_quantity\":1,\"price\":10,\"picture_ids\":[\"http:\/\/www.glamour.com.br\/arquivos\/ids\/550471_10\/78911931_1.jpg\"]}]}");
 {% endhighlight %}
     </div>
     <div id="net">
@@ -233,7 +233,7 @@ p.Value = m.AccessToken;
 
 var ps = new List<Parameter> ();
 ps.Add (p);
-IRestResponse r = m.Post ("/items", ps, new {title="Anteojos Ray Ban Wayfare",subtitle="Some subtitle here",category_id="MLA5529",price:10,currency_id="ARS",available_quantity:1,buying_mode="buy_it_now",listing_type_id="bronze",condition="new",description: "Item:, <strong> Ray-Ban WAYFARER Gloss Black RB2140 901 </strong> Model: RB2140. Size: 50mm. Name: WAYFARER. Color: Gloss Black. Includes Ray-Ban Carrying Case and Cleaning Cloth. New in Box",video_id="YOUTUBE_ID_HERE",warranty="12 months by Ray Ban",pictures:[{source="http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"},{source="http://en.wikipedia.org/wiki/File:Teashades.gif"}]});
+IRestResponse r = m.Post ("/items", ps, new {title="Anteojos Ray Ban Wayfare",subtitle="Some subtitle here",category_id="MLA5529",price:10,currency_id="ARS",available_quantity:1,buying_mode="buy_it_now",listing_type_id="bronze",condition="new",description: "Item:, Ray-Ban WAYFARER Gloss Black RB2140 901 Model: RB2140. Size: 50mm. Name: WAYFARER. Color: Gloss Black. Includes Ray-Ban Carrying Case and Cleaning Cloth. New in Box",video_id="YOUTUBE_ID_HERE",warranty="12 months by Ray Ban",pictures:[{source="http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"},{source="http://en.wikipedia.org/wiki/File:Teashades.gif"}]});
 {% endhighlight %}
     </div>
   </div>
@@ -241,10 +241,9 @@ IRestResponse r = m.Post ("/items", ps, new {title="Anteojos Ray Ban Wayfare",su
 
 **Congratulations!** You have just listed your first item with variations! You can access the item's VIP through the permalink attribute.
 
-
 In this example we've created one item with two variations, each one with the respective image.
 
-If you have questions regarding how to get your access token to list items, please refer to the [getting started](/getting-started) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial.
+If you have questions regarding how to get your access token to list items, please refer to the [getting started](/getting-started) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial 12321.
 
 **Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ) page.
 

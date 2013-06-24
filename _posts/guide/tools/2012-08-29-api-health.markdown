@@ -2,12 +2,9 @@
 layout: 1columns
 title: Platform Health
 ---
-<script src="/javascripts/lagfeeds.js">
-</script>
-<script src="/javascripts/twitter.js">
-</script>
-<script src="/javascripts/initHealth.js">
-</script>
+<script src="/javascripts/lagfeeds.js"></script>
+<script src="/javascripts/twitter.js"></script>
+<script src="/javascripts/initHealth.js"></script>
 
 <div class="status_bar">
 
@@ -67,7 +64,6 @@ title: Platform Health
 
 
 <style>
-
 .status {
     padding: 5%;
     font-size: 24px;
@@ -167,5 +163,4 @@ title: Platform Health
     font-style: italic;
     color: #666666;
 }
-
 </style>

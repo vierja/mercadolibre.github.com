@@ -20,92 +20,48 @@ tags:
 
 <section class="main main-content">
     <h1>{{ page.title }}</h1>
-
-<p> April 11 was an important day for MercadoLibre, and also for e-commerce in Latin America. This time the event took place in Buenos Aires at the incredible Golden Center.</p>
-
-<p> A room with 500 "geeks" attended for our engineers presentations.</p>
-
-<p>Below you can find the slides that our Engineers presented to the audience. Come back soon to find pictures and full videos of the presentations! </p>
-
-
-<h2 id="mercadopago">Mercado Pago </h2>
-
-<iframe src="http://www.slideshare.net/slideshow/embed_code/18856262" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
-
-<h2 id="Announcinganitem">Announcing an item </h2>
-
-<iframe src="http://www.slideshare.net/slideshow/embed_code/18856287" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
-
-<h2 id="demand">Demand </h2>
-
-<iframe src="http://www.slideshare.net/slideshow/embed_code/18856346" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
-
-<h2 id="AuthorizationAndAuthentication">Authorization and authentication </h2>
-
-<iframe src="http://www.slideshare.net/slideshow/embed_code/18856188" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
-
-<h2 id="APIgenrealview">API general overview </h2>
-
-<iframe src="http://www.slideshare.net/slideshow/embed_code/18856222" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
-
-<h2 id="ManagingSales">Managing Sales </h2>
-
-<iframe src="http://www.slideshare.net/slideshow/embed_code/18856352" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
-
-<h2 id="ManagingSales">Business Opportunities </h2>
-
-<iframe src="http://www.slideshare.net/slideshow/embed_code/18856277" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
-
-
-<h2 id="videos">Conference videos</h2>
-
-<h2 id="marcos">Event opening by Marcos Galperin</h2>
-
-<iframe src="http://www.youtube.com/embed/jBEF5NnldMM" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="daniel">MercadoLibre &#38; API history by Daniel Rabinovich</h2>
-
-<iframe src="http://www.youtube.com/embed/kPeOKHf_TPg" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="esteban">The developer role in a platform by Esteban Kozak (Twitter)</h2>
-
-<iframe src="http://www.youtube.com/embed/Cu9SEqkgd1Q" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="dario">API general overview by Darío Simonassi &#38; Jonathan Leibiusky</h2>
-
-<iframe src="http://www.youtube.com/embed/m6S1KIYUQ-o" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="wesley">Authorization and authentication by Wesley Nascimento</h2>
-
-<iframe src="http://www.youtube.com/embed/vdSQxSAJASo" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="pablo">Demand by Pablo Moretti</h2>
-
-<iframe src="http://www.youtube.com/embed/qzogxYXoAUU" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="fernando">Announcing an item by Fernando Scasserra</h2>
-
-<iframe src="http://www.youtube.com/embed/dYDwzJPsqJQ" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="soledad">Managing Sales by Soledad Dematteo</h2>
-
-<iframe src="http://www.youtube.com/embed/gLZj-2GcLY8" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="hernan">Mercado Pago by Hernán Di Chello</h2>
-
-<iframe src="http://www.youtube.com/embed/j57h2GttwC8" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="matias">Mobile APIs by Matías Di Gregorio</h2>
-
-<iframe src="http://www.youtube.com/embed/-bFmXnmMlwE" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="federico">Business Opportunities and Summary by Federico Procaccini &#38; Daniel Rabinovich</h2>
-
-<iframe src="http://www.youtube.com/embed/wI73JUVqHdc" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
-
-<h2 id="Photos">Conference Photos</h2>
-
-<div class="box-event">
+    <p> April 11 was an important day for MercadoLibre, and also for e-commerce in Latin America. This time the event took place in Buenos Aires at the incredible Golden Center.</p>
+    <p> A room with 500 "geeks" attended for our engineers presentations.</p>
+    <p>Below you can find the slides that our Engineers presented to the audience. Come back soon to find pictures and full videos of the presentations! </p>
+    <h2 id="mercadopago">Mercado Pago </h2>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/18856262" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
+    <h2 id="Announcinganitem">Announcing an item </h2>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/18856287" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
+    <h2 id="demand">Demand </h2>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/18856346" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
+    <h2 id="AuthorizationAndAuthentication">Authorization and authentication </h2>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/18856188" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
+    <h2 id="APIgenrealview">API general overview </h2>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/18856222" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
+    <h2 id="ManagingSales">Managing Sales </h2>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/18856352" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
+    <h2 id="ManagingSales">Business Opportunities </h2>
+    <iframe src="http://www.slideshare.net/slideshow/embed_code/18856277" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;</iframe>
+    <h2 id="videos">Conference videos</h2>
+    <h2 id="marcos">Event opening by Marcos Galperin</h2>
+    <iframe src="http://www.youtube.com/embed/jBEF5NnldMM" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="daniel">MercadoLibre &#38; API history by Daniel Rabinovich</h2>
+    <iframe src="http://www.youtube.com/embed/kPeOKHf_TPg" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="esteban">The developer role in a platform by Esteban Kozak (Twitter)</h2>
+    <iframe src="http://www.youtube.com/embed/Cu9SEqkgd1Q" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="dario">API general overview by Darío Simonassi &#38; Jonathan Leibiusky</h2>
+    <iframe src="http://www.youtube.com/embed/m6S1KIYUQ-o" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="wesley">Authorization and authentication by Wesley Nascimento</h2>
+    <iframe src="http://www.youtube.com/embed/vdSQxSAJASo" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="pablo">Demand by Pablo Moretti</h2>
+    <iframe src="http://www.youtube.com/embed/qzogxYXoAUU" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="fernando">Announcing an item by Fernando Scasserra</h2>
+    <iframe src="http://www.youtube.com/embed/dYDwzJPsqJQ" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="soledad">Managing Sales by Soledad Dematteo</h2>
+    <iframe src="http://www.youtube.com/embed/gLZj-2GcLY8" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="hernan">Mercado Pago by Hernán Di Chello</h2>
+    <iframe src="http://www.youtube.com/embed/j57h2GttwC8" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="matias">Mobile APIs by Matías Di Gregorio</h2>
+    <iframe src="http://www.youtube.com/embed/-bFmXnmMlwE" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="federico">Business Opportunities and Summary by Federico Procaccini &#38; Daniel Rabinovich</h2>
+    <iframe src="http://www.youtube.com/embed/wI73JUVqHdc" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px">&nbsp;></iframe>
+    <h2 id="Photos">Conference Photos</h2>
+    <div class="box-event">
     <h3>Photos Developers Conference BsAs</h3>
     <div class="middle">
         <div class="big-image">
@@ -173,7 +129,6 @@ tags:
         </div>
     </div>
 </div>
-
 </section>
 
 

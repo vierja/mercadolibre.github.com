@@ -7,8 +7,6 @@ menu:
 tags: 
 ---
 
-<br /><br /><br /><br />
-
 <div style="height:400px;">
   <img src="/images/ninja.png" style="z-index:1;" />
   <img src="/images/bubble.png" style="position:relative;left:-100px;top:-170px;z-index:2;" />

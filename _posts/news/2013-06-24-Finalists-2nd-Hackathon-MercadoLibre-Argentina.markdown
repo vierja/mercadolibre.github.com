@@ -15,9 +15,7 @@ tags:
 ---
 
 
-
 ![Finalists 2nd Hackathon MercadoLibre Argentina](/images/news/image.png)
-<img src="/images/hack_2013_15jun.png" />
 
 After long debate, we're proud to have selected the 5 finalists from our **2nd Hackathon in Argentina**. And the finalists are...
 

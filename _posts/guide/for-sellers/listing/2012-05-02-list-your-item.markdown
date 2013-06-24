@@ -72,6 +72,7 @@ Try to post a item using our SDK's
   </ul>
   <div>
     <div id="js">
+
 {% highlight javascript %}
 var uri = "/items?access_token=" + MELI.getToken()
 var param = {
@@ -96,8 +97,10 @@ MELI.post(uri, param, function(data) {
   //Your code
 }
 {% endhighlight %}
+    
     </div>
     <div id="php">
+
 {% highlight php5 %}
 <?php
 $item = array(
@@ -125,8 +128,10 @@ $item = array(
 $item = $meli->postWithAccessToken("/items", $item);
 ?>
 {% endhighlight %}
+    
     </div>
     <div id="java">
+
 {% highlight java %}
 FluentStringsMap params = new FluentStringsMap();
 params.add("access_token", m.getAccessToken());
@@ -134,6 +139,7 @@ Response r = m.post("/items", params, "{\"title\":\"Anteojos Ray Ban Wayfare\",\
 {% endhighlight %}
     </div>
     <div id="net">
+
 {% highlight csharp %}
 var p = new Parameter ();
 p.Name = "access_token";
@@ -143,6 +149,7 @@ var ps = new List<Parameter> ();
 ps.Add (p);
 IRestResponse r = m.Post ("/items", ps, new {title="Anteojos Ray Ban Wayfare",subtitle="Some subtitle here",category_id="MLA5529",price:10,currency_id="ARS",available_quantity:1,buying_mode="buy_it_now",listing_type_id="bronze",condition="new",description: "Item:, <strong> Ray-Ban WAYFARER Gloss Black RB2140 901 </strong> Model: RB2140. Size: 50mm. Name: WAYFARER. Color: Gloss Black. Includes Ray-Ban Carrying Case and Cleaning Cloth. New in Box",video_id="YOUTUBE_ID_HERE",warranty="12 months by Ray Ban",pictures:[{source="http://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"},{source="http://en.wikipedia.org/wiki/File:Teashades.gif"}]});
 {% endhighlight %}
+    
     </div>
   </div>
 </div>
@@ -165,6 +172,7 @@ The Items API will automatically download the provided images to MELI Storage an
 If you have questions regarding how to get your access token to list items, please refer to the [getting started](/first-step) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial.
 
 **Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ) page.
+
 
 ## Best practices {#best-practices}
 
