@@ -249,7 +249,7 @@ In this example we've created one item with two variations, each one with the re
 
 If you have questions regarding how to get your access token to list items, please refer to the [getting started](/getting-started) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial 12321.
 
-**Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ) page.
+**Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&amp;faqId=2407&amp;categId=COST&amp;type=FAQ) page.
 
 ##Error Codes Reference {#error-codes}
 

@@ -176,7 +176,7 @@ The Items API will automatically download the provided images to MELI Storage an
 
 If you have questions regarding how to get your access token to list items, please refer to the [getting started](/first-step) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial.
 
-**Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ) page.
+**Note:** If you get any errors trying to post your item, please refer to the [selling conditions](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&amp;faqId=2407&amp;categId=COST&amp;type=FAQ) page.
 
 
 ## Best practices {#best-practices}
@@ -191,7 +191,7 @@ To create your first item you need a number of attributes that can be set; some 
 
 The title is the main descriptor of an item. This label will be used for searching purposes and it is an important component of your item's detail. It is a mandatory attribute. For more details about this attribute in MercadoLibre, you can check the [visual introduction](/listing-introduction) and the [item title section](/listing-introduction/#item-title).
 
-You can add a subtitle attribute, which is optional and it is used in the view item page or in the search result list. Together, these parameters are very important to describe your item. If you have doubts about how to describe your item, visit [MercadoLibre site help](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=9564&categId=MEJVT&type=FAQ).
+You can add a subtitle attribute, which is optional and it is used in the view item page or in the search result list. Together, these parameters are very important to describe your item. If you have doubts about how to describe your item, visit [MercadoLibre site help](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&amp;faqId=9564&amp;categId=MEJVT&amp;type=FAQ).
 
 
 ### Description {#listing-description-attribute}
@@ -301,7 +301,7 @@ curl https://api.mercadolibre.com/sites/MLA/listing_types/silver
 }
 {% endhighlight %}
 
-For more details about listing type costs, you can visit [MercadoLibre help site](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&faqId=2407&categId=COST&type=FAQ).
+For more details about listing type costs, you can visit [MercadoLibre help site](http://www.mercadolibre.com/jm/ml.faqs.framework.main.FaqsController?pageId=FAQ&amp;faqId=2407&amp;categId=COST&amp;type=FAQ).
 
 ##Error Codes Reference {#error-codes}
 
