@@ -25,4 +25,5 @@ After long debate, we're proud to have selected the 5 finalists from our **2nd H
 - Regalo Perfecto (Ramiro Rinaldi, Federico Rinaldi)
 - HackML (Daniel Grippo, Sebastian Kaplum, Pablo Canonico, Mauro Fogo)
 
+
 We thank all contestants for participating and hope to see you all again in future hackathons. The winner will be announced this week at [Red Innova's event](http://www.redinnova.com/buenos-aires/) in Buenos Aires. Good luck to the finalists!
