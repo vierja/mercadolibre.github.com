@@ -226,7 +226,7 @@ To see the available filters and sortings in a resource, check the <b>available_
 <br /><br />
 Example:
 <pre class="terminal">
-curl https://api.mercadolibre.com/sites/MLA/search?category=MLA5529&sort=relevance&price=25.0-95.0
+curl https://api.mercadolibre.com/sites/MLA/search?category=MLA5529&amp;sort=relevance&amp;price=25.0-95.0
 </pre>
 {% highlight javascript %}
 {
