@@ -55,7 +55,7 @@ The response indicates if shipping modes me1 is available and the shipping metho
 **URL**
 
 <pre class="terminal">
-https://api.mercadolibre.com/users/:user_id/shipping_modes?category_id=MLB74723&dimensions=10x50x100,5000
+https://api.mercadolibre.com/users/:user_id/shipping_modes?category_id=MLB74723&amp;dimensions=10x50x100,5000
 </pre>
 
 
@@ -97,7 +97,7 @@ The dimensions have some restrictions e.g.: 30kg maximum weight.
  If there are no modes that support the given dimensions the item has to be listed with **not_specified** shipping.
 
 <pre class="terminal">
-https://api.mercadolibre.com/users/:user_id/shipping_modes?category_id=MLB74723&dimensions=10x50x100,30001
+https://api.mercadolibre.com/users/:user_id/shipping_modes?category_id=MLB74723&amp;dimensions=10x50x100,30001
 </pre>
 
 
@@ -275,7 +275,7 @@ There are 2 resources for the shipping calculator to choose the one that better 
 
 **URL**
 <pre class="terminal">
-https://api.mercadolibre.com/users/:user_id/shipping_options?category_id=:category_id&dimensions=:dim&zip_code=13565905
+https://api.mercadolibre.com/users/:user_id/shipping_options?category_id=:category_id&amp;dimensions=:dim&amp;zip_code=13565905
 </pre>
 
 <pre class="terminal">

@@ -19,7 +19,7 @@ If your APP will list properties **only on behalf your signed up user**, then fo
 To get an access token for your own MELI user, you must send a POST request to the following URL:
 
 <pre class="terminal">
-https://api.mercadolibre.com/oauth/token?grant_type=client_credentials&client_id=YOUR_CLIENT_ID&client_secret=YOUR_SECRET_KEY
+https://api.mercadolibre.com/oauth/token?grant_type=client_credentials&amp;client_id=YOUR_CLIENT_ID&amp;client_secret=YOUR_SECRET_KEY
 </pre>
 
 *YOUR_CLIENT_ID* and *YOUR_SECRET_KEY* can be obtained from the MercadoLibre APP you've created.
@@ -53,7 +53,7 @@ If your APP will list properties **on behalf other users**, then follow the foll
 Users on whose behalf you wish to list properties will have to grant permissions to allow your APP do so. This permission-granting will only be needed once per user. To accomplish this, the user who wants to grant this permission must access the following URL:
 
 <pre class="terminal">
- https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=YOUR_CLIENT_ID
+ https://auth.mercadolibre.com.ar/authorization?response_type=code&amp;client_id=YOUR_CLIENT_ID
 </pre>
 
 *YOUR_CLIENT_ID* can be obtained from the MercadoLibre APP you've created.
@@ -76,7 +76,7 @@ Once the user grants permissions to your APP, it will be automatically redirecte
 When receiving a request to your "Callback URL", your server must then send a POST request to our OAuth API to the following URL:
 
 <pre class="terminal">
- https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=YOUR_CLIENT_ID&client_secret=YOUR_SECRET_KEY&code=YOUR_SECRET_CODE&redirect_uri=CALLBACK_URL
+ https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&amp;client_id=YOUR_CLIENT_ID&amp;client_secret=YOUR_SECRET_KEY&amp;code=YOUR_SECRET_CODE&amp;redirect_uri=CALLBACK_URL
 </pre>
 
 *YOUR_CLIENT_ID* and *YOUR_SECRET_KEY* can be obtained from the MercadoLibre APP you've created. *YOUR_SECRET_CODE* can be obtained from the params received and for the *CALLBACK_URL* you must send the exact same "Callback URL" set up for your APP.
@@ -102,7 +102,7 @@ You will receive a response body in a JSON format with the following layout:
 *YOUR_NEW_ACCESS_TOKEN* is now the access token required to interact with the API to list a real estate property on behalf the user who just granted permissions to your APP. Keep in mind that this token will expire after the "expires_in" amount of seconds. Once expired your access token will no longer be valid and you will have to get a new access token. To obtain from the second access token on, you will need *YOUR_REFRESH_TOKEN* and will have to send a POST request to the following URL:
 
 <pre class="terminal">
- https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=YOUR_CLIENT_ID&client_secret=YOUR_SECRET_KEY&refresh_token=YOUR_REFRESH_TOKEN
+ https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&amp;client_id=YOUR_CLIENT_ID&amp;client_secret=YOUR_SECRET_KEY&amp;refresh_token=YOUR_REFRESH_TOKEN
 </pre>
 
 This POST will then return a new valid access token and a new refresh token, which you will have to use for getting your next valid access token by sending a POST request to the last mentioned URL.

@@ -1,0 +1,153 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	{% include meta-tags.html %}
+	<title>{{ page.title }}</title>
+	{% include link-tags.html %}
+	{% include script-tags-head.html %}
+ </head>
+  <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143932955748439";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<script src="/javascripts/lagfeeds.js"></script>
+	<script src="/javascripts/twitter.js"></script>
+	<script src="/javascripts/initHealth.js"></script>
+
+     {% include header.html %}
+
+	<section class="main ch-g1">
+		{{ content }}
+
+		<div class="socialPages">
+			<div class="fb-like" data-href="" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-text="I liked - {{ page.title }} - " data-via="melidevelopers" data-hashtags='MercadoLibreAPI'>Tweet</a>
+			<div class="g-plusone" data-size="medium" style='width:61px !important;'></div>
+		</div>
+	</section>
+
+	<style type="text/css">
+	#dummybodyid td {
+		background: white;
+	}
+	.status {
+	    padding: 5%;
+	    font-size: 24px;
+	    font-weight: bold;
+	    color: #FFF;
+	    margin: auto;
+	    display: block;
+	    width: 55%;
+	}
+
+	.sub_status_bar {
+	    width:49.8%;
+	    color: #FFF;
+	    padding-top: 2%;
+	    padding-bottom: 2%;
+	    margin-top: 0.5%;
+	    background: #444444;
+	}
+
+	.left {
+	    float: left;
+	}
+
+	.right {
+	    float: right;
+	}
+
+	.inner_status_bar {
+	    width: 70%;
+	    margin: auto;
+	    display: block;
+	    font-size: 20px;
+	}
+
+	.inner_status_box {
+	    width: 50%;
+	    margin: auto;
+	    display: block;
+	    font-size: 20px;
+	}
+
+	.inner_status_bar img{
+	    margin-right: 5%;
+	}
+
+	.status_bar {
+	    width: 100%;
+	    margin-bottom: 20px;
+	    background-color: #000;
+	}
+
+	.SubTitles {
+	    color: #DC7B1C;
+	    font-size: 18px;
+	    font-weight: bold;
+	    padding-bottom: 15px;
+	    margin-top: 20px;
+	}
+
+	.red {
+	    background-color: #FF7773;
+	}
+
+	.yellow {
+	    background-color: #FFDA40;
+	}
+
+	.green {
+	    background-color: #74E868;
+	}
+
+	#lastTweets {
+	    width: 600px;
+	    font-family: georgia;
+	    font-size: 15px;
+	    color: #333333;
+	    padding: 10px;
+	}
+
+	#lastTweets .tweet {
+	    margin: 0 auto 15px auto;
+	    padding: 0 0 15px 0;
+	    border-bottom: 1px dotted #ccc;
+	}
+
+	#lastTweets .tweet a {
+	    text-decoration: none;
+	    color: #13c9d0;
+	}
+
+	#lastTweets .tweet a:hover {
+	    text-decoration: underline;
+	}
+
+	#lastTweets .tweet .time {
+	    font-size: 10px;
+	    font-style: italic;
+	    color: #666666;
+	}
+	</style>
+
+    {% include footer.html %}
+</body>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</html>

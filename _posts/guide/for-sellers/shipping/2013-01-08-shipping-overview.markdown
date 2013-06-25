@@ -232,7 +232,7 @@ https://api.mercadolibre.com/sites/MLA/shipping_methods
       </tr>
       <tr>
          <td>validation_error</td>
-         <td>No shipping mode can be used for this item. Check /users/?/shipping_modes?category_id=?&dimensions=?x?x?,?.</td>
+         <td>No shipping mode can be used for this item. Check /users/?/shipping_modes?category_id=?&amp;dimensions=?x?x?,?.</td>
          <td>Validation error</td>
          <td>Minimum dimensions are 2x11x16, sum not exceeding 200 (L + W + H &lt;= 200) and weight must be less than 30000.</td>
       </tr>

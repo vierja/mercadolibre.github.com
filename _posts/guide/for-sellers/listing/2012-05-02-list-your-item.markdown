@@ -151,8 +151,11 @@ IRestResponse r = m.Post ("/items", ps, new {title="Anteojos Ray Ban Wayfare",su
 {% endhighlight %}
     
     </div>
+
   </div>
+
 </div>
+
 
 The Items API will automatically download the provided images to MELI Storage and create a listing for your item. You will receive the following Json response:
 
@@ -167,7 +170,9 @@ The Items API will automatically download the provided images to MELI Storage an
 }
 {% endhighlight %}
 
+
 **Congratulations!** You have just listed your first item! You can access the Item’s VIP through the permalink attribute.
+
 
 If you have questions regarding how to get your access token to list items, please refer to the [getting started](/first-step) tutorial. In addition, if you wish to validate your item before listing, check out the [item validation](/validate-item) tutorial.
 
@@ -314,73 +319,73 @@ For more details about listing type costs, you can visit [MercadoLibre help site
          <td>item.start_time.invalid</td>
          <td>start time $startTime is only updateable in NOT_YET_ACTIVE items.</td>
          <td>Field start time cannot be updated.</td>
-         <td>The parameter start_time can only be updated if the item status is <b><i>NOT_YET_ACTIVE</i></b>.</td>
+         <td>The parameter start_time can only be updated if the item status is <strong><i>NOT_YET_ACTIVE</i></strong>.</td>
       </tr>
       <tr>
          <td>item.category_id.invalid</td>
          <td>Category $categoryId does not exist.</td>
          <td>Category not found.</td>
-         <td>To see the available categories check the page <b>https://api.mercadolibre.com/sites/$siteId</b> (<a href='https://api.mercadolibre.com/sites' target='_blank'>Check $sideId</a>).</td>
+         <td>To see the available categories check the page <strong>https://api.mercadolibre.com/sites/$siteId</strong> (<a href='https://api.mercadolibre.com/sites' target='_blank'>Check $sideId</a>).</td>
       </tr>
       <tr>
          <td>item.category_id.invalid</td>
          <td>Is not allowed to post in category $categoryId. Make sure you're posting in a leaf category</td>
          <td>$category.listing_allowed false.</td>
-         <td>Before post an item, make sure it is allowed to post in the chosen category, see the parameter listing_allowed on <b>https://api.mercadolibre.com/categories/$categoryId</b>.</td>
+         <td>Before post an item, make sure it is allowed to post in the chosen category, see the parameter listing_allowed on <strong>https://api.mercadolibre.com/categories/$categoryId</strong>.</td>
       </tr>
       <tr>
          <td>item.buying_mode.invalid</td>
          <td>Category $categoryId only supports listing modes: $category.buyingModes.</td>
          <td>$item.buying_modes is invalid.</td>
-         <td>To see the available listing modes in category check the page <b>https://api.mercadolibre.com/categories/$categoryId</b> in parameter <b><i>settings:{buying_modes:[...]}</i></b>.</td>
+         <td>To see the available listing modes in category check the page <strong>https://api.mercadolibre.com/categories/$categoryId</strong> in parameter <strong><i>settings:{buying_modes:[...]}</i></strong>.</td>
       </tr>
       <tr>
          <td>item.available_quantity.invalid</td>
          <td>Available quantity max. value is $itemMaxStock for category $categoryId and listing type $item.listingTypeId</td>
          <td>$item.available_quantity is bigger the maximum allowed.</td>
-         <td>To see the maximum quantity allowed on category check the page <b>https://api.mercadolibre.com/categories/$categoryId/listing_types/$listing_type</b> in parameter <b><i>max_stock_per_item</i></b> (<a href='https://api.mercadolibre.com/categories/$categoryId/listing_types' target='_blank'>Check listing_type</a>)</td>
+         <td>To see the maximum quantity allowed on category check the page <strong>https://api.mercadolibre.com/categories/$categoryId/listing_types/$listing_type</strong> in parameter <strong><i>max_stock_per_item</i></strong> (<a href='https://api.mercadolibre.com/categories/$categoryId/listing_types' target='_blank'>Check listing_type</a>)</td>
       </tr>
       <tr>
          <td>item.attributes.invalid</td>
          <td>The attributes $attributesIds are invalid for category $item.categoryId</td>
          <td>$item.attributes is invalid.</td>
-         <td>See attributes allowed <b>https://api.mercadolibre.com/categories/$categoryId/attributes</b>.</td>
+         <td>See attributes allowed <strong>https://api.mercadolibre.com/categories/$categoryId/attributes</strong>.</td>
       </tr>
       <tr>
          <td>item.variations.attribute_combinations.invalid</td>
          <td>Variation attribute $variationAttribute.attributeId has an invalid value ($variationAttribute.valueId). Allowed values are $values.</td>
          <td>$item.attribute_combinations is invalid.</td>
-         <td>To see mandatory attributes on this category check the page <b>https://api.mercadolibre.com/categories/$categoryId/attributes</b> in parameter <b><i>{values:[{...}]}</i></b>.</td>
+         <td>To see mandatory attributes on this category check the page <strong>https://api.mercadolibre.com/categories/$categoryId/attributes</strong> in parameter <strong><i>{values:[{...}]}</i></strong>.</td>
       </tr>
       <tr>
          <td>item.attributes.missing_required</td>
          <td>The attributes $requiredAttributeIds are required for category $item.categoryId. Check the attribute is present in the attributes list or in all variation attributes combination.</td>
          <td>Category is required atribute.</td>
-         <td>To see the attributes mandatory on this category check the page <b>https://api.mercadolibre.com/categories/$categoryId/attributes</b> in parameter <b><i>{tags:{required:{true}}}</i></b>.</td>
+         <td>To see the attributes mandatory on this category check the page <strong>https://api.mercadolibre.com/categories/$categoryId/attributes</strong> in parameter <strong><i>{tags:{required:{true}}}</i></strong>.</td>
       </tr>
       <tr>
          <td>item.listing_type_id.invalid</td>
          <td>Invalid listing_type_id.</td>
          <td>$item.listing_type_id is invalid.</td>
-         <td>To see the available listing types in category check the page <b>https://api.mercadolibre.com/categories/$categoryId/listing_types</b>.</td>
+         <td>To see the available listing types in category check the page <strong>https://api.mercadolibre.com/categories/$categoryId/listing_types</strong>.</td>
       </tr>
       <tr>
          <td>item.listing_type_id.requiresPictures</td>
          <td>Item pictures are mandatory for listing type $item.listingTypeId</td>
          <td>Pictures is required.</td>
-         <td>To see if the pictures is mandatory in category check the page <b>https://api.mercadolibre.com/categories/$categoryId/listing_types/silver</b> in parameter <b><i>requires_picture:{}</i></b>.</td>
+         <td>To see if the pictures is mandatory in category check the page <strong>https://api.mercadolibre.com/categories/$categoryId/listing_types/silver</strong> in parameter <strong><i>requires_picture:{}</i></strong>.</td>
       </tr>
       <tr>
          <td>item.site_id.invalid</td>
          <td>Site $item.siteId doesn't exist.</td>
          <td>$item.site_id is invalid.</td>
-         <td>To the available sites, see the page <b>https://api.mercadolibre.com/sites</b>.</td>
+         <td>To the available sites, see the page <strong>https://api.mercadolibre.com/sites</strong>.</td>
       </tr>
       <tr>
          <td>item.shipping.mode.invalid</td>
-         <td>No shipping mode can be used for this item. Check /users/$item.sellerId/shipping_modes?category_id=$item.categoryId" + (item.dimensions ? "&dimensions=$item.dimensions" : "</td>
+         <td>No shipping mode can be used for this item. Check /users/$item.sellerId/shipping_modes?category_id=$item.categoryId" + (item.dimensions ? "&amp;dimensions=$item.dimensions" : "</td>
          <td>Shipping mode is invalid.</td>
-         <td>To see the available shipping modes in category check the page <b>https://api.mercadolibre.com/users/$userId/shipping_modes?category_id=$categoryId</b>.</td>
+         <td>To see the available shipping modes in category check the page <strong>https://api.mercadolibre.com/users/$userId/shipping_modes?category_id=$categoryId</strong>.</td>
       </tr>
       <tr>
          <td>item.description.max</td>
@@ -392,7 +397,7 @@ For more details about listing type costs, you can visit [MercadoLibre help site
          <td>item.pictures.max</td>
          <td>Items in category $item.categoryId cannot exceeds $maxPicturesPerItem pictures.</td>
          <td>Number of images exceeded.</td>
-         <td>To see the quantity of pictures per item in category check the page <b>https://api.mercadolibre.com/categories/$categoryId</b> in parameter <b><i>max_pictures_per_item:{}</i></b>.</td>
+         <td>To see the quantity of pictures per item in category check the page <strong>https://api.mercadolibre.com/categories/$categoryId</strong> in parameter <strong><i>max_pictures_per_item:{}</i></strong>.</td>
       </tr>
    </tbody>
 </table>

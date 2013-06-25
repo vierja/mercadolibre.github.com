@@ -4,7 +4,7 @@ title: Finalists 2nd Hackathon MercadoLibre Argentina
 homeTitle: News
 homeText: After long debate, we're proud to have selected the 5 finalists that will be attending this week's Red Innova event to see who the winner is.
 excerpt: After long debate, we're proud to have selected the 5 finalists that will be attending this week's Red Innova event to see who the winner is.
-imageRight: sdks.jpg
+imageRight: hack_2013_15jun.png
 categories:
 - news
 menu:

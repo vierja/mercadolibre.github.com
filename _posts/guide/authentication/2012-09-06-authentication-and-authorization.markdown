@@ -144,7 +144,7 @@ If you want to use the access token from your server for off-line processing, yo
 In this case when the user grants the permissions to your application he will be redirected to the url as specified when you registered your application with an access_code parameter.
 <pre>http://your_url?code=...</pre>
 Here you must exchange this code for an access token by issuing a POST request to...
-<pre>https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=SECRET_CODE&redirect_uri=$APP_CALLBACK_URL</pre>
+<pre>https://api.mercadolibre.com/oauth/token?grant_type=authorization_code&amp;client_id=CLIENT_ID&amp;client_secret=CLIENT_SECRET&amp;code=SECRET_CODE&amp;redirect_uri=$APP_CALLBACK_URL</pre>
 ...…in which response you will receive the access token, the expiration time and a refresh token (if you requested offline-access permissions) that you will use to get a new token once the current token has expired (all this takes place on the server side).
 
 
@@ -165,8 +165,10 @@ Here you must exchange this code for an access token by issuing a POST request t
 
         Make a GET request to this URL:
         <pre>
-          https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=Client_id&redirect_uri=REDIRECT_URL
+          https://auth.mercadolibre.com.ar/authorization?response_type=code&amp;client_id=Client_id&amp;redirect_uri=REDIRECT_URL
+
         </pre>
+
 
         <h4>Parameters</h4>
         <ul class="ch-list parameters">
@@ -381,7 +383,7 @@ There are also events which may cause an access token to become invalid before i
 
 If the user has provided you with offline access, then by using the server-side authentication flow you will have a refresh token. This extra token can be used to refresh an expired token (not a token invalidated from other methods). By issuing a POST call to
 
-<pre>https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&client_id=&client_secret=&refresh_token=</pre>
+<pre>https://api.mercadolibre.com/oauth/token?grant_type=refresh_token&amp;client_id=&amp;client_secret=&amp;refresh_token=</pre>
 you will get a new access_token and also a new refresh token. Note that a refresh token can be used only once.
 
 
