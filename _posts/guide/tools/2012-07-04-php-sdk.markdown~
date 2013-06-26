@@ -22,13 +22,11 @@ Initialize the SDK with your __client_id__ as follows:
 
 {% highlight php %}
 // Try to put this code at the top
-require '../src/meli.php';
+require '../MercadoLivre/meli.php';
 
 // Create our Application instance (replace this with your appId and secret).
-$meli = new Meli(array(
-    'appId'         => 12345,
-    'secret'        => dsadsaDWFfs24DF34dgg43T3,
-));
+$meli = new Meli(123456, "application_secret");
+
 {% endhighlight %}
 	
 

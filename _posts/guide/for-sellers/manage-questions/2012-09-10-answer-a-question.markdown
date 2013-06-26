@@ -62,7 +62,7 @@ $answer = array(
   "question_id" => QUESTION_ID,
   "text" => "Some text here..."
 );
-$item = $meli->postWithAccessToken("/answers", $answer);
+$item = $meli->post("/answers", $answer, array('access_token' => $_SESSION['access_token']));
 ?>
 {% endhighlight %}
     </div>

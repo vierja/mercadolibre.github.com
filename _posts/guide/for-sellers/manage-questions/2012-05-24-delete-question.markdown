@@ -43,7 +43,7 @@ MELI.remove(uri, param, function(data) {
     <div id="php">
 {% highlight php5 %}
 <?php
-$question = $meli->deleteWithAccessToken("/questions/QUESTION_ID");
+$question = $meli->delete("/questions/QUESTION_ID", array('access_token' => $_SESSION['access_token']));
 ?>
 {% endhighlight %}
     </div>

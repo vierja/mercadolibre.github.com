@@ -114,7 +114,7 @@ MELI.get("/items/MLB474720094", null, function(data) {
 <?php
 $meli = new Meli(123456, "application_secret");
 
-$item = $meli->get("/items/MLB474720094");
+$item = $meli->get("/items/MLB474720094", array('access_token' => $_SESSION['access_token']));
 ?>
 {% endhighlight %}
 		</div>

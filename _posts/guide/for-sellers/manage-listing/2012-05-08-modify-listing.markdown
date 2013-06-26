@@ -150,7 +150,7 @@ MELI.post(uri, param, function(data) {
 $item = array(
   "id" => "silver"
 );
-$item = $meli->postWithAccessToken("/items/ITEM_ID/listing_type", $item);
+$item = $meli->post("/items/ITEM_ID/listing_type", $item, array('access_token' => $_SESSION['access_token']));
 ?>
 {% endhighlight %}
     </div>

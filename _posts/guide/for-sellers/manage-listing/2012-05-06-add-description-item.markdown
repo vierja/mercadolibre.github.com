@@ -66,7 +66,7 @@ MELI.post(uri, param, function(data) {
 $description = array(
   "text" => "Need more information, Please ask. We will be happy to answer."
 );
-$item = $meli->postWithAccessToken("/items/ITEMID/descriptions", $description);
+$item = $meli->post("/items/ITEMID/descriptions", $description, array('access_token' => $_SESSION['access_token']));
 ?>
 {% endhighlight %}
     </div>

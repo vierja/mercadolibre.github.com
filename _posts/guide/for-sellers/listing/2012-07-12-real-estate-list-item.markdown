@@ -309,7 +309,7 @@ $item = array(
   ),
   "description" => "<b>This is the real estate property descritpion.</b>"
 );
-$item = $meli->postWithAccessToken("/items", $item);
+$item = $meli->post("/items", $item, array('access_token' => $_SESSION['access_token']));
 {% endhighlight %}
     </div>
     <div id="java">

@@ -95,7 +95,7 @@ $feedback = array(
   "fulfilled" => true,
   "message" => "The product was paid in time and shipped to the buyer."
 );
-$item = $meli->postWithAccessToken("/orders/ORDER_ID/feedback", $feedback);
+$item = $meli->post("/orders/ORDER_ID/feedback", $feedback, array('access_token' => $_SESSION['access_token']));
 ?>
 {% endhighlight %}
     </div>
@@ -177,7 +177,7 @@ $feedback = array(
   "reason" => "DESCRIPTION_DIDNT_MATCH_ARTICLE",
   "message" => "The product is not what I expected. It is too small."
 );
-$item = $meli->postWithAccessToken("/orders/ORDER_ID/feedback", $feedback);
+$item = $meli->post("/orders/ORDER_ID/feedback", $feedback, array('access_token' => $_SESSION['access_token']));
 ?>
 {% endhighlight %}
     </div>

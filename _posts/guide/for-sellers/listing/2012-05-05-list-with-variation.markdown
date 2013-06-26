@@ -214,7 +214,7 @@ $item = array(
     ),
   ),
 );
-$item = $meli->postWithAccessToken("/items", $item);
+$item = $meli->post("/items", $item, array('access_token' => $_SESSION['access_token']));
 ?>
 {% endhighlight %}
     </div>

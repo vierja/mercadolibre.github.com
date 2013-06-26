@@ -345,12 +345,13 @@ MELI.login(function() {
     <div id="php">
 {% highlight php %}
 <?php
-$meli = new Meli(array('appId' => '1234','secret' => 'a secret'));
-$userId = $meli->initConnect();
-if(userId):
-$user = $meli->getWithAccessToken('/users/me');
+$meli = new Meli(123456, "application_secret");
+
+if($_GET['code']):
+  $oAuth = $meli->authorize($_GET['code'], 'http://localhost/PHPSDK/examples/example_login.php');
+  $_SESSION['access_token'] = $oAuth['body']->access_token;
 else:
-echo '<a href="' . $meli->getLoginUrl() . '">Login with MercadoLibre</a>';
+  echo '<a href="' . $meli->getAuthUrl('http://CALLBACK_URL') . '">Login with MercadoLibre</a>';
 endif;
 ?>
 {% endhighlight %}
