@@ -21,7 +21,6 @@ tags:
 <script type="text/javascript">
 	uri = "https%3A%2F%2Fgroups.google.com%2Fforum%2Fembed%2F%3Fplace%3Dforum%2Fpt-meli-developers%26hideforumtitle%3Dtrue%26hidesubject%3Dtrue%26fragments%3Dtrue%26showsearch%3Dtrue%26showpopout%3Dtrue%26showtabs%3Dfalse";
 	uri = decodeURIComponent(uri);
-	alert(uri);
 	document.getElementById('forum_embed').src = uri;
 </script>
 
