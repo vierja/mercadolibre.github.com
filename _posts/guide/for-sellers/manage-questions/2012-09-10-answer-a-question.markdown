@@ -35,7 +35,7 @@ curl -i -X POST -H "Content-Type: application/json" -d
 https://api.mercadolibre.com/answers?access_token=XXXX
 </pre>
 
-<div id="code2">
+<div id="code">
   <ul>
     <li><a href="#js">JavaScript</a></li>
     <li><a href="#php">PHP</a></li>
@@ -115,4 +115,14 @@ We also provide a [Notifications API](/notifications). Listening to Notification
       </tr>
    </tbody>
 </table>
+
+<script>
+
+  window.onload = function() { startDrawing(); }
+
+  function startDrawing(){
+      $("#code").tabNavigator();
+
+  }
+</script>
 
