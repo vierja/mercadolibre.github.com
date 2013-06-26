@@ -1,0 +1,210 @@
+## Build your SDK!
+
+We currently have SDKs available for Javascript, PHP, Java, .NET, Ruby and Python. Check them out and feel free to make a pull request in GitHub if you feel like suggesting some changes.
+
+But why stop there? You can contribute to our dev community and help us grow our available SDKs list by creating one of your own in any desired programming language. It’s really easy! All we ask from you is to adapt to Meli's SDKs standards and methods lists we have established, to provide other devs seamless migration from one language to another.
+
+Start working on your own SDK now, and remember to include documentation and tests. Let us know when you’re done at developers@mercadolibre.com. We'll check it asap and return the favor with a big fat thank you note in our dev platform.
+
+For us to make your SDK public in our Meli SDKs list, please consider the following guide:
+
+#### Table of contents
+- Configuration file
+- Constructor
+- Authentication methods
+- Request methods
+
+#### Configuration file
+
+Your SDK must have a config file for contants, which are:
+
+
+**API_ROOT_URL:** Meli API URL (eg: https://api.mercadolibre.com/)
+**SDK_VERSION:** Current version of your SDK (eg: 1.0)
+**AUTH_URL:** Meli Authentication URL (eg: https://auth.mercadolibre.com.ar/)
+**OAUTH_URL:** Meli OAUTH URL, used to get access & refresh tokens (eg: https://api.mercadolibre.com/oauth)
+
+## Constructor
+
+The constructor for MELI objects. Must have the following input parameters:
+
+
+Field
+Type
+Required
+Description
+client_id
+int
+yes
+ID provided when creating a MELI APP (link to create app guide)
+client_secret
+string
+yes
+Hash string key provided when creating a MELI APP (link to create app guide)
+access_token
+string
+optional
+Used to talk to our API resources that require credentials (eg: POST to /items).
+refresh_token
+string
+optional
+Hash string provided when a user authorizes an APP. Used to get a new valid access_token (only available when offline_access scope in APP settings is checked).
+
+The constructor must return an Object.
+
+Example:
+
+myMeliObject = new Meli(client_id=1234, client_secret"my_secret_key", [access_token="an_access_token"], [refresh_token="a_refresh_token"])
+
+This Meli object must contain, at least, the following methods:
+
+Authorization methods: GetAuthURL, Authorize, RefreshAccessToken.
+Request methods: GET, POST, PUT, DELETE.
+
+Authorization methods
+
+Make sure you have read our Authentication & Authorization section (link to that section) to fully understand what these three methods must do.
+
+GetAuthURL(string redirect_uri)
+
+Field
+Type
+Required
+Description
+redirect_uri
+string
+yes
+Callback URL to which the user will be redirected after granting permission to the Meli APP. The code required to obtain the first access_token (required in Authorize method) will be appended to this URL when making this redirect.
+
+Example:
+myAuthURL = myMeliObject.getAuthURL('http://www.mydomain.com/mercadolibre')
+
+
+Authorize(string code, string redirect_uri)
+
+Field
+Type
+Required
+Description
+code
+string
+yes
+Code received at redirect_uri when user granted permission to the Meli APP.
+redirect_uri
+string
+yes
+Callback URL to which the API will send the access & refresh tokens. Must be the same as the one configured in the Meli APP settings.
+Example:
+myAuthorization = myMeliObject.authorize('TG-1234', 'http://www.mydomain.com/mercadolibre')
+print myAuthorization.access_token
+print myAuthorization.refresh_token
+
+RefreshAccessToken()
+
+This method will only be used for APPs with offline_access scope checked. It does not require input parameters and must use the refresh_token within the Meli Object created (eg: myMeliObject.refresh_token) and exchange it for a new access_token and refresh_token.
+
+Example:
+myNewTokens = myMeliObject.refreshAccessToken()
+print myNewTokens.access_token
+print myNewTokens.refresh_token
+
+Request methods
+
+These methods must handle the four basic HTTP verbs: GET, POST, PUT, DELETE.
+
+GET(string path, [string params])
+
+Field
+Type
+Required
+Description
+path
+string
+yes
+API resource path to which the GET request will be sent to.
+params
+string
+optional
+Additional params (if required).
+
+Example:
+myResponse = myMeliObject.get('/items/MLA12345678')
+print "Status code: " + myResponse.status_code
+print "JSON content: " +myResponse.body
+
+
+POST(string path, [string params], [string body])
+
+Field
+Type
+Required
+Description
+path
+string
+yes
+API resource path to which the POST request will be sent to.
+body
+string
+optional
+Body to be sent when executing the POST request.
+params
+string
+optional
+Additional params (if required).
+
+Example:
+myBody = {'foo':'bar'}
+myResponse = myMeliObject.post('/items/MLA12345678', [myBody], [params])
+print "Status code: " + myResponse.status_code
+print "JSON content: " +myResponse.body
+
+
+PUT(string path, [string params], [string body])
+
+Field
+Type
+Required
+Description
+path
+string
+yes
+API resource path to which the PUT request will be sent to.
+body
+string
+optional
+Body to be sent when executing the PUT request.
+params
+string
+optional
+Additional params (if required).
+
+Example:
+myBody = {'foo':'bar'}
+myResponse = myMeliObject.put('/items/MLA12345678', [myBody], [params])
+print "Status code: " + myResponse.status_code
+print "JSON content: " +myResponse.body
+
+
+DELETE(string path, [string params])
+
+Field
+Type
+Required
+Description
+path
+string
+yes
+API resource path to which the DELETE request will be sent to.
+params
+string
+optional
+Additional params (if required).
+
+Example:
+myResponse = myMeliObject.delete('/questions/1234', [params])
+print "Status code: " + myResponse.status_code
+print "JSON content: " +myResponse.body
+
+
+Got it all? Great!
+Need help? Check our forums (link to forums). There’s a big chance that someone has already faced the same problem you are and there’s a big community ready to help you 24/7. Thanks so much for contributing!

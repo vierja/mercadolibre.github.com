@@ -11,184 +11,249 @@ tags:
 - sdks
 ---
 
-The Meli SDKs attend some requirements, they all must have at least this methods bellow, of course they can have private and helpers methods for internal usage, provided that they satisfy the pattern bellow
+## Build your SDK!
 
-## Configuration File
-The SDk must have a config file for Constant Data
+We currently have SDKs available for [Javascript](/javascript-sdk), [PHP](/php-sdk), [Java](/java-sdk), [.NET](/net-sdk), [Ruby](/ruby-sdk) and [Python](/python-sdk). Check them out and feel free to make a pull request in GitHub if you feel like suggesting some changes.
 
-#### Constants:
-**API_ROOT_URL**, the url for the api
+But why stop there? You can contribute to our dev community and help us grow our available SDKs list by creating one of your own in any desired programming language. It’s really easy! All we ask from you is to adapt to Meli's SDKs standards and methods lists we have established, to provide other devs seamless migration from one language to another.
 
-**SDK_VERSION**, the number version for SDK
+Start working on your own SDK now, and remember to include documentation and tests. Let us know when you’re done at developers@mercadolibre.com. We'll check it asap and return the favor with a big fat thank you note in our dev platform.
 
-**AUTH_URL**, the url for authentication in Meli plataform 
+For us to make your SDK public in our Meli SDKs list, please consider the following guide:
 
-**OAUTH_URL**, the path for get token and refresh token in Meli plataform 
+
+<br />
+#### Table of contents
++ Configuration file
+
++ Constructor
+
++ Authentication methods
+
++ Request methods
+
+
+## Configuration file
+
+Your SDK must have a config file for contants, which are:
+
+
+**API_ROOT_URL:** Meli API URL (eg: https://api.mercadolibre.com/)
+
+**SDK_VERSION:** Current version of your SDK (eg: 1.0)
+
+**AUTH_URL:** Meli Authentication URL (eg: https://auth.mercadolibre.com.ar/)
+
+**OAUTH_URL:** Meli OAUTH URL, used to get access &amp; refresh tokens (eg: https://api.mercadolibre.com/oauth)
 
 
 ## Constructor
-The constructor for Objects Meli
-
-####Receive parameters:
-**client_id**, ***Required***, Int, Number given when create a new application in [creating an application](http://developers.mercadolibre.com/creating-your-own-application/)
-
-**client_secret**, ***Required***, String, String Hash given when create a new application in [creating an application](http://developers.mercadolibre.com/creating-your-own-application/)
-
-**access_token**, Optional, String, String Hash given when authorize a application
-
-**refresh_token**, Optional, String, String Hash given when authorize a application
 
 
-####Return:
-**Object**, Meli object with at least the methods, get_auth_url, authorize, do_refresh_token, get, post, put, delete
+The constructor for MELI objects. Must have the following input parameters:
 
-####Example
-{% highlight python %}
-meli = Meli(client_id=1234, client_secret"a secret", access_token="Access_Token", refresh_token="Refresh_Token")
+
+{:.borderOn}
+| Field         | Type       | Required  | Description                             |
+| ------------- |:----------:| ---------:| ---------------------------------------:|
+| client_id | int | yes | ID provided when creating a MELI APP (link to create app guide) | 
+| client_secret | string | yes | Hash string key provided when creating a MELI APP (link to create app guide) | 
+| access_token | string | optional | Used to talk to our API resources that require credentials (eg: POST to /items). | 
+| refresh_token | string | optional | Hash string provided when a user authorizes an A P. Used to get a new valid access_token (only available when offline_access scope in APP settings is checked). |
+
+
+<br />
+The constructor must return an Object.
+
+
+<br />
+Example:
+
+{% highlight javascript %}
+myMeliObject = new Meli(
+	client_id=1234, 
+	client_secret"my_secret_key", 
+	[access_token="an_access_token"], 
+	[refresh_token="a_refresh_token"]
+)
 {% endhighlight %}
 
 
-## Authentication Methods
-this section explain methods that will be used in Authentication flow
-
-### Get Auth Url
-Method that return the url, based in the parameters passed when construc the meli Object
-
-####Receive parameters:
-**redirect_uri**, ***Required***, String, A Url where the authentication will send the return and **code** param to proceed
+<br />
+This Meli object must contain, at least, the following methods:
 
 
-####Return:
-**String**, the authentication url with the params populated with the correct values
+<br />
+**Authorization methods:** GetAuthURL, Authorize, RefreshAccessToken.
 
-####Example
-{% highlight python %}
-auth_url = meli.get_auth_url(redirect_uri="a redirect url")
+**Request methods:** GET, POST, PUT, DELETE.
+
+
+<br />
+<br />
+#### Authorization methods
+
+
+<br />
+Make sure you have read our Authentication &amp; Authorization section (link to that section) to fully understand what these three methods must do.
+
+<br />
+GetAuthURL(string redirect_uri)
+
+
+{:.borderOn}
+| Field         | Type       | Required  | Description                             |
+| ------------- |:----------:| ---------:| ---------------------------------------:|
+| redirect_uri | string | yes | Callback URL to which the user will be redirected after granting permission to the Meli APP. The code required to obtain the first access_token (required in Authorize method) will be appended to this URL when making this redirect. |
+
+
+<br />
+Example:
+
+{% highlight ruby %}
+myAuthURL = myMeliObject.getAuthURL('http://www.mydomain.com/mercadolibre')
 {% endhighlight %}
 
 
-### Authorize
-This method receive the code from Meli authentication and make the Post request to get the ***Access Token*** and ***Refresh Token***
 
-####Receive parameters:
-**code**, ***Required***, String, String hash received by Query Params from the redirect from meli authentication
+<br />
+<br />
+Authorize(string code, string redirect_uri)
 
-**redirect_uri**, ***Required***, String, Url that will be the return from the authorize to receive the ***Access Token*** and ***Refresh Token***
 
-####Return:
-The variable access_token and refresh_token from Object Meli populated and
-**String**, the String Hash access_token 
+{:.borderOn}
+| Field         | Type       | Required  | Description                             |
+| ------------- |:----------:| ---------:| ---------------------------------------:|
+|code |string |yes |Code received at redirect_uri when user granted permission to the Meli APP.|
+|redirect_uri |string |yes |Callback URL to which the API will send the access &amp; refresh tokens. Must be the same as the one configured in the Meli APP settings.|
 
-####Example
-{% highlight python %}
-meli.authorize(code="a code from get params", redirect_uri="a redirect uri")
-print "New Access Token: " + meli.access_token
-print "New Refresh Token: " + meli.refresh_token #only if the app have offline access
+
+<br />
+Example:
+
+{% highlight ruby %}
+myAuthorization = myMeliObject.authorize('TG-1234', 'http://www.mydomain.com/mercadolibre')
+print myAuthorization.access_token
+print myAuthorization.refresh_token
 {% endhighlight %}
 
-### Do Refresh Token
-If exists a refresh_token variable populated, this method will send a post to oauth meli authentication and receive a new ***Access Token*** and ***Refresh Token***
 
-####Receive parameters:
-**None**
+<br />
+RefreshAccessToken()
 
-####Return:
-The variable access_token and refresh_token from Object Meli populated and
-**String**, the String Hash for the new access_token 
 
-####Example
-{% highlight python %}
-#only if the app have offline access
-meli.do_refresh_token()
-print "New Access Token: " + meli.access_token
-print "New Refresh Token: " + meli.refresh_token 
+This method will only be used for APPs with offline_access scope checked. It does not require input parameters and must use the refresh_token within the Meli Object created (eg: myMeliObject.refresh_token) and exchange it for a new access_token and refresh_token.
+
+
+<br />
+Example:
+
+{% highlight ruby %}
+myNewTokens = myMeliObject.refreshAccessToken()
+print myNewTokens.access_token
+print myNewTokens.refresh_token
 {% endhighlight %}
 
-## Request Methods
-This section will show the methods that make the requests 
 
-### Get
-This method make a HTTP GET call to a url
+<br />
+<br />
+#### Request methods
 
-####Receive parameters:
-**path**, ***Required***, String, String with the path to the API that will be send the GET request
 
-**params**, Optional, Hash, a hash with the params that will be send by GET request
+<br />
+These methods must handle the four basic HTTP verbs: GET, POST, PUT, DELETE.
 
-####Return:
-**Object**, a HTTP Response Object with at least HTTP CODE and Content(Body) Data 
 
-####Example
-{% highlight python %}
-response = meli.get(path="/items/123")
-print "Status Code: " + response.status_code
-print "JSON content: " + response.body
+<br />
+GET(string path, [string params])
+
+
+{:.borderOn}
+| Field         | Type       | Required  | Description                             |
+| ------------- |:----------:| ---------:| ---------------------------------------:|
+|path |string |yes |API resource path to which the GET request will be sent to.	   |
+|params|string | optional | Additional params (if required).|
+
+
+<br />
+Example:
+
+{% highlight ruby %}
+myResponse = myMeliObject.get('/items/MLA12345678')
+print "Status code: " + myResponse.status_code
+print "JSON content: " +myResponse.body
 {% endhighlight %}
 
-### Post
-This method make a HTTP POST call to a url
 
-####Receive parameters:
-**path**, ***Required***, String, String with the path to the API that will be send the POST request
+<br />
+POST(string path, [string params], [string body])
 
-**params**, ***Required***, Hash, a hash with the params that will be send by POST request, at least the access_token
 
-**body**, Optional, Hash, a hash with the params that will be send by POST request
-***OBS: here you can have two approaches, the Body can be a Hash for you language and in the moment of the Request that will be converted in JSON OR this body already will be a JSON***
+{:.borderOn}
+| Field         | Type       | Required  | Description                             |
+| ------------- |:----------:| ---------:| ---------------------------------------:|
+| path | string | yes | API resource path to which the POST request will be sent to. | 
+| body | string | optional | Body to be sent when executing the POST request. | 
+| params | string | optional | Additional params (if required). |
 
-####Return:
-**Object**, a HTTP Response Object with at least HTTP CODE and Content(Body) Data 
 
-####Example
-{% highlight python %}
-body = {'foo':'bar'}
-response = meli.post(path="/items", body=body, params={'access_token':meli.access_token})
-print "Status Code: " + response.status_code
-print "JSON content: " + response.body
+<br />
+Example:
+
+{% highlight ruby %}
+myBody = {'foo':'bar'}
+myResponse = myMeliObject.post('/items/MLA12345678', [myBody], [params])
+print "Status code: " + myResponse.status_code
+print "JSON content: " +myResponse.body
 {% endhighlight %}
 
-### Put
-This method make a HTTP PUT call to a url
 
-####Receive parameters:
-**path**, ***Required***, String, String with the path to the API that will be send the PUT request
+<br />
+PUT(string path, [string params], [string body])
 
-**params**, ***Required***, Hash, a hash with the params that will be send by PUT request, at least the access_token
 
-**body**, Optional, Hash, a hash with the params that will be send by PUT request
-***OBS: here you can have two approaches, the Body can be a Hash for you language and in the moment of the Request that be converted in JSON OR this body already will be a JSON***
+{:.borderOn}
+| Field         | Type       | Required  | Description                             |
+| ------------- |:----------:| ---------:| ---------------------------------------:|
+| path | string | yes | API resource path to which the PUT request will be sent to. | 
+| body | string | optional | Body to be sent when executing the PUT request. | 
+| params | string | optional | Additional params (if required). | 
 
-####Return:
-**Object**, a HTTP Response Object with at least HTTP CODE and Content(Body) Data 
 
-####Example
-{% highlight python %}
-body = {'foo':'bar'}
-response = meli.put(path="/items/123", body=body, params={'access_token':meli.access_token})
-print "Status Code: " + response.status_code
-print "JSON content: " + response.body
+<br />
+Example:
+
+{% highlight ruby %}
+myBody = {'foo':'bar'}
+myResponse = myMeliObject.put('/items/MLA12345678', [myBody], [params])
+print "Status code: " + myResponse.status_code
+print "JSON content: " +myResponse.body
 {% endhighlight %}
 
-### Delete
-This method make a HTTP DELETE call to a url
 
-####Receive parameters:
-**path**, ***Required***, String, String with the path to the API that will be send the DELETE request
+<br />
+DELETE(string path, [string params])
 
-**params**, ***Required***, Hash, a hash with the params that will be send by DELETE request, at least the access_token
 
-####Return:
-**Object**, a HTTP Response Object with at least HTTP CODE and Content(Body) Data 
+{:.borderOn}
+| Field         | Type       | Required  | Description                             |
+| ------------- |:----------:| ---------:| ---------------------------------------:|
+| path | string | yes | API resource path to which the DELETE request will be sent to. | 
+| params | string | optional | Additional params (if required). | 
 
-####Example
-{% highlight python %}
-response = meli.delete(path="/questions/123", params={'access_token':meli.access_token})
-print "Status Code: " + response.status_code
-print "JSON content: " + response.body
+
+<br />
+Example:
+
+{% highlight ruby %}
+myResponse = myMeliObject.delete('/questions/1234', [params])
+print "Status code: " + myResponse.status_code
+print "JSON content: " +myResponse.body
 {% endhighlight %}
 
-## I want to contribute!
 
-Excellent! Create a SDK, write some Tests and Documentation and Let us Know, maybe you can be in the Third Party SDKs Section.
 
-Thanks for helping!
+## Got it all? Great!
+
+
+Need help? Check our [forums](/community). There’s a big chance that someone has already faced the same problem you are and there’s a big community ready to help you 24/7. Thanks so much for contributing!

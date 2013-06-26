@@ -1204,7 +1204,14 @@ q.single:after{content:"'";}
 .prev_next .next {
 	text-align:right;
 }
-
+.borderOn {
+	width: 100% !important;
+}
+.borderOn tr, .borderOn th, .borderOn td {
+	border: 1px solid black;
+	text-align: left !important;
+	padding: 5px 10px 5px 10px;
+}
 
 pre.no-height{max-height:none;}
 
