@@ -20,19 +20,15 @@ You'll find the source code in the following location: [https://github.com/merca
 
 Initialize the SDK with your __client_id__ as follows:
 
-{% highlight php %}
-// Try to put this code at the top
-require '../src/meli.php';
+{% highlight php5 %}
+<?php
+// Try to put this code at the top (attention to the path)
+require '../MercadoLivre/meli.php';
 
 // Create our Application instance (replace this with your appId and secret).
-$meli = new Meli(array(
-    'appId'         => '12345',
-    'secret'        => 'dsadsaDWFfs24DF34dgg43T3',
-));
+$meli = new Meli(123456, 'dsadsaDWFfs24DF34dgg43T3');
+?>
 {% endhighlight %}
-	
-
-You can use __getWithAccessToken__ to make requests to the API adding an __access_token__. Or just use __get__ method to make anonymous calls.
-    
+	    
 ## Contribute
 If you want to contribute or you find something that needs to be fixed, just fork our SDK in [GitHub](https://github.com/mercadolibre/php-sdk) and pull requests as needed.

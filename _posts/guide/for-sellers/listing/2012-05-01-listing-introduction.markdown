@@ -112,10 +112,8 @@ MELI.get("/items/MLB474720094", null, function(data) {
 		<div id="php">
 {% highlight php5 %}
 <?php
-$meli = new Meli(array(
-  "appId" => 123456,
-  "secret" => "application_secret"
-));
+$meli = new Meli(123456, "application_secret");
+
 $item = $meli->get("/items/MLB474720094");
 ?>
 {% endhighlight %}

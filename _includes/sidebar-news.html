@@ -3,7 +3,7 @@
 
 {% for category in page.categories %}
   <ul>
-    {% for post in site.tags.[category] reversed %}
+    {% for post in site.tags.[category] %}
       {% assign current = nil %}
       {% if post.id == page.id %}
         {% assign current = 'current' %}
