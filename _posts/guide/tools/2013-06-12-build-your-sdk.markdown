@@ -1,6 +1,6 @@
 ---
 layout: 2columns
-title: SDKs Pattern
+title: Build your SDK!
 categories:
 - sdks
 - more tools
@@ -24,13 +24,13 @@ For us to make your SDK public in our Meli SDKs list, please consider the follow
 
 <br />
 #### Table of contents
-+ Configuration file
++ - [Configuration file](#configuration_file)
 
-+ Constructor
++ - [Constructor](#constructor)
 
-+ Authentication methods
++ - [Authorization methods](#authorization_methods)
 
-+ Request methods
++ - [Request methods](#request_methods)
 
 
 ## Configuration file
@@ -91,7 +91,7 @@ This Meli object must contain, at least, the following methods:
 
 <br />
 <br />
-#### Authorization methods
+## Authorization methods
 
 
 <br />
@@ -157,7 +157,7 @@ print myNewTokens.refresh_token
 
 <br />
 <br />
-#### Request methods
+## Request methods
 
 
 <br />
